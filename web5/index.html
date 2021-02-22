@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+    <meta name="refresh" content="180">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 				
+    <meta name="msapplication-TileImage" content="./data/icon/favicon320.png">
+    <meta name="application-name" content="innisfree">
+    <meta name="keywords" content="SK주식회사, sk, 이노베이션, 텔레콤, 네트웍스, 머티리얼즈, 바이오팜, 실트론, 건설, 임업, skc">
+    <meta property="og:title" content="SK주식회사">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="SK주식회사 공식 홈페이지">
+    <meta property="og:image" content="favicon-320.ico">
+    <meta property="og:site_name" content="SK주식회사">
+    <link rel="shortcut icon" href="./data/icon/favicon320.png">
+    <link rel="shortcut icon" href="./data/icon/favicon16.png">
+    <link rel="shortcut icon" href="./data/icon/favicon240.png">
+    <link rel="shortcut icon" href="./data/icon/favicon32.ico">
+    <link rel="stylesheet" href="./fontset.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/device.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="./js/main.js"></script>
+    <title>SK주식회사</title>
+    <script>
+    $(document).ready(function(){
+        $(".menu_icon .close").click(function(){
+            $(".hd").toggleClass("active");
+        });
+        $(window).scroll(function(){
+            var scTop = parseInt($(window).scrollTop());
+            if(scTop>=300){
+                $(".hd").addClass("on");
+            } else {
+                $(".hd").removeClass("on");
+            }
+        });
+        $("#p1 .pg_tit").click(function(){
+            $("#p1 .pg_tit").toggleClass("on");
+            $(".map_box").toggleClass("on");
+        });
+        $(".collap_close_btn").click(function(){
+            $("#p1 .pg_tit").removeClass("on");
+            $(".map_box").removeClass("on");
+        });
+        var tr_th = parseInt($(".p4_lst").width());
+        $(".p4_lst li").mouseenter(function(){ 
+            $(this).width(tr_th*0.44);
+            $(this).siblings().width(tr_th*0.28);
+        });
+        $(".p4_lst li").mouseleave(function(){ 
+            $(".p4_lst li").width(tr_th*0.3333333);
+        });
+    });    
+    </script>
+    <script>
+    $(document).ready(function(){
+    var home = 0;
+    var pg1 = $("#p1").offset().top;
+    var pg2 = $("#p2").offset().top;
+    var pg3 = $("#p3").offset().top;
+    var pg4 = $("#p4").offset().top;
+    var ft = $(".ft").offset().top;
+    var endPage = parseInt(pg3+500);
+    console.log(ft, endPage);
+   $(".collap_tit").click(function(){
+       $(this).toggleClass("on");  
+       $(this).nextAll(".collap_lst").toggleClass("on");
+   }); 
+    $(window).scroll(function(){
+        var scTop = parseInt($(window).scrollTop()); 
+        var ht = $(window).height(); 
+
+        if(scTop>=ht) {
+            $(".to_top").fadeIn();
+        } else {
+            $(".to_top").fadeOut();
+        }
+        if(scTop<pg1){
+            $(".cur_page").css("top", "35px");
+        } else if(scTop>=pg1 && scTop<pg2){
+            $(".cur_page").css("top", "35px");
+        } else if(scTop>=pg2 && scTop<pg3){
+            $(".cur_page").css("top", "55px");
+        } else if(scTop>=pg3 && scTop<pg3+200){
+            $(".cur_page").css("top", "75px");
+        } else if(scTop>=pg3+200){
+            $(".cur_page").css("top", "95px");
+        }
+    });
+    $(".to_top").click(function(){
+       $("body, html").not(":animated").animate({scrollTop:"0px"}, 500); 
+    });
+    $(".meter_fr li.cate0 button").click(function(){
+       $("body, html").not(":animated").animate({scrollTop:"0px"}, 500); 
+    });
+    $(".meter_fr li.cate1 button").click(function(){
+        $("body, html").not(":animated").animate({scrollTop:pg1+"px"}, 500);
+    });
+    $(".meter_fr li.cate2 button").click(function(){
+        $("body, html").not(":animated").animate({scrollTop:pg2+"px"}, 500);
+    });
+    $(".meter_fr li.cate3 button").click(function(){
+        $("body, html").not(":animated").animate({scrollTop:pg3+"px"}, 500);
+    });
+    $(".meter_fr li.cate4 button, .meter_fr li.cate5 button").click(function(){
+        $("body, html").not(":animated").animate({scrollTop:endPage+"px"}, 500);
+    });
+});    
+    </script>
+    <script>
+    $(document).ready(function(){
+    var home = 0;
+    var pg1 = $("#p1").offset().top;
+    var pg2 = $("#p2").offset().top;
+    var pg3 = $("#p3").offset().top;
+    var pg4 = $("#p4").offset().top;
+    var ft = $(".footer").offset().top;
+    var endPage = parseInt(pg3+500);
+    console.log(ft, endPage);
+   $(".collap_tit").click(function(){
+       $(this).toggleClass("on");  
+       $(this).nextAll(".collap_lst").toggleClass("on");
+   }); 
+    $(window).scroll(function(){
+        var scTop = parseInt($(window).scrollTop()); 
+        var ht = $(window).height(); 
+
+        if(scTop>=ht) {
+            $(".to_top").fadeIn();
+        } else {
+            $(".to_top").fadeOut();
+        }
+        if(scTop<pg1){
+            $(".cur_page").css("top", "35px");
+        } else if(scTop>=pg1 && scTop<pg2){
+            $(".cur_page").css("top", "35px");
+        } else if(scTop>=pg2 && scTop<pg3){
+            $(".cur_page").css("top", "55px");
+        } else if(scTop>=pg3 && scTop<pg3+200){
+            $(".cur_page").css("top", "75px");
+        } else if(scTop>=pg3+200){
+            $(".cur_page").css("top", "95px");
+        }
+    });
+    $(".to_top").click(function(){
+       $("body, html").not(":animated").animate({scrollTop:"0px"}, 500); 
+    });
+    $(".meter_fr li.cate0 button").click(function(){
+       $("body, html").not(":animated").animate({scrollTop:"0px"}, 500); 
+    });
+    $(".meter_fr li.cate1 button").click(function(){
+        $("body, html").not(":animated").animate({scrollTop:pg1+"px"}, 500);
+    });
+    $(".meter_fr li.cate2 button").click(function(){
+        $("body, html").not(":animated").animate({scrollTop:pg2+"px"}, 500);
+    });
+    $(".meter_fr li.cate3 button").click(function(){
+        $("body, html").not(":animated").animate({scrollTop:pg3+"px"}, 500);
+    });
+    $(".meter_fr li.cate4 button, .meter_fr li.cate5 button").click(function(){
+        $("body, html").not(":animated").animate({scrollTop:endPage+"px"}, 500);
+    });
+});    
+    </script>
+</head>
+<body>
+    <header class="hd">
+        <a href="index.html" class="logo"></a>
+        <nav class="gnb">
+            <ul class="menu">
+                <li>
+                    <a href="" class="dp1">회사소개</a>
+                    <ul class="sub">
+                        <li><a href="">회사개요</a></li>
+                        <li><a href="">CEO Message</a></li>
+                        <li><a href="">사업소개</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="dp1">사업영역</a>
+                    <ul class="sub">
+                        <li><a href="">SK이노베이션</a></li>
+                        <li><a href="">SK텔레콤</a></li>
+                        <li><a href="">SKC</a></li>
+                        <li><a href="">SK네트웍스</a></li>
+                        <li><a href="">SK머티리얼즈</a></li>
+                        <li><a href="">SK바이오팜</a></li>
+                        <li><a href="">SKE&amp;S</a></li>
+                        <li><a href="">SK실트론</a></li>
+                        <li><a href="">SK건설</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="dp1">사회적가치</a>
+                    <ul class="sub">
+                        <li><a href="">윤리/준법</a></li>
+                        <li><a href="">상생경영</a></li>
+                        <li><a href="">사회공헌</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="dp1">투자정보</a>
+                    <ul class="sub">
+                        <li><a href="">기업지배구조</a></li>
+                        <li><a href="">재무정보</a></li>
+                        <li><a href="">IR정보</a></li>
+                        <li><a href="">공시</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="dp1">인재채용</a>
+                    <ul class="sub">
+                        <li><a href="">인사재도</a></li>
+                        <li><a href="">직무소개</a></li>
+                        <li><a href="">채용전형</a></li>
+                        <li><a href="">채용공고</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="dp1">홍보센터</a>
+                    <ul class="sub">
+                        <li><a href="">SK뉴스</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="top_right">
+            <ul class="lang tp">
+                <li class="kor"><a href="">KOR</a></li>
+                <li class="eng"><a href="">ENG</a></li>
+            </ul>
+            <div class="call tp">
+                <a href="">신고센터</a>
+            </div>
+            <div class="menu_icon tp ">
+                <span class="close">
+                    <i class="bar1"></i>
+                    <i class="bar2"></i>
+                    <i class="bar3"></i>
+                </span>
+            </div>
+        </div>
+    </header>
+    <figure class="vs">
+        <ul class="vs_box">
+            <li class="item1">
+                <div class="tit_box">
+                    <h2 class="vs_tit">SK주식회사</h2>
+                    <p class="vs_com">Value중심 Portfolio 기반 신성장사업을 발굴하고 육성합니다.</p>
+                    <a href="" class="vs_more">VIEW MORE</a>
+                </div>
+            </li>
+            <li class="item2">
+                <div class="tit_box">
+                    <h2 class="vs_tit">SK주식회사</h2>
+                    <p class="vs_com">Future, SK는 행복한 미래를 위해 끊임없이 도전합니다.</p>
+                    <a href="" class="vs_more">VIEW MORE</a>
+                </div>
+            </li>
+            <li class="item3">
+                <div class="tit_box">
+                    <h2 class="vs_tit">SK주식회사</h2>
+                    <p class="vs_com">Deep Change를 통해 지속적 행복을 추구하는 투자형 지주회사입니다.</p>
+                    <a href="" class="vs_more">VIEW MORE</a>
+                </div>
+            </li>
+            <li class="item4">
+                <div class="tit_box">
+                    <h2 class="vs_tit">SK주식회사</h2>
+                    <p class="vs_com">주주, 고객, 사회 등 다양한 이해관계자와 보다 더 큰 행복을 추구합니다.</p>
+                    <a href="" class="vs_more">VIEW MORE</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="btn_box">
+            <li class="vs_btn1"><button></button></li>
+            <li class="vs_btn2"><button></button></li>
+        </ul>
+        <ul class="bar_fr">
+            <li class="bar1 on">
+                <div class="bar_btn"></div>
+            </li>
+            <li class="bar2">
+                <div class="bar_btn"></div>
+            </li>
+            <li class="bar3">
+                <div class="bar_btn"></div>
+            </li>
+            <li class="bar4">
+                <div class="bar_btn"></div>
+            </li>
+        </ul>
+        <script>
+        $(document).ready(function(){
+            var itv1 = setInterval(function(){ next_ani(); }, 3500);
+            var wd = parseInt($(".vs").width());
+            var n = $(".vs_box li").length;
+            function next_ani() {
+                $(".vs_box").not(":animated").animate({"margin-left": -wd+"px"}, 700, function(){
+                    $(".vs_box li").eq(0).appendTo($(".vs_box"));
+                    $(".vs_box").css("margin-left", "0px");
+                });
+                $(".bar_fr li").eq(0).appendTo($(".bar_fr"));
+                $(".bar_fr li").removeClass("on");
+                $(".bar_fr li").eq(0).addClass("on");
+            }
+            function prev_ani() {
+                $(".vs_box li").eq(n-1).prependTo($(".vs_box"));
+                $(".vs_box").css("margin-left", -wd+"px");
+                $(".vs_box").not(":animated").animate({"margin-left": "0px"}, 700);
+                $(".bar_fr li").eq(n-1).prependTo($(".bar_fr"));
+                $(".bar_fr li").removeClass("on");
+                $(".bar_fr li").eq(0).addClass("on");
+            }
+            $(".vs_btn1").click(function(){
+                clearInterval(itv1);
+                prev_ani();
+                itv1 = setInterval(function(){ next_ani(); }, 3500);
+            });
+            $(".vs_btn2").click(function(){
+                clearInterval(itv1);
+                next_ani();
+                itv1 = setInterval(function(){ next_ani(); }, 3500);
+            });
+        });    
+        </script>
+    </figure>
+    <div class="page" id="p1">
+        <h2 class="pg_tit">AllAboutSK<img src="./data/icon/p1_more_btn.png" alt="열림버튼" class="map_btn"></h2>
+        <ul class="con_lst">
+            <li class="item1"><a href="">SK이노베이션</a></li>
+            <li class="item2"><a href="">SK텔레콤</a></li> 
+            <li class="item3"><a href="">SKC</a></li>
+            <li class="item4"><a href="">SK네트웍스</a></li>
+            <li class="item5"><a href="">SK머티리얼즈</a></li>
+            <li class="item6"><a href="">SK바이오팜</a></li>
+            <li class="item7"><a href="">SKE&amp;S</a></li>
+            <li class="item8"><a href="">SK실트론</a></li>
+            <li class="item9"><a href="">SK건설</a></li>
+            <li class="item10"></li>
+        </ul>
+        <div class="map_box">
+            <img src="" alt="조직도">
+            <button class="collap_close_btn">CLOSE</button>
+        </div>
+    </div>
+    <div class="page" id="p2">
+        <h2 class="news_tit">SK NEWS</h2>
+        <button></button>
+        <button></button>
+        <div class="news_lst">
+            <div class="news_box">
+                <ul class="img_box">
+                    <li>
+                        <a href="">
+                            <img src="./data/img/news1.jpg" alt="뉴스1">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="tit_box">
+                    <h4 class="news_tit1">언론보도</h4>
+                    <h3 class="news_tit2">SK㈜ 전기차용 전력 반도체 시장 진출…미래차 소재 시장 선점 나선다
+
+</h3>
+                    <p class="news_tit3">2021-01-28</p>
+                </ul>
+            </div>
+            <div class="news_box">
+                <ul class="img_box">
+                    <li>
+                        <a href="">
+                            <img src="./data/img/news2.jpg" alt="뉴스2">
+                            <div class="news_more"></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="tit_box">
+                    <h4 class="news_tit1">언론보도</h4>
+                    <h3 class="news_tit2">SK㈜, 4大 핵심사업 중심 「투자전문회사」 진화 가속화</h3>
+                    <p class="news_tit3">2021-01-24</p>
+                </ul>
+            </div><div class="news_box">
+                <ul class="img_box">
+                    <li>
+                        <a href="">
+                            <img src="./data/img/news3.jpg" alt="뉴스3">
+                            <div class="news_more"></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="tit_box">
+                    <h4 class="news_tit1">언론보도</h4>
+                    <h3 class="news_tit2">SK, 美 플러그파워社 투자 5일만에 지분가치 2조원 상승</h3>
+                    <p class="news_tit3">2021-01-13</p>
+                </ul>
+            </div><div class="news_box">
+                <ul class="img_box">
+                    <li>
+                        <a href="">
+                            <img src="./data/img/news5.jpg" alt="뉴스4">
+                            <div class="news_more"></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="tit_box">
+                    <h4 class="news_tit1">언론보도</h4>
+                    <h3 class="news_tit2">SK, 美 수소에너지 선도 기업 투자…글로벌 수소시장 본격 진출</h3>
+                    <p class="news_tit3">2021-01-07</p>
+                </ul>
+            </div><div class="news_box">
+                <ul class="img_box">
+                    <li>
+                        <a href="">
+                            <img src="./data/img/news4.jpg" alt="뉴스5">
+                            <div class="news_more"></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="tit_box">
+                    <h4 class="news_tit1">언론보도</h4>
+                    <h3 class="news_tit2">SK㈜ 2020년 지속가능경영 대통령 표창 수상</h3>
+                    <p class="news_tit3">2020-12-09</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="page" id="p3">
+        <div class="p_wrap">
+            <h2>인재채용</h2>
+            <p>SK주식회사는 공정하고 체계적인 절차에 따라 인재를 선발합니다.</p>
+            <ul class="hire_box">
+                <li class="item1">
+                    <a href="">
+                        <span>인사제도</span>
+                        <span>인사제도</span>
+                    </a>
+                </li>
+                <li class="item2"><a href=""><span>직무소개</span><span>직무소개</span></a></li>
+                <li class="item3"><a href=""><span>채용안내</span><span>채용안내</span></a></li>
+                <li class="item4"><a href=""><span>채용공고</span><span>채용공고</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="page" id="p4">
+        <h2 class="pg_tit">SK GROUP</h2>
+        <ul class="p4_lst">
+            <li class="p4_item1"><a href=""><span class="p4_tit">보도자료</span></a></li>
+            <li class="p4_item2"><a href=""><span class="p4_tit">고객문의</span></a></li>
+            <li class="p4_item3"><a href=""><span class="p4_tit">Contact Us</span></a></li>
+        </ul>
+    </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="left">
+                <a href="index.html" class="ft_logo"><img src="./data/img/ftlogo.png" alt="로고2"></a>
+                <ul class="ft_lst">
+                    <li><a href="">기업소개</a></li>
+                    <li><a href="">사업영역</a></li>
+                    <li><a href="">사회공헌</a></li>
+                    <li><a href="">투자정보</a></li>
+                    <li><a href="">인재채용</a></li>
+                    <li><a href="">홍보센터</a></li>
+                </ul>
+                <ul class="ft_lst2">
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                    <li><a href="">고객문의</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+                <div class="copy">
+                    <p class="addr">(03188) 서울특별시 종로구 종로 26</p>
+                    <p class="copyright">COPYRIGHT ⓒ BY SK HOLDINGS CO., LTD. ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="collap item1">
+                    <span class="callap_tit">주요계열사바로가기</span>
+                    <ul class="callap_lst">
+                        <li><a href="">SK이노베이션</a></li>
+                        <li><a href="">SK텔레콤</a></li>
+                        <li><a href="">SK네트웍스</a></li>
+                        <li><a href="">SK하이닉스</a></li>
+                        <li><a href="">SK케미칼</a></li>
+                        <li><a href="">SKC</a></li>
+                    </ul>
+                </div>
+                <div class="collap item2">
+                    <span class="callap_tit">관련시스템바로가기</span>
+                    <ul class="callap_lst">
+                        <li><a href="">기업지배구조</a></li>
+                        <li><a href="">투자정보</a></li>
+                        <li><a href="">공시정보</a></li>
+                        <li><a href="">사업전략</a></li>
+                        <li><a href="">지속가능경영전략</a></li>
+                        <li><a href="">보도자료</a></li>
+                    </ul>
+                </div>
+                 <div class="mark_box">
+                        <img src="./source/logo_wa.png" alt="웹접근성마크" class="wa_mark">
+                        <img src="./source/logo_ipc.png" alt="국제특허분류인증마크" class="ipc_mark">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="to_top">
+        <img src="" alt="화살표">
+        <span class="top_txt">TOP</span>
+    </div>
+    <div class="metering_box">
+        <ul class="meter_fr">
+            <li class="cate0"><button data-target="top">TOP</button></li>
+            <li class="cate1"><button data-target="p1"></button></li>
+            <li class="cate2"><button data-target="p2"></button></li>
+            <li class="cate3"><button data-target="p3"></button></li>
+            <li class="cate4"><button data-target="p4"></button></li>
+            <li class="cate5"><button data-target="end">END</button></li>
+        </ul>
+        <div class="cur_page"></div>        
+    </div>
+</body>
+</html>

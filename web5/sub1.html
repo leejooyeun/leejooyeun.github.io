@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+    <meta name="refresh" content="180">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 				
+    <meta name="msapplication-TileImage" content="./data/icon/favicon320.png">
+    <meta name="application-name" content="innisfree">
+    <meta name="keywords" content="SK주식회사, sk, 이노베이션, 텔레콤, 네트웍스, 머티리얼즈, 바이오팜, 실트론, 건설, 임업, skc">
+    <meta property="og:title" content="SK주식회사">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="SK주식회사 공식 홈페이지">
+    <meta property="og:image" content="favicon-320.ico">
+    <meta property="og:site_name" content="SK주식회사">
+    <link rel="shortcut icon" href="./data/icon/favicon320.png">
+    <link rel="shortcut icon" href="./data/icon/favicon16.png">
+    <link rel="shortcut icon" href="./data/icon/favicon240.png">
+    <link rel="shortcut icon" href="./data/icon/favicon32.ico">
+    <link rel="stylesheet" href="./fontset.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./common.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/device.js"></script>
+    <title>SK주식회사</title>
+    <style>
+        .wrap{width: 1200px; margin: 0 auto; position: relative;}
+        #p1{width: 1200px; margin: 0 auto;}
+        #p1 .pg_tit{font-size: 50px; text-align: center;margin-bottom: 30px;}
+        #p1 .txt{font-size: 30px; text-align: center; width: 180px;height: 50px; margin: 0 auto;line-height: 50px; background-color: crimson; color: #fff; }
+        #p1 .txt:after{content: ""; display: block; width: 2px;height: 50px; margin-left: 90px;background-color: #333;}
+        #p1 .item0{display: block; width: 1000px; height: 2px; margin: 0 auto; margin-top: 50px;background-color: #333;}
+        #p1 .item0:before, #p1 .item0:after{content: ""; display: block; width: 2px;height: 20px;background-color: #333;}
+        #p1 .item0:before{float: left;}
+        #p1 .item0:after{float: right;}
+        
+        #p1 .t1{width: 1400px; margin: 0 auto; height: 900px; clear: both; }
+        #p1 li{ float: left;}
+        #p1 .t1 .top_tit{ width: 120px; margin: auto 10px; height: 30px; background-color: coral; text-align: center; line-height: 30px;}
+        #p1 .t1 .top_tit > a{display: block; font-size: 17px; width: 120px; height: 30px; }
+        #p1 .t1 .top_tit .dp1:after, #p1 .t1 .top_tit .dp2:after, #p1 .t1 .top_tit .dp3:after, #p1 .t1 .top_tit .dp4:after{content: ""; display: block; width: 2px;height: 20px; background-color: #333; margin:auto 58px;}
+        #p1 .t1 .top_tit:first-child{margin-left: 50px;}
+        #p1 .t1 .com{clear: both;  font-size: 14px; width: 100px; height: 60px; margin:0 10px;background-color: #eee; text-align: center; margin-top: 20px;}
+        #p1 .t1 .item1 .com:nth-child(2), #p1 .t1 .item1 .com:nth-child(3), #p1 .t1 .item1 .com:nth-child(4){line-height: 60px;}
+        #p1 .t1 .item2 .com:nth-child(8), #p1 .t1 .item2 .com:nth-child(9) {line-height: 60px;}
+        #p1 .t1 .item3 .com {line-height: 60px;}
+        #p1 .t1 .item3 .com:nth-child(6), #p1 .t1 .item3 .com:nth-child(7){line-height: 30px;}
+        #p1 .t1 .item4 .com {line-height: 60px;}
+        
+        #p1 .t1 .com:after{content: ""; display: block; width: 2px;height: 20px; background-color: #333; margin:auto 48px;}
+        #p1 .t1 .com:last-child::after{content: ""; display: none; }
+        
+        #p2{position: absolute; top: 320px;right: 50px; width:680px; height: 600px; border: 2px solid #eee; box-shadow: 1px 1px 1px #333;}
+        #p2 .pg_tit{font-size: 40px; text-align: center;margin-bottom: 30px; margin-top: 30px;}
+        #p2 .txt{font-size: 20px; text-align: center; width: 150px;height: 45px; margin: 0 auto;line-height: 45px; background-color: crimson; color: #fff; }
+        #p2 .txt:after{content: ""; display: block; width: 2px;height: 40px; margin-left: 73px;background-color: #333;}
+        #p2 .item0{display: block; width: 520px; height: 2px; margin: 0 auto; margin-top: 40px;background-color: #333;}
+        #p2 .item0:before, #p2 .item0:after{content: ""; display: block; width: 2px;height: 20px;background-color: #333;}
+        #p2 .item0:before{float: left;}
+        #p2 .item0:after{float: right;}
+        #p2 .t2{width: 1400px; margin: 0 auto; height: 900px; clear: both; position: relative;}
+        #p2 li{ float: left;}
+        #p2 .t2 .top_tit{ width: 120px; margin-left: 40px; height: 30px; background-color: coral; text-align: center; line-height: 30px;}
+        #p2 .t2 .com{clear: both;  font-size: 14px; width: 100px; height: 60px; margin:20px 10px;background-color: #eee; text-align: center; margin-top: 0px; line-height: 60px;}
+        #p2 .item1 .com:last-child{line-height: 30px;}
+        #p2 .t2 .com:after{content: ""; display: block; width: 2px;height: 20px; background-color: #333; margin:auto 48px;}
+        #p2 .t2 .com:last-child::after{content: ""; display: none; }
+        #p2 .t2 .top_tit .dp1:after, #p2 .t2 .top_tit .dp2:after{content: ""; display: block; width: 2px;height: 20px; background-color: #333; margin:0 58px;}
+    </style>
+</head>
+<body>
+    <header class="hd">
+        <div class="top">
+            <a href="index.html" class="logo"></a>
+            <div class="gnb">
+                <ul class="menu">
+                    <li>
+                        <a href="" class="dp1">회사소개</a>
+                        <ul class="sub">
+                            <li><a href="">회사개요</a></li>
+                            <li><a href="">CEO Message</a></li>
+                            <li><a href="">사업소개</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">사업영역</a>
+                        <ul class="sub">
+                            <li><a href="">SK이노베이션</a></li>
+                            <li><a href="">SK텔레콤</a></li>
+                            <li><a href="">SKC</a></li>
+                            <li><a href="">SK네트웍스</a></li>
+                            <li><a href="">SK머티리얼즈</a></li>
+                            <li><a href="">SK바이오팜</a></li>
+                            <li><a href="">SKE&amp;S</a></li>
+                            <li><a href="">SK실트론</a></li>
+                            <li><a href="">SK건설</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">사회적가치</a>
+                        <ul class="sub">
+                            <li><a href="">윤리/준법</a></li>
+                            <li><a href="">상생경영</a></li>
+                            <li><a href="">사회공헌</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">투자정보</a>
+                        <ul class="sub">
+                            <li><a href="">기업지배구조</a></li>
+                            <li><a href="">재무정보</a></li>
+                            <li><a href="">IR정보</a></li>
+                            <li><a href="">공시</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">인재채용</a>
+                        <ul class="sub">
+                            <li><a href="">인사재도</a></li>
+                            <li><a href="">직무소개</a></li>
+                            <li><a href="">채용전형</a></li>
+                            <li><a href="">채용공고</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">홍보센터</a>
+                        <ul class="sub">
+                            <li><a href="">SK뉴스</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="top_right">
+                <ul class="lang tp">
+                    <li class="kor"><a href="">KOR</a></li>
+                    <li class="eng"><a href="">ENG</a></li>
+                </ul>
+                <div class="call tp"><a href="">신고센터</a></div>
+                <div class="menu_icon tp ">
+                    <span class="close">
+                        <i class="bar1"></i>
+                        <i class="bar2"></i>
+                        <i class="bar3"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="page" id="p1">
+            <h2 class="pg_tit">SK 조직도</h2>
+            <h3 class="txt">SK주식회사</h3>
+            <span class="item0"></span>
+            <ul class="t1">
+                <li class="item1 top_tit">
+                   <a href="" class="dp1 top1">SK이노베이션</a>
+                   <ul class="sub_tit">
+                        <li class="com"><a href="" class="sub1">SK트레이딩<br>인터내셔널</a></li>
+                        <li class="com"><a href="" class="sub2">SK에너지</a></li>
+                        <li class="com"><a href="" class="sub3">SK종합화학</a></li>
+                        <li class="com"><a href="" class="sub4">SK루브리컨츠</a></li>
+                        <li class="com"><a href="" class="sub5">SK인천<br>석유화학</a></li>
+                        <li class="com"><a href="" class="sub6">대한<br>송유관공사</a></li>
+                    </ul>
+                </li>
+                <li class="item2 top_tit">
+                    <a href="" class="dp2 top2">SKE&amp;S</a>
+                    <ul class="sub_tit">
+                        <li class="com"><a href="">충청<br>에너지서비스</a></li>
+                        <li class="com"><a href="">영남<br>에너지서비스</a></li>
+                        <li class="com"><a href="">전북<br>에너지서비스</a></li>
+                        <li class="com"><a href="">위례<br>에너지서비스</a></li>
+                        <li class="com"><a href="">파주<br>에너지서비스</a></li>
+                        <li class="com"><a href="">코원<br>에너지서비스</a></li>
+                        <li class="com"><a href="">나래<br>에너지서비스</a></li>
+                        <li class="com"><a href="">전남도시가스</a></li>
+                        <li class="com"><a href="">강원도시가스</a></li>
+                        <li class="com"><a href="">보령<br>LNG터미날</a></li>
+                    </ul>
+                </li>
+                <li class="item3 top_tit">
+                    <a href="" class="dp3 top3">SK텔레콤</a>
+                    <ul class="sub_tit">
+                        <li class="com"><a href="">SK하이닉스</a></li>
+                        <li class="com"><a href="">SK브로드밴드</a></li>
+                        <li class="com"><a href="">11번가</a></li>
+                        <li class="com"><a href="">SK텔링크</a></li>
+                        <li class="com"><a href="">SK플래닛</a></li>
+                        <li class="com"><a href="">드림어스<br>컴퍼니</a></li>
+                        <li class="com"><a href="">라이프앤<br>시큐리티홀딩스</a></li>
+                    </ul>
+                </li>
+                <li class="item4 top_tit">
+                    <a href="" class="dp4 top4">SKC</a>
+                    <ul class="sub_tit">
+                        <li class="com"><a href="">SK바이오랜드</a></li>
+                    </ul>
+                </li>
+                <li class="item5 top_tit"><a href="" class="top5">SK건설</a></li>
+                <li class="item6 top_tit"><a href="" class="top6">SK머티리얼즈</a></li>
+                <li class="item7 top_tit"><a href="" class="top7">SK실트론</a></li>
+                <li class="item8 top_tit"><a href="" class="top8">SK네트웍스</a></li>
+            </ul>
+        </div>
+        <div class="page" id="p2">
+            <h2 class="pg_tit">SK 디스커버리 조직도</h2>
+            <h3 class="txt">SK디스커버리</h3>
+            <span class="item0"></span>
+            <ul class="t2">
+                <li class="item1 top_tit">
+                    <a href="" class="dp1 top1">SK케미칼</a>
+                    <ul class="sub_tit">
+                        <li class="com"><a href="">이니츠</a></li>
+                        <li class="com"><a href="">SK<br>바이오사이언스</a></li>
+                    </ul>
+                </li>
+                <li class="item2 top_tit">
+                    <a href="" class="dp2 top2">SK가스</a>
+                    <ul class="sub_tit">
+                        <li class="com"><a href="">SKD&amp;D</a></li>
+                        <li class="com"><a href="">당진에코파워</a></li>
+                        <li class="com"><a href="">지허브</a></li>
+                    </ul>
+                </li>
+                <li class="item3 top_tit"><a href="" class="top3">SK신택</a></li>
+                <li class="item4 top_tit"><a href="" class="top4">SK플라즈마</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="left">
+                <a href="index.html" class="ft_logo"><img src="./data/img/ftlogo.png" alt="로고2"></a>
+                <ul class="ft_lst">
+                    <li><a href="">기업소개</a></li>
+                    <li><a href="">사업영역</a></li>
+                    <li><a href="">사회공헌</a></li>
+                    <li><a href="">투자정보</a></li>
+                    <li><a href="">인재채용</a></li>
+                    <li><a href="">홍보센터</a></li>
+                </ul>
+                <ul class="ft_lst2">
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                    <li><a href="">고객문의</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+                <div class="copy">
+                    <p class="addr">(03188) 서울특별시 종로구 종로 26</p>
+                    <p class="copyright">COPYRIGHT ⓒ BY SK HOLDINGS CO., LTD. ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="collap item1">
+                    <span class="callap_tit">주요계열사바로가기</span>
+                    <ul class="callap_lst">
+                        <li><a href="">SK이노베이션</a></li>
+                        <li><a href="">SK텔레콤</a></li>
+                        <li><a href="">SK네트웍스</a></li>
+                        <li><a href="">SK하이닉스</a></li>
+                        <li><a href="">SK케미칼</a></li>
+                        <li><a href="">SKC</a></li>
+                    </ul>
+                </div>
+                <div class="collap item2">
+                    <span class="callap_tit">관련시스템바로가기</span>
+                    <ul class="callap_lst">
+                        <li><a href="">기업지배구조</a></li>
+                        <li><a href="">투자정보</a></li>
+                        <li><a href="">공시정보</a></li>
+                        <li><a href="">사업전략</a></li>
+                        <li><a href="">지속가능경영전략</a></li>
+                        <li><a href="">보도자료</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="to_top">
+        <img src="" alt="화살표">
+        <span>TOP</span>
+        <div class="metering_box">
+            <ul class="meter_fr">
+                <li class="cate0"><button data-target="top">TOP</button></li>
+                <li class="cate1"><button data-target="p1"></button></li>
+                <li class="cate2"><button data-target="p2"></button></li>
+                <li class="cate3"><button data-target="p3"></button></li>
+                <li class="cate4"><button data-target="p4"></button></li>
+                <li class="cate5"><button data-target="end">END</button></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
