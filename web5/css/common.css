@@ -1,0 +1,274 @@
+body,
+html {
+    font-family: "HL_Regular", "HL_Bold", sans-serif;
+}
+
+.hd {
+    clear: both;
+    position: fixed;
+    width: 100%;
+    height: 140px;
+    z-index: 998;
+}
+
+.hd.on {
+    background-color: #333;
+    height: 110px;
+}
+
+.hd.active {
+    background-color: #fff;
+}
+
+.top {
+    width: 1500px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top a.logo {
+    display: block;
+    width: 86px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-image: url(./data/img/mainlogo.png);
+    background-size: 86px, 85px;
+}
+
+.hd.on .top a.logo {
+    margin-top: 10px;
+}
+
+.hd.active .top a.logo {
+    background-position: center -41px;
+}
+
+.gnb {
+    width: 900px;
+    height: 0px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    margin-left: -450px;
+    z-index: 998;
+}
+
+.hd.active .gnb {
+    height: 400px;
+}
+
+.clf:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.gnb .menu {
+    position: relative;
+    height: 359px;
+}
+
+.gnb .menu:before,
+.gnb .menu:after {
+    content: "";
+    display: block;
+    width: 900px;
+    height: 0px;
+    position: absolute;
+    top: 40px;
+}
+
+.gnb .menu:before {
+    right: 900px;
+}
+
+.gnb .menu:after {
+    left: 900px;
+}
+
+.hd.active .gnb .menu:before,
+.hd.active .gnb .menu:after {
+    height: 359px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.gnb li {
+    float: left;
+    width: 150px;
+}
+
+.gnb li a {
+    display: block;
+    font-size: 15px;
+    line-height: 35px;
+    text-align: center;
+    width: 150px;
+}
+
+.gnb li a.dp1 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+    height: 40px;
+    border-box;
+    display: none;
+}
+
+.hd.active .gnb li a.dp1 {
+    display: block;
+}
+
+.gnb li:hover a.dp1 {
+    background-color: #333;
+    color: #fff;
+    border-top: 4px solid #b6b3b3;
+    box-sizing: border-box;
+}
+
+.gnb li .sub {
+    clear: both;
+    border-top: 1px solid #eee;
+    display: none;
+}
+
+.gnb li .sub a:hover {
+    background-image: url(./data/icon/sub.png);
+}
+
+.top_right {
+    float: right;
+}
+
+.top_right a {
+    display: block;
+    color: #fff;
+}
+
+.hd.active .top_right a {
+    color: #333;
+}
+
+.top_right .tp {
+    float: left;
+    margin-right: 30px;
+}
+
+.top_right ul li {
+    float: left;
+    margin-right: 15px;
+    border: 2px solid #fff;
+    padding: 0 5px;
+    line-height: 24px;
+    position: absolute;
+    top: 67%;
+}
+
+.hd.active .top_right ul li {
+    border: 2px solid #333;
+}
+
+.top_right ul li a {
+    font-size: 12px;
+}
+
+.top_right ul li.kor {
+    background-color: #fff;
+    right: 15%;
+}
+
+.hd.active .top_right ul li.kor {
+    background-color: #333;
+}
+
+.hd.active .top_right ul li.kor a {
+    color: #fff;
+}
+
+.top_right ul li.eng {
+    right: 12%;
+}
+
+.top_right ul li.kor a {
+    color: #333;
+}
+
+.top_right .call {
+    font-size: 12px;
+    border: 1px solid #fff;
+    padding: 0 5px;
+    line-height: 24px;
+    position: absolute;
+    top: 67%;
+    right: 5.5%;
+}
+
+.hd.active .top_right .call {
+    border: 2px solid #333;
+}
+
+.menu_icon {
+    width: 50px;
+    height: 55px;
+    top: 67%;
+    right: 0;
+    cursor: pointer;
+}
+
+.menu_icon .close {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-top: 55px;
+}
+
+.menu_icon .close .bar1 {
+    width: 35px;
+    height: 2px;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    background-color: #fff;
+}
+
+.menu_icon .close .bar2 {
+    width: 35px;
+    height: 2px;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    background-color: #fff;
+}
+
+.menu_icon .close .bar3 {
+    width: 35px;
+    height: 2px;
+    position: absolute;
+    top: 75%;
+    right: 0;
+    background-color: #fff;
+}
+
+.hd.active .menu_icon .close .bar1 {
+    background-color: #333;
+    transform: rotate(45deg);
+    top: 25px;
+}
+
+.hd.active .menu_icon .close .bar2 {
+    display: none;
+}
+
+.hd.active .menu_icon .close .bar3 {
+    background-color: #333;
+    transform: rotate(-45deg);
+    top: 25px;
+}
