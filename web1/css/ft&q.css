@@ -1,0 +1,271 @@
+.ft_wrap1 {
+    clear: both;
+    width: 100%;
+    height: 50px;
+    background-color: #117acb;
+}
+
+.fnb {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.fnb li {
+    float: left;
+    width: 25%;
+    position: relative;
+}
+
+.fnb li .cur_cate {
+    display: block;
+    line-height: 50px;
+    color: #fff;
+    padding-left: 24px;
+    border-left: 1px solid #83b0d2;
+    cursor: pointer;
+}
+
+.fnb .popup {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: none;
+}
+
+.fnb li.on .popup {
+    display: block;
+}
+
+.fnb li:before {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #fff;
+}
+
+.fnb li.on:before {
+    content: "▲";
+}
+
+.fnb .popup li {
+    clear: both;
+    width: 100%;
+}
+
+.fnb .popup li a {
+    display: block;
+    color: #000;
+    padding-left: 24px;
+    line-height: 36px;
+}
+
+.fnb .popup li a:hover {
+    color: #42a2eb;
+    text-decoration: underline;
+}
+
+.ft_wrap2 {
+    width: 1280px;
+    margin: 0 auto;
+    clear: both;
+    position: relative;
+    border-top: 1px solid #f1f1f1;
+    height: auto;
+    overflow: hidden;
+}
+
+.ft_banner {
+    width: 200%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.ft_banner li {
+    float: left;
+}
+
+.ft_banner li a {
+    display: block;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.ft_banner li a img {
+    display: block;
+    height: 30px;
+    width: auto;
+}
+
+.ft_link li {
+    float: left;
+}
+
+.ft_link li a {
+    display: block;
+    color: #000;
+    padding: 15px;
+    padding-left: 0;
+}
+
+.ft_link li a:hover {
+    text-decoration: underline;
+}
+
+.ft_link li + li a:before {
+    content: "|";
+    padding-right: 10px;
+    color: #ccc;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.ft_link li:first-child a {
+    color: #42a2eb;
+}
+
+.copyright {
+    clear: both;
+    padding: 20px 0;
+}
+
+.ortxt {
+    color: chocolate;
+}
+
+.wamark {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+}
+
+.quick {
+    position: fixed;
+    right: 0px;
+    top: 40%;
+    z-index: 999;
+    width: 222px;
+    height: 240px;
+}
+
+.quick li {
+    clear: both;
+    margin: 14px;
+    height: 66px;
+    width: 120px;
+    transition: 0.5s;
+    position: relative;
+}
+
+.quick li.on {
+    width: 220px;
+}
+
+.quick li a {
+    display: block;
+}
+
+.quick li a span {
+    display: block;
+    float: left;
+    line-height: 66px;
+}
+
+.quick li a span.qtxt {
+    padding-right: 16px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.quick li.on a span.qtxt {
+    opacity: 1; font-family: 'HangeulNuriB'; font-size: 17px; text-shadow: 1px 1px 5px #000;
+}
+
+.quick li.item1.on a span.qtxt {
+    color: #62b26e;
+}
+
+.quick li.item2.on a span.qtxt {
+    color: #9f4bd8;
+}
+
+.quick li.item3.on a span.qtxt {
+    color: hotpink;
+}
+
+.quick li a span.qicon {
+    width: 66px;
+    height: 66px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 3px solid #fff;
+    background-color: transparent;
+    border-radius: 40px;
+    transition: 0.3s;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+}
+
+.quick li.on a span.qicon {
+    right: 86px;
+}
+
+.quick li.item1 a span.qicon {
+    background-image: url("./data/home/icon/qicon1.png");
+}
+
+.quick li.item2 a span.qicon {
+    background-image: url("./data/home/icon/qicon2.png");
+}
+
+.quick li.item3 a span.qicon {
+    background-image: url("./data/home/icon/qicon3.png");
+}
+
+.quick li.item1.on a span.qicon {
+    border: 3px solid #62b26e;
+    background-color: #62b26e;
+}
+
+.quick li.item2.on a span.qicon {
+    border: 3px solid #9f4bd8;
+    background-color: #9f4bd8;
+}
+
+.quick li.item3.on a span.qicon {
+    border: 3px solid hotpink;
+    background-color: hotpink;
+}
+
+.quick li a:after {
+    content: "";
+    display: block;
+    float: right;
+    width: 0px;
+    height: 3px;
+    top: 33px;
+    right: -14px;
+    transition: 0.5s;
+    position: absolute;
+}
+
+.quick li.on a:after {
+    width: 100px;
+}
+
+.quick li.item1 a:after {
+    background-color: #62b26e;
+}
+
+.quick li.item2 a:after {
+    background-color: #9f4bd8;
+}
+
+.quick li.item3 a:after {
+    background-color: hotpink;
+}

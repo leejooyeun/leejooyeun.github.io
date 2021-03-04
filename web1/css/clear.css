@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* clear.css */
+* { margin: 0; padding: 0; }
+body, html { width: 100%; }
+ul { list-style: none; }
+a { text-decoration: none; }
+img, button, input { border:none; outline:none; user-select:none; }
+

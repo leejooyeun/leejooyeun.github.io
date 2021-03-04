@@ -1,0 +1,272 @@
+body,
+html {
+    background-color: #fff;
+    font-family: 'HangeulNuriB';
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    clear: both;
+}
+
+.container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.hd {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+}
+
+.content {
+    padding-bottom: 20px;
+    background-color: #fff;
+    clear: both;
+    position: static;
+}
+
+.content:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*    .ft { bottom: 0; position:absolute; left: 0; width: 100%; }*/
+.vs {
+    clear: both;
+    width: 100%;
+    background-image: url("./data/serve/img/smain.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.page_container {
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: -130px;
+    height: auto;
+}
+
+.page_container:after {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: auto;
+    padding-bottom: 130px;
+}
+
+.page_header {
+    clear: both;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.page_tit1 {
+    font-size: 3em;
+    text-align: center;
+    padding-top: 2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px #333;
+}
+
+.page_com1 {
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px #333;
+    letter-spacing: 0.02em;
+    padding-bottom: 10em;
+}
+
+.page_tit2 {
+    width: 250px;
+    float: left;
+    line-height: 130px;
+    font-size: 1.5em;
+    background-color: #0e4e80;
+    color: #fff;
+    text-align: center;
+}
+
+.breadcrumb_box {
+    width: 1030px;
+    float: right;
+    background-color: #fff;
+    height: 130px;
+    border-bottom: 1px solid #999;
+}
+
+.cate_tit1 {
+    padding-left: 40px;
+    line-height: 2.4;
+    font-size: 2em;
+    color: #999;
+}
+
+.bread {
+    clear: both;
+}
+
+.bread_lst {
+    clear: both;
+    float: left;
+    padding-left: 40px;
+}
+
+.bread_lst li {
+    float: left;
+}
+
+.bread_lst li + li:before {
+    content: ">";
+    display: block;
+    float: left;
+    padding: 1em;
+    color: #666;
+}
+
+.bread_lst li a {
+    display: block;
+    padding: 1em;
+    white-space: nowrap;
+    font-weight: 300;
+    color: #666;
+}
+
+.sub_cate_tit {
+    padding: 1em;
+    font-weight: 200;
+    color: #666;
+}
+
+.bread_lst li.sub_cate_tit:before {
+    padding: 0px 1em;
+    font-weight: 300;
+}
+
+.cur_page {
+    display: block;
+    padding: 1em;
+    white-space: nowrap;
+    font-weight: 300;
+    color: #666;
+}
+
+.bread_lst li.home a {
+    background-image: url("./data/serve/icon/home.png");
+    background-repeat: no-repeat;
+    background-position: 0px center ;
+    padding-left: 1.5em;
+}
+
+.device_lst {
+    float: right;
+}
+
+.device_lst li {
+    float: left;
+}
+
+.device_lst li a {
+    display: block;
+    margin: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #999;
+}
+
+.device_lst li.sns a {
+    width: 32px;
+    height: 32px;
+    background-image: url("./data/serve/icon/sns.png");
+}
+
+.device_lst li.print a {
+    width: 32px;
+    height: 32px;
+    background-image: url("./data/serve/icon/printer.png");
+}
+
+.device_lst li.edit a {
+    padding: 4px 8px;
+    border-radius: 25px;
+}
+
+.page_content {
+    width: 1280px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.left_bar {
+    width: 250px;
+    float: left;
+}
+
+.lnb {
+    clear: both;
+    min-height: 800px;
+    background-color: #fff;
+}
+
+.lnb_item {
+    clear: both;
+}
+
+.sub_lnb {
+    height: 40px;
+    overflow: hidden;
+}
+
+.sub_lnb li {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    background-color: #fff;
+}
+
+.sub_lnb li a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 21px;
+}
+
+.sub_lnb.on {
+    height: auto;
+}
+
+.sub_lnb_tit {
+    border: 1px solid #666;
+    text-indent: 20px;
+}
+
+.sub_lnb.on .sub_lnb_tit {
+    background-color: #117acb;
+    color: #fff;
+}
+
+.right_bar {
+    width: calc(100% - 253px);
+    float: right;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.right_bar:after {
+    content: '';
+    display: block;
+    clear: both;
+}
