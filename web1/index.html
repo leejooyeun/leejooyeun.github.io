@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>이천 문화관광</title>
+    <meta name="viewport" content="">
+    <meta http-equiv="refresh" content="180">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="이천시청 관광문화 홈페이지">
+    <meta name="keywords" content="이천, 이천관광문화, 이천시청 관광문화, 이천 여행정보">
+    <meta name="description" content="이천관광문화 홈페이지">
+    <link rel="shortcut icon" href="./data/home/icon/favicon16.ico">
+    <link rel="shortcut icon" href="./data/home/icon/favicon32.ico">
+    <link rel="shortcut icon" href="./data/home/icon/favicon144.ico">
+    <link rel="shortcut icon" href="./data/home/icon/favicon240.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/clear.css">
+    <link rel="stylesheet" href="./css/fontset.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        .col1200 {
+            display: block;
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .col600 {
+            display: block;
+            width: 600px;
+            float: left;
+        }
+
+        .col300 {
+            display: block;
+            width: 300px;
+            float: left;
+        }
+
+        body,
+        html {
+            font-family: 'nsrL', 'nb'sans-serif;
+        }
+
+        .wrap {
+            width: 100%;
+            clear: both;
+        }
+
+        .hd {
+            width: 100%;
+            height: 50px;
+            background-color: #0b568f;
+        }
+
+        .hd_wrap {
+            width: 1200px;
+            margin: 0 auto;
+            clear: both;
+        }
+
+        .tnb {
+            width: 1200px;
+            height: 50px;
+            clear: both;
+        }
+
+        .tnb_left li {
+            float: left;
+            padding-left: 20px;
+            padding-right: 40px;
+        }
+
+        .tnb_right {
+            float: right;
+        }
+
+        .lang_box {
+            float: left;
+        }
+
+        .tnb_left li a,
+        .tnb_right li a {
+            display: block;
+            color: #fff;
+        }
+
+        .gnb {
+            width: 1200px;
+            height: 300px;
+        }
+
+        .content {
+            100vw height: auto;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lte IE 9]>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-1708370-27');
+    </script>
+-->
+    <script src="https://code.jquery.com/jquery-1.7.0.js"></script>
+    <script src="jquery.ajax-cross-origin.min.js"></script>
+    <!--    <script src="jquery.ajax-cross-origin.min.js"></script>-->
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                crossOrigin: true,
+                url: "http://www.weather.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108",
+                dataType: 'xml',
+                success: function(response) {
+                    console.log(response);
+                    $(response).find('location').each(function() {
+                        var city = $(this).find('city').text();
+                        if (city = '대전') {
+                            $("body").append(city + "<br>");
+                            $(this).find("data").each(function() {
+                                var output = $(this).find("tmEf").text() + " " + $(this).find("wf").text();
+                                $("body").append(output + "<br>");
+                            });
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+    <!--    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4962973NXP"></script>-->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4962973NXP');
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="hd">
+            <div class="hd_wrap">
+                <nav class="tnb">
+                    <ul class="tnb_left">
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">오시는길</a></li>
+                    </ul>
+                    <input type="checkbox" id="find_open_btn">
+                    <div class="find_window">
+                        <form action="" id="find_form" name="find_form" class="frm">
+                            <input type="text" id="keyword" class="find_input">
+                            <input type="text" id="find_btn" class="find_btn">
+                        </form>
+                    </div>
+                    <ul class="tnb_right">
+                        <li class="lang">
+                            <div class="lang_box">
+                                <span class="cur_lang">language</span>
+                                <a href="">English</a>
+                                <a href="">中文</a>
+                                <a href="">日文</a>
+                            </div>
+                        </li>
+                        <li class="ls"><a href="">목록</a></li>
+                        <li class="find">
+                            <label for="find_open_btn" class="find_open"></label>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hd_wrap">
+                <a href="index.html" class="logo"><img src="./data/home/img/logo.png" alt="로고"></a>
+                <nav class="gnb">
+                    <ul>
+                        <li class="mm">
+                            <a href="" class="dp1">한눈에이천</a>
+                            <div class="sub">
+                                <ul class="sub_cate">
+                                    <li class="sub_tit"><a href="">이천VR</a></li>
+                                    <li><a href="">설봉공원</a></li>
+                                    <li><a href="">온천공원</a></li>
+                                    <li><a href="">서희테마파크</a></li>
+                                    <li><a href="">성호호수연꽃단지</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_tit"><a href="">이천관광전자지도</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_tit"><a href="">이천9경</a></li>
+                                    <li><a href="">말머리바위</a></li>
+                                    <li><a href="">산수유마을</a></li>
+                                    <li><a href="">사기막골도예촌</a></li>
+                                    <li><a href="">설봉산성</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_tit"><a href="">체험관광</a></li>
+                                    <li><a href="">부래미마을</a></li>
+                                    <li><a href="">도니울마을</a></li>
+                                    <li><a href="">이천영어마을</a></li>
+                                    <li><a href="">자체방아마을</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_tit"><a href="">도자기</a></li>
+                                    <li><a href="">이천도자기</a></li>
+                                    <li><a href="">도자기 명장</a></li>
+                                    <li><a href="">도자기 공방</a></li>
+                                    <li><a href="">도자기 전시</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mm">
+                            <a href="" class="dp1">이천여행
+                                <div class="sub">
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">이천맛집</a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">숙박</a></li>
+                                        <li><a href="">펜션/민박</a></li>
+                                        <li><a href="">호텔/모텔</a></li>
+                                        <li><a href="">리조트/콘도</a></li>
+                                        <li><a href="">연수수련시설</a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">쇼핑/농특산물</a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">레저/스포츠</a></li>
+                                        <li><a href="">골프장</a></li>
+                                        <li><a href="">승마장</a></li>
+                                        <li><a href="">낚시터</a></li>
+                                        <li><a href="">인공암벽등반장</a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">이천온천/워터파크</a></li>
+                                        <li><a href="">미란다스파플러스</a></li>
+                                        <li><a href="">설봉온천</a></li>
+                                        <li><a href="">테르메덴</a></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mm"><a href="" class="dp1">즐거운축제
+                                <div class="sub">
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">축제행사</a></li>
+                                        <li><a href="">도자기축제</a></li>
+                                        <li><a href="">쌀문화축제</a></li>
+                                        <li><a href="">산수유축제</a></li>
+                                        <li><a href="">설봉산별빛축제</a></li>
+                                    </ul>
+                                    <ul class="sub_grp">
+                                        <li class="sub_tit"><a href="">이천아트홀</a></li>
+                                    </ul>
+                                    <ul class="sub_grp">
+                                        <li class="sub_tit"><a href="">이천시림박물관</a></li>
+                                        <li><a href="">박물관소개</a></li>
+                                        <li><a href="">전시실안내</a></li>
+                                        <li><a href="">유물기증안내</a></li>
+                                        <li><a href="">공지사항</a></li>
+                                    </ul>
+                                    <ul class="sub_grp">
+                                        <li class="sub_tit"><a href="">전시/관람</a></li>
+                                        <li><a href="">이천세라피아</a></li>
+                                        <li><a href="">이천설봉서원</a></li>
+                                        <li><a href="">시립월전미술관</a></li>
+                                        <li><a href="">서희역사관</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                        <li class="mm"><a href="" class="dp1">역사/문화
+                                <div class="sub">
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">국가지정문화재</a></li>
+                                        <li><a href="">반룡소</a></li>
+                                        <li><a href="">어재연장군생가</a></li>
+                                        <li><a href="">이천백송</a></li>
+                                        <li><a href="">장암리 마애보살반가상</a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">도지정문화재</a></li>
+                                        <li><a href="">김좌근고택</a></li>
+                                        <li><a href="">설설산성</a></li>
+                                        <li><a href="">이천거북놀이</a></li>
+                                        <li><a href="">이천중리3층석탑</a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">시지정문화재</a></li>
+                                        <li><a href="">도립리 육괴정</a></li>
+                                        <li><a href="">설봉서원절목</a></li>
+                                        <li><a href="">설봉서원</a></li>
+                                        <li><a href="">선읍리입상석불</a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">이천인물</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                        <li class="mm"><a href="" class="dp1">여행가이드
+                                <div class="sub">
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">여행준비</a></li>
+                                        <li><a href="">이천스마트관광맵</a></li>
+                                        <li><a href="">관광안내소</a></li>
+                                        <li><a href="">관광지요금</a></li>
+                                        <li><a href="">이천여행사</a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">교통정보</a></li>
+                                        <li><a href="">대중교통안내</a></li>
+                                        <li><a href="">주차장안내</a></li>
+                                        <li><a href="">자전거</a></li>
+                                        <li><a href="">교통불편신고센터</a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">문화축제알림</a></li>
+                                        <li><a href=""></a></li>
+                                        <li><a href=""></a></li>
+                                        <li><a href=""></a></li>
+                                        <li><a href=""></a></li>
+                                    </ul>
+                                    <ul class="sub_cate">
+                                        <li class="sub_tit"><a href="">자주묻는질문</a></li>
+                                        <li><a href=""></a></li>
+                                        <li><a href=""></a></li>
+                                        <li><a href=""></a></li>
+                                        <li><a href=""></a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                        <li class="mm">
+                            <a href="" class="dp1">커뮤니티</a>
+                            <div class="sub">
+                                <ul class="sub_cate">
+                                    <li class="sub_tit"><a href="">새소식</a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_tit"><a href="">내가찍은이천</a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_tit"><a href="">여행후기</a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_tit"><a href="">여행Q&A</a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="content">
+            <figure class="vs">
+                <ul class="ban_box">
+                    <li class="venner" id="vn1">
+                        <img src="" alt="">
+                        <div class="tit_box">
+                            <h2 class="ban_tit"></h2>
+                            <span class="ban_com"></span>
+                        </div>
+                    </li>
+                    <li class="venner" id="vn2">
+                        <img src="" alt="">
+                        <div class="tit_box">
+                            <h2 class="ban_tit"></h2>
+                            <span class="ban_com"></span>
+                        </div>
+                    </li>
+                    <li class="venner" id="vn3">
+                        <img src="" alt="">
+                        <div class="tit_box">
+                            <h2 class="ban_tit"></h2>
+                            <span class="ban_com"></span>
+                        </div>
+                    </li>
+                    <li class="venner" id="vn4">
+                        <img src="" alt="">
+                        <div class="tit_box">
+                            <h2 class="ban_tit"></h2>
+                            <span class="ban_com"></span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="btn_box">
+                    <li><button class="ban_btn on"></button></li>
+                    <li><button class="ban_btn"></button></li>
+                    <li><button class="ban_btn"></button></li>
+                    <li><button class="ban_btn"></button></li>
+                </ul>
+                <div id="werther">
+                </div>
+            </figure>
+            <div class="page" id="p1">
+                <section class="page_wrap">
+                    <h3 class="page_tit1">이천9경 및 맞춤관광지</h3>
+                    <h2 class="page_tit2">이천의 여행정보</h2>
+                    <div class="travel_box col1200">
+                        <ul class="grd_item left col600"></ul>
+                        <li class="gitem1 col300">
+                            <h3 class="gtit1">이천여행앱 다운로드</h3>
+                            <p class="gcom1">이천여행을 위한 필수 앱을 다운로드 받으세요</p>
+                            <a href="" class="gicon1"></a>
+                            <a href="" class="gicon2"></a>
+                        </li>
+                        <li class="gitem2 col300">
+                            <h3 class="gtit2"></h3>
+                            <a href="" class="umore"></a>
+                        </li>
+                        <li class="gitem3 col300">
+                            <h3 class="gtit2"></h3>
+                            <p class="gcom2"></p>
+                            <a href="" class="gmore2"></a>
+                        </li>
+                        <li class="gitem4 col300">
+                            <h3 class="gtit2"></h3>
+                            <a href=""><span class="gtxt"></span></a>
+                            <a href=""><span class="gtxt"></span></a>
+                            <a href=""><span class="gtxt"></span></a>
+                            <a href=""><span class="gtxt"></span></a>
+                        </li>
+                        <div class="grd_item right col600">
+                            <input type="radio" name="ra" class="ra" id="ra1" checked>
+                            <input type="radio" name="ra" class="ra" id="ra2">
+                            <input type="radio" name="ra" class="ra" id="ra3">
+                            <input type="radio" name="ra" class="ra" id="ra4">
+                            <input type="radio" name="ra" class="ra" id="ra5">
+                            <input type="radio" name="ra" class="ra" id="ra6">
+                            <input type="radio" name="ra" class="ra" id="ra7">
+                            <input type="radio" name="ra" class="ra" id="ra8">
+                            <ul class="slider1" id="sl1">
+                                <li class="item1">
+                                    <img src="./data/home/img/slider1.jpg" alt="말머리바위">
+                                    <div class="sltit_box">
+                                        <h4 class="sl_tit">이야기 여행</h4>
+                                        <h3 class="sl_tit2">말머리 바위</h3>
+                                        <p class="sl_com">말의 머리를 닮은 노성산 말머리 바위!</p>
+                                    </div>
+                                </li>
+                                <li class="item2">
+                                    <img src="./data/home/img/slider2.jpg" alt="도드람산봉">
+                                    <div class="sltit_box">
+                                        <h4 class="sl_tit">이야기 여행</h4>
+                                        <h3 class="sl_tit2">도드람 산봉</h3>
+                                        <p class="sl_com">효자와 산신령 이야기가 있는 저명산에 돼지 울음소리 들으러 가자!</p>
+                                    </div>
+                                </li>
+                                <li class="item3">
+                                    <img src="./data/home/img/slider3.jpg" alt="반룡소">
+                                    <div class="sltit_box">
+                                        <h4 class="sl_tit">이야기 여행</h4>
+                                        <h3 class="sl_tit2">반룡소</h3>
+                                        <p class="sl_com">하늘에 오르기 전 용의 모습을 한 소나무가 있다?!</p>
+                                    </div>
+                                </li>
+                                <li class="item4">
+                                    <img src="./data/home/img/slider4.jpg" alt="산수유마을">
+                                    <div class="sltit_box">
+                                        <h4 class="sl_tit">이야기 여행</h4>
+                                        <h3 class="sl_tit2">산수유 마을</h3>
+                                        <p class="sl_com">산수유가 남자한테 그렇게 좋다는데~ 다양한 체험이 진행되는 산수유마을로 오세요!</p>
+                                    </div>
+                                </li>
+                                <li class="item5">
+                                    <img src="./data/home/img/slider5.jpg" alt="사기막공도예촌">
+                                    <div class="sltit_box">
+                                        <h4 class="sl_tit">이야기 여행</h4>
+                                        <h3 class="sl_tit2">사기막골도예촌</h3>
+                                        <p class="sl_com">도에장인들이 모이는 도예촌 전통 도자기 구경하자!</p>
+                                    </div>
+                                </li>
+                                <li class="item6">
+                                    <img src="./data/home/img/slider6.jpg" alt="삼형제바위">
+                                    <div class="sltit_box">
+                                        <h4 class="sl_tit">이야기 여행</h4>
+                                        <h3 class="sl_tit2">삼형제바위</h3>
+                                        <p class="sl_com">효성 지극한 삼형제의 슬픈 전설! 궁금하면 놀러와~</p>
+                                    </div>
+                                </li>
+                                <li class="item7">
+                                    <img src="./data/home/img/slider7.jpg" alt="설봉산성">
+                                    <div class="sltit_box">
+                                        <h4 class="sl_tit">이야기 여행</h4>
+                                        <h3 class="sl_tit2">설봉산성</h3>
+                                        <p class="sl_com">이천시와 주변 지역이 한눈에 들어오는 이곳! 등산욕구 생기는 이곳!</p>
+                                    </div>
+                                </li>
+                                <li class="item8">
+                                    <img src="./data/home/img/slider8.jpg" alt="애련정">
+                                    <div class="sltit_box">
+                                        <h4 class="sl_tit">이야기 여행</h4>
+                                        <h3 class="sl_tit2">애련정</h3>
+                                        <p class="sl_com">조선왕조실록에도 등장! 이천 핫플레이스에서 인생샷찍자!</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="slbtn_box" id="sl_bow1">
+                                <li class="item1"><label for="ra1">말머리바위</label></li>
+                                <li class="item2"><label for="ra2">도드람산봉</label></li>
+                                <li class="item3"><label for="ra3">반룡소</label></li>
+                                <li class="item4"><label for="ra4">산수유마을</label></li>
+                                <li class="item5"><label for="ra5">서기막골도예촌</label></li>
+                                <li class="item6"><label for="ra6">삼형제바위</label></li>
+                                <li class="item7"><label for="ra7">설봉산성</label></li>
+                                <li class="item8"><label for="ra8">애련정</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="page" id="p2">
+                <section class="page_wrap">
+                    <h3 class="page_tit1">축제행사 및 다양한 정보</h3>
+                    <h2 class="page_tit2">이천의 테마여행</h2>
+                    <div class="tema_box col1200">
+                        <div class="grd_item left col600">
+                            <input type="radio" name="rd" class="rd" id="rd1" checked>
+                            <input type="radio" name="rd" class="rd" id="rd2">
+                            <input type="radio" name="rd" class="rd" id="rd3">
+                            <input type="radio" name="rd" class="rd" id="rd4">
+                            <ul class="slider2" id="sl2">
+                                <li class="item1"><a href="">
+                                        <img src="" alt="">
+                                        <div class="sl_titbox">
+                                            <h2 class="sl_tit3"></h2>
+                                            <span class="btxt"></span>
+                                            <span class="gtxt"></span>
+                                            <p class="sl_com2"></p>
+                                        </div>
+                                    </a></li>
+                                <li class="item2"><a href="">
+                                        <img src="" alt="">
+                                        <div class="sl_titbox">
+                                            <h2 class="sl_tit3"></h2>
+                                            <span class="btxt"></span>
+                                            <span class="gtxt"></span>
+                                            <p class="sl_com2"></p>
+                                        </div>
+                                    </a></li>
+                                <li class="item3"><a href="">
+                                        <img src="" alt="">
+                                        <div class="sl_titbox">
+                                            <h2 class="sl_tit3"></h2>
+                                            <span class="btxt"></span>
+                                            <span class="gtxt"></span>
+                                            <p class="sl_com2"></p>
+                                        </div>
+                                    </a></li>
+                                <li class="item4"><a href="">
+                                        <img src="" alt="">
+                                        <div class="sl_titbox">
+                                            <h2 class="sl_tit3"></h2>
+                                            <span class="btxt"></span>
+                                            <span class="gtxt"></span>
+                                            <p class="sl_com2"></p>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                            <ul class="slbtn_box2" id="sl_box2">
+                                <li class="item1">
+                                    <h3 class="gtit2"></h3>
+                                    <label for="rd4" class="lbtn"></label>
+                                    <div class="slimg"></div>
+                                    <label for="rd2" class="rbtn"></label>
+                                </li>
+                                <li class="item2">
+                                    <h3 class="gtit2"></h3>
+                                    <label for="rd4" class="lbtn"></label>
+                                    <div class="slimg"></div>
+                                    <label for="rd2" class="rbtn"></label>
+                                </li>
+                                <li class="item3">
+                                    <h3 class="gtit2"></h3>
+                                    <label for="rd4" class="lbtn"></label>
+                                    <div class="slimg"></div>
+                                    <label for="rd2" class="rbtn"></label>
+                                </li>
+                                <li class="item4">
+                                    <h3 class="gtit2"></h3>
+                                    <label for="rd4" class="lbtn"></label>
+                                    <div class="slimg"></div>
+                                    <label for="rd2" class="rbtn"></label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grd_item_right col600">
+                            <li class="item1 col300">
+                                <a href="">
+                                    <h3 class="gtit2">
+                                        <span></span>
+                                        <span class="corg"></span>
+                                    </h3>
+                                    <h2 class="gtit3"></h2>
+                                </a>
+                            </li>
+                            <li class="item2 col300">
+                                <h3 class="gtit2"></h3>
+                                <a href="" class="umore"></a>
+                            </li>
+                            <li class="item3 col300">
+                                <h3 class="gtit2"></h3>
+                                <p class="gcom2"></p>
+                                <a href="" class="gmore2"></a>
+                            </li>
+                            <li class="item4 col300">
+                                <h3 class="gtit2"></h3>
+                                <a href="" class="icon1">
+                                    <span class="gtxt"></span>
+                                </a>
+                                <a href="" class="icon2">
+                                    <span class="gtxt"></span>
+                                </a>
+                                <a href="" class="icon3">
+                                    <span class="gtxt"></span>
+                                </a>
+                                <a href="" class="icon4">
+                                    <span class="gtxt"></span>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="page" id="p3">
+                <section class="page_wrap">
+                    <h3 class="page_tit1">소식 및 다양한 정보</h3>
+                    <h2 class="page_tit2">이천의 소식정보</h2>
+                    <ul class="ico_box">
+                        <li class="item1"><a href="">
+                                <img src="./data/home/icon/sicon1.png" alt="">
+                                <span class="hv_txt"></span></a></li>
+                        <li class="item2"><a href=""><img src="./data/home/icon/sicon2.png" alt=""><span class="hv_txt"></span></a></li>
+                        <li class="item3"><a href=""><img src="./data/home/icon/sicon3.png" alt=""><span class="hv_txt"></span></a></li>
+                        <li class="item4"><a href=""><img src="./data/home/icon/sicon4.png" alt=""><span class="hv_txt"></span></a></li>
+                        <li class="item5"><a href=""><img src="./data/home/icon/sicon5.png" alt=""><span class="hv_txt"></span></a></li>
+                        <li class="item6"><a href=""><img src="./data/home/icon/sicon6.png" alt=""><span class="hv_txt"></span></a></li>
+                        <li class="item7"><a href=""><img src="./data/home/icon/sicon7.png" alt=""><span class="hv_txt"></span></a></li>
+                        <li class="item8"><a href=""><img src="./data/home/icon/sicon8.png" alt=""><span class="hv_txt"></span></a></li>
+                        <li class="item9"><a href=""><img src="./data/home/icon/sicon9.png" alt=""><span class="hv_txt"></span></a>
+                        </li>
+                    </ul>
+                    <div class="nt_box">
+                        <div class="left">
+                            <h3 class="nt_tit"></h3>
+                            <a href="" class="more2"></a>
+                            <ul class="nt_list">
+                                <li class="cur_list">
+                                    <a href="" class="txt_tit"></a>
+                                    <a href="" class="txt_com"></a>
+                                </li>
+                                <li>
+                                    <a href="" class="txt_tit"></a>
+                                    <span class="data"></span>
+                                </li>
+                                <li>
+                                    <a href="" class="txt_tit"></a>
+                                    <span class="data"></span>
+                                </li>
+                                <li>
+                                    <a href="" class="txt_tit"></a>
+                                    <span class="data"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <ul class="right_box">
+                                <div class="tit_box">
+                                    <h3 class="tit1"></h3>
+                                    <p class="com1"></p>
+                                    <ul class="btn_box3">
+                                        <li><button class="prev"></button></li>
+                                        <li><button class="play"></button></li>
+                                        <li><button class="next"></button></li>
+                                    </ul>
+                                </div>
+                                <ul class="img_box">
+                                    <li class="item1">
+                                        <a href="">
+                                            <img src="" alt="">
+                                            <h4 class="img_tit"></h4>
+                                            <p class="img_com"></p>
+                                        </a>
+                                    </li>
+                                    <li class="item2">
+                                        <a href="">
+                                            <img src="" alt="">
+                                            <h4 class="img_tit"></h4>
+                                            <p class="img_com"></p>
+                                        </a>
+                                    </li>
+                                    <li class="item3">
+                                        <a href="">
+                                            <img src="" alt="">
+                                            <h4 class="img_tit"></h4>
+                                            <p class="img_com"></p>
+                                        </a>
+                                    </li>
+                                    <li class="item4">
+                                        <a href="">
+                                            <img src="" alt="">
+                                            <h4 class="img_tit"></h4>
+                                            <p class="img_com"></p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="ft">
+            <div class="ft_wrap1">
+                <nav class="fnb">
+                    <ul>
+                        <li>
+                            <span class="cur_cate"></span>
+                            <ul class="popup">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="cur_cate"></span>
+                            <ul class="popup">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="cur_cate"></span>
+                            <ul class="popup">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="cur_cate"></span>
+                            <ul class="popup">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="ft_wrap2">
+                <ul class="ft_banner">
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="ft_wrap2">
+                <nav class="ft_link">
+                    <ul>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </nav>
+                <div class="quict">
+                    <p class="copy1"></p>
+                    <p class="copy2"></p>
+                </div>
+                <a href="" class="wamark">
+                    <img src="" alt="">
+                </a>
+            </div>
+        </footer>
+        <div class="quick">
+            <ul>
+                <li class="item1"><a href=""><span class="qtxt">여행정보</span><span class="qicon"></span></a></li>
+                <li class="item2"><a href=""><span class="qtxt">태마여행</span><span class="qicon"></span></a></li>
+                <li class="item3"><a href=""><span class="qtxt">소식정보</span><span class="qicon"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
