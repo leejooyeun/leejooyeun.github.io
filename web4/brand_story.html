@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+    <meta name="refresh" content="180">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 				
+    <meta name="msapplication-TileImage" content="./data/main/favicon-320.png">
+    <meta name="application-name" content="innisfree">
+    <meta name="keywords" content="이니스프리, 화장품, 그린티, 화산송이, 자연주의">
+    <meta property="og:title" content="이니스프리">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="이니스프리 공식 홈페이지">
+    <meta property="og:image" content="favicon-320.ico">
+    <meta property="og:site_name" content="이니스프리">
+    <link rel="shortcut icon" href="./data/main/favicon-320.png">
+    <link rel="shortcut icon" href="./data/main/favicon-320.ico">
+    <link rel="shortcut icon" href="./data/main/favicon-32.png">
+    <link rel="shortcut icon" href="./data/main/favicon-32.ico">
+    <link rel="stylesheet" href="./fontset.css">
+    <link rel="stylesheet" href="./clear.css">
+    <link rel="stylesheet" href="./reset.css">
+    <title>이니스프리</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/device.js"></script>
+    <script>
+    $(document).ready(function(){
+//        deviceCheck1();
+    });
+    </script>
+    <link rel="stylesheet" href="./bx/bxslider.css"> 
+    <link rel="stylesheet" href="./commont.css">  
+    <link rel="stylesheet" href="./sub_commont.css">  
+    <style>
+        #p4{width: 100%; margin: 0 auto;}
+        #p4 img.item1{display: block; width: 1920px; height: 906px; margin: 1em auto;  }
+        #p4 h2{font-size: 48px; font-weight: bold; padding-bottom: 20px;}
+        #p4 .csr_box{width: 1600px; margin: 0 auto;}
+        #p4 .csr{float: left; margin: 10px;}
+        #p4 .csr a{display: block; color: #fff; background-color:#0e4035; width: 80px; height: 40px; text-align: center; line-height: 40px; border-radius: 30px; font-size: 25px; margin: 1.3em auto; font-weight: bold;}
+        #p4 .csr a:hover{color: #0e4035; background-color:#fff; font-weight: bold; border: 2px solid #0e4035; box-sizing: border-box; }
+    </style>
+     <script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var pageTop = $(window).scrollTop();
+            if(pageTop>=350) {
+                $(".hd").addClass("active");
+            } else {
+                $(".hd").removeClass("active");
+            }
+        });
+    });    
+    </script>
+</head>
+<body>
+     <div class="wrap">
+        <header class="hd">
+           <div class="col1400 clrfx">
+                <ul class="top_nb clrfx">
+                    <li class="cate"><a href="join.html">회원가입</a></li>
+                    <li class="cate"><a href="login.html">로그인</a></li>
+                    <li class="cate"><a href="mypage.html">마이페이지</a></li>
+                    <li class="cate"><a href="cart.html">장바구니(<span class="cart_num">0</span>)</a></li>
+                    <li class="cate"><a href="search.html">배송조회</a></li>
+                </ul>
+            </div>
+            <div class="hd_wrap clefx">
+                <div class="col1400 clefx">
+                    <a href="index.html" class="logo"><img src="./data/main/logo_basic.png" alt="로고"></a>
+                    <nav class="gnbbox">
+                        <ul class="gnb_lst clrfx">
+                            <li><a href="movie.html">홍보영상</a></li>
+                            <li ><a href="product.html">제품소개</a></li>
+                            <li><a href="sales.html">제품구매하기</a></li>
+                            <li class="active"><a href="brand_story.html">브랜드이야기</a></li>
+                            <li><a href="qanda.html">질문하기</a></li>
+                        </ul>
+                    </nav>
+                    <a href="index.html" class="logo_ct"></a>
+                </div>
+            </div>
+         </header>
+         <main class="main">
+            <div class="bread_box">
+                <p class="breadcrumb">
+                    <a href="index.html">홈</a> &gt; <span class="cur_page">브렌드이야기</span>
+                </p>
+            </div>
+             <div class="page" id="p4">
+                <img src="./data/MAIN/p4.jpg" alt="브렌드" class="item1">
+                <div class="csr_box">
+                   <h2>INNISFREE CSR STORY</h2>
+                    <div class="csr ytb_box">
+                        <iframe width="500" height="300" src="https://www.youtube.com/embed/LhKaGl0BhFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a href="" class="more">more</a>
+                    </div>
+                    <div class="csr">
+                        <img src="./data/MAIN/crs.jpg" alt="브렌드스토리">
+                        <a href="" class="more">more</a>
+                    </div>
+                    <div class="csr ytb_box">
+                        <iframe width="500" height="300" src="https://www.youtube.com/embed/37B9cYh9fC4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a href="" class="more">more</a>
+                    </div>
+                </div>
+             </div>
+         </main>
+         <footer>
+             <div class="footer col1400">
+                 <ul class="ft ">
+                     <li class="item1">
+                        <div class="ft_lst">
+                             <a href="">회사소개</a>
+                             <a href="">이용안내</a>
+                             <a href="">개인정보처리방침</a>
+                             <a href="">이용약관</a>
+                             <p class="compony">(주)이니스프리 서울특별시 용산구 한강대로 100(한강로2가) 7층 이니스프리 대표이사 임혜영<br>사업자 등록번호 106-86-68127 통신판매신고번호 2018-서울용산-0014 <br>이메일 주소 innisfree@innisfree.com 비즈니스제휴/입점문의 partner.biz@innisfree.com</p>
+                             <p class="copy">Copyright © 2019 Innisfree. All Rights Reserved.</p>
+                         </div>
+                     </li>
+                     <li class="item2">
+                         <h2>상담신청</h2>
+                         <h1>080-380-0114</h1>
+                         <p class="dt">운영시간 AM 09:00 ~ PM 18:00 (주말 및 공휴일 휴무)<br>점심시간 PM 12:00 ~ PM 13:00</p>
+                     </li>
+                     <li class="item3">
+                         <a href="index.html"><img src="./data/main/logo_basic.png" alt="로고"></a>
+                     </li>
+                 </ul>
+             </div>
+         </footer>
+     </div>
+</body>
+</html>

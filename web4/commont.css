@@ -1,0 +1,206 @@
+a {
+    text-decoration: none;
+}
+
+body,
+html {
+    font-family: "Cafe24", sans-serif;
+}
+
+.hd {
+    width: 100%;
+    clear: both;
+    z-index: 99;
+}
+
+.hd_wrap {
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.col1400 {
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    clear: both;
+}
+
+.clrfx:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.logo {
+    display: block;
+    width: 204px;
+    height: 44px;
+    position: absolute;
+    top: 11px;
+    left: 0;
+}
+
+.top_nb {
+    width: 100%;
+    clear: both;
+    float: right;
+}
+
+.top_nb li {
+    float: right;
+    height: 50px;
+}
+
+.top_nb li a {
+    color: #666;
+    display: block;
+    margin: auto 10px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.top_nb li a:hover {
+    text-decoration: underline;
+    color: darkcyan;
+}
+
+.gnb {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.gnbbox {
+    width: 1000px;
+    margin: 0 auto;
+    padding-left: 20%;
+}
+
+.gnb_lst li {
+    float: left;
+    margin-left: 45px;
+}
+
+.gnb_lst li a {
+    display: block;
+    width: 103px;
+    text-align: center;
+    color: #666;
+    font-size: 1.3em;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+.gnb_lst li a:hover {
+    background-image: url(./data/main/gnb.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hd_wrap .col1400 .logo_ct {
+    display: block;
+    width: 77px;
+    height: 44px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-image: url(./data/main/logo_img.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+body > div > header > div.hd_wrap.clefx > div > a.logo_ct {
+    display: block;
+    width: 77px;
+    height: 55px;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    background-image: url(./data/main/logo_img.png);
+}
+
+.page {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+.page:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.footer {
+    height: 200px;
+    width: 100%;
+    border-top: 1px solid #999;
+    margin-top: 40px;
+}
+
+.footer .ft {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.footer .ft li {
+    float: left;
+    padding-right: 20px;
+    margin-top: 40px;
+}
+
+.footer .ft li.item1 .ft_lst {
+    width: 600px;
+}
+
+.footer .ft li.item1 .ft_lst a {
+    display: block;
+    margin: 20px;
+    text-align: center;
+    color: #333;
+    float: left;
+    font-weight: 800;
+}
+
+.footer .ft li.item1 .ft_lst a:hover {
+    text-decoration: underline;
+}
+
+.footer .ft li.item1 .ft_lst p {
+    display: block;
+    clear: both;
+}
+
+.footer .ft li.item1 .ft_lst p.copy {
+    margin-top: 20px;
+}
+
+.footer .ft li.item2 h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.footer .ft li.item2 h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer .ft li.item2 .dt {
+    display: block;
+    margin-top: 20px;
+}
+
+.footer .ft li.item3 {
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+.footer .ft li.item3 img {
+    display: block;
+    width: 204px;
+    height: 44px;
+    margin: 0 auto;
+}

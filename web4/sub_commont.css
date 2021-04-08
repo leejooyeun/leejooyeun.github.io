@@ -1,0 +1,11 @@
+@charset "utf-8";
+.gnb_lst { padding-top: 0; }
+.gnb_lst li { position:relative;  }     
+
+.gnb_lst li.active { background-color:#0e4035; }
+.gnb_lst li.active a { color:#fff; background-color:transparent; width: 103px; margin: 0 auto; text-align: center; }    
+
+.bread_box { clear:both; width: 1400px; margin: 1em auto; }
+.breadcrumb {  text-align:right;  color:#333; font-size:16px; word-spacing:8px; }
+.breadcrumb a { color:#333; }
+.breadcrumb a:hover { color:#000; font-weight: bold; text-decoration: underline; }

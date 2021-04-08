@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배너01</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            font-family: 'Noto Sans KR', sans-serif;
+            overflow-x: hidden;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button,
+        input {
+            border: 0;
+            outline: 0;
+            background: none;
+        }
+
+        h2,
+        h3,
+        p {
+            line-height: 1.6;
+        }
+
+        .wrap {
+            clear: both;
+            width: 100%;
+            position: relative;
+            margin-top: 100px;
+            overflow: hidden;
+        }
+
+        .tit {
+            line-height: 3;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .tit_url {
+            line-height: 1.6;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+
+        .vs {
+            clear: both;
+        }
+
+        .more {
+            display: inline-block;
+            font-size: 20px;
+            padding: 12px 16px;
+            border-radius: 40px;
+            border: 3px solid #fff;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            right: 80px;
+            bottom: 80px;
+        }
+
+        .tit_box {
+            position: absolute;
+            color: #fff;
+            text-shadow: 1px 1px 2px #333;
+            padding-left: 80px;
+            padding-top: 40px;
+        }
+    </style>
+    <link rel="stylesheet" href="bx/jquery.bxslider.css">
+    <link rel="stylesheet" href="owl/owl.carousel.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <style>
+        #vs1 {width: 1280px;height: 550px; margin: 0 auto; position:relative; overflow: hidden;}
+        #vs2 {width: 1280px; height: 550px; margin: 0 auto; position: relative; overflow: hidden;}
+        #vs3 {width: 1280px; height: 550px; margin: 0 auto; position: relative; overflow: hidden;}
+        
+        .owl-prev, .owl-next {position: absolute; top: 50%; bottom: 50%; text-indent: -9999px;background-repeat: no-repeat;}
+        .owl-prev {left: 50px;display: block;width: 45px;height: 45px;background-image: url(./prev.png);}
+        .owl-next {right: 50px;display: block;width: 45px;height: 45px;background-image: url(./next.png);}
+        .owl-dots{position: absolute;bottom: 50px;left: 50%; width: 200px;} 
+        .owl-dot{float: left;} 
+        .owl-dot span {display: block; width: 12px;height: 12px;border-radius: 7px; background-color: #fff; margin: 10px;}
+        
+        .slick-prev, .slick-next {position: absolute; top: 50%; bottom: 50%; text-indent: -9999px;background-repeat: no-repeat;}
+        .slick-prev {left: 50px;}
+        .slick-next {right: 50px;}
+        .slick-prev:before {content: "◀"; width: 15px; height: 15px; display: block; position: absolute; color: #fff;}
+        .slick-dots{position: absolute;bottom: 50px;left: 50%; width: 200px;} 
+        .slick-dot{float: left;} 
+        .slick-dot li {display: block; width: 12px;height: 12px;border-radius: 7px; background-color: #fff; margin: 10px;}
+    </style>
+    
+</head>
+
+<body>
+    <div class="wrap bx-wrapper">
+        <h2 class="tit">bx slider</h2>
+        <h3 class="tit_url">https://bxslider.com/</h3>
+        <figure class="bx-viewport visual1" id="vs1">
+            <ul class="bxslider">
+                <li class="item">
+                    <div class="tit_box">
+                        <h2>첫 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/333/fff" title="이미지1" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </li>
+                <li class="item">
+                    <div class="tit_box">
+                        <h2>두 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지2" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </li>
+                <li class="item">
+                    <div class="tit_box">
+                        <h2>세 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/174697/fff" title="이미지3" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </li>
+                <li class="item">
+                    <div class="tit_box">
+                        <h2>네 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지4" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </li>
+            </ul>
+            <script src="bx/jquery.bxslider.js"></script>
+            <script class="script_bxslider">
+            $(document).ready(function(){
+                $('.bxslider').bxSlider({
+                    auto: true,
+                    speed: 500,
+                    pause:4000,
+                    mode: 'horizontal',
+                    autoControls: true,
+                    pager: true,
+                    captions: true,
+                  });
+                });
+                </script>
+        </figure>
+
+    </div>
+
+
+    <div class="wrap">
+        <h2 class="tit">owl carousel slider</h2>
+        <h3 class="tit_url">https://owlcarousel2.github.io/OwlCarousel2/</h3>
+        <div class="visual2" id="vs2">
+            <ul class="owl-carousel">
+                <li class="item">
+                    <div class="tit_box">
+                        <h2>첫 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/333/fff" title="이미지1" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </li>
+                <li class="item">
+                    <div class="tit_box">
+                        <h2>두 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지2" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </li>
+                <li class="item">
+                    <div class="tit_box">
+                        <h2>세 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/174697/fff" title="이미지3" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </li>
+                <li class="item">
+                    <div class="tit_box">
+                        <h2>네 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지4" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </li>
+            </ul>
+        </div>
+        <script src="owl/owl.carousel.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.owl-carousel').owlCarousel({
+                    autoplay: true,
+                    loop: true,
+                    margin:10,
+                    nav: true,
+                    mouseDrag: true,
+                    dots: true,
+                    touchDrag: true,
+                });
+            });
+        </script>
+    </div>
+
+
+    <div class="wrap">
+        <h2 class="tit">slick slider</h2>
+        <h3 class="tit_url">https://kenwheeler.github.io/slick/</h3>
+        <div class="visual3" id="vs3">
+            <div class="slider single-item">
+                <div class="item">
+                    <div class="tit_box">
+                        <h2>첫 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/333/fff" title="이미지1" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </div>
+                <div class="item">
+                    <div class="tit_box">
+                        <h2>두 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지2" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </div>
+                <div class="item">
+                    <div class="tit_box">
+                        <h2>세 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/174697/fff" title="이미지3" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </div>
+                <div class="item">
+                    <div class="tit_box">
+                        <h2>네 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지4" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </div>
+            </div>
+        </div>
+        <script src="slick/slick.js"></script>
+        <script>
+        $(document).ready(function() {
+           $('.single-item').slick({
+               dots: true,
+               arrows: true,
+               infinite: true,
+               speed: 300,
+               autoplay: true,
+               autoplaySpeed: 3000,
+            });
+        });
+        </script>
+    </div>
+
+
+    <div class="wrap">
+        <h2 class="tit">swiper slider</h2>
+        <h3 class="tit_url">https://swiperjs.com/</h3>
+        <figure class="swiper-container" id="vs4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-swiper-autoplay="4000">
+                    <div class="tit_box">
+                        <h2>첫 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/333/fff" title="이미지1" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </div>
+                <div class="swiper-slide" data-swiper-autoplay="4000">
+                    <div class="tit_box">
+                        <h2>두 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지2" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </div>
+                <div class="swiper-slide" data-swiper-autoplay="4000">
+                    <div class="tit_box">
+                        <h2>세 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/174697/fff" title="이미지3" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </div>
+                <div class="swiper-slide" data-swiper-autoplay="4000">
+                    <div class="tit_box">
+                        <h2>네 번째 이미지</h2>
+                    </div>
+                    <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지4" alt="이미지1">
+                    <a href="" class="more">MORE</a>
+                </div>
+            </div>
+            <div class="swiper-pagination">
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </figure>
+        
+    </div>
+
+
+    <div class="wrap">
+        <h2 class="tit">wow slider</h2>
+        <h3 class="tit_url">https://wowslider.com/</h3>
+        <figure class="visual5" id="wowslider-container">
+            <div class="ws_images">
+                <ul>
+                    <li class="item">
+                        <img src="https://placehold.it/1280x480/333/fff" title="이미지1" alt="이미지1">
+                    </li>
+                    <li class="item">
+                        <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지2" alt="이미지1">
+                    </li>
+                    <li class="item">
+                        <img src="https://placehold.it/1280x480/174697/fff" title="이미지3" alt="이미지1">
+                    </li>
+                    <li class="item">
+                        <img src="https://placehold.it/1280x480/05a4a6/fff" title="이미지4" alt="이미지1">
+                    </li>
+                </ul>
+            </div>
+            <div class="ws_bullets">
+                <div>
+                    <a href="javascript:;" title="River"><span><img src="https://placehold.it/150x90/333/fff" alt="River">content slider jquery</span></a>
+                    <a href="javascript:;" title="Forest"><span><img src="https://placehold.it/150x90/05a4a6/fff" alt="Forest">jquery responsive content slider </span></a>
+                    <a href="javascript:;" title="Wild"><span><img src="https://placehold.it/150x90/174697/fff" alt="Wild">jquery slider with content </span></a>
+                    <a href="javascript:;" title="Wild"><span><img src="https://placehold.it/150x90/05a4a6/fff" alt="Wild">jquery slider with content </span></a>
+                </div>
+            </div>
+            <button class="ws_prev"></button>
+            <button class="ws_next"></button>
+            <a href="#" class="ws_frame"></a>
+            <div class="ws_shadow"></div>
+        </figure>
+
+    </div>
+    <div class="wrap"></div>
+</body></html>
