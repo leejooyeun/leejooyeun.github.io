@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+body,
+html {
+    width: 100%;
+    clear: both;
+    font-family: 'Cafe24';
+}
+button, input{font-family: 'Cafe24';}
+
+.clx:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.hd {
+    width: 100%;
+    height: 50px;
+    padding-top: 20px;
+    border-bottom: 1px solid #bbb;
+    background-color: #fff;
+    z-index: 50;
+}
+
+.hd:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.hd .it {
+    float: left;
+}
+
+.back {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.hd .tit {
+    font-size: 20px;
+    font-weight: bold;
+    width: 270px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.mb {
+    padding-top: 0;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+}
+
+.menu_btn i {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 7px auto;
+    background-color: #863e0e;
+}
+
+.hd.active ~ .mb .menu_btn i {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 99;
+}
+
+.hd.active ~ .mb.it > span > i.bar1 {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.hd.active ~ .mb.it > span > i.bar2 {
+    display: none;
+}
+
+.hd.active ~ .mb.it > span > i.bar3 {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+.teb_lst {
+    clear: both;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 71px;
+    left: 0;
+    z-index: 30;
+}
+
+.teb_lst button {
+    float: left;
+    width: 100px;
+    border-bottom: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    box-sizing: border-box;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-family: 'Cafe24';
+}
+
+.teb_lst .tb {
+    float: left;
+}
+
+.teb_lst .teb4 {
+    border-right: none;
+}
+
+.teb_lst .teb1 {
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    box-sizing: border-box;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    background-image: url(../data/teb1.png);
+    text-indent: 15px;
+}
+
+.teb_lst .teb2.on {
+    background-image: url(../data/teb2.png);
+    width: 100px;
+    text-indent: 15px;
+}
+
+.teb_lst .teb3.on {
+    background-image: url(../data/teb3.png);
+    width: 100px;
+    text-indent: 20px;
+}
+
+.teb_lst .teb4.on {
+    background-image: url(../data/teb4.png);
+    width: 100px;
+    text-indent: 28px;
+}
+
+.teb_lst:after {
+    content: "";
+    display: block;
+    clear: both;
+}

@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+.teb_lst {
+    clear: both;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 71px;
+    left: 0;
+    z-index: 30;
+}
+
+.teb_lst button {
+    float: left;
+    width: 100px;
+    border-bottom: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    box-sizing: border-box;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-family: 'Cafe24';
+}
+
+.teb_lst .tb {
+    float: left;
+}
+
+.teb_lst .teb4 {
+    border-right: none;
+}
+
+.teb_lst .teb1 {
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    box-sizing: border-box;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    background-image: url(../data/teb1.png);
+    text-indent: 15px;
+}
+
+.teb_lst .teb2.on {
+    background-image: url(../data/teb2.png);
+    width: 100px;
+    text-indent: 15px;
+}
+
+.teb_lst .teb3.on {
+    background-image: url(../data/teb3.png);
+    width: 100px;
+    text-indent: 20px;
+}
+
+.teb_lst .teb4.on {
+    background-image: url(../data/teb4.png);
+    width: 100px;
+    text-indent: 28px;
+}
+
+.teb_lst:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.page {
+    width: 100%;
+    height: auto;
+    clear: both;
+}
+
+#p1 {
+    width: 100%;
+    height: 100vh;
+    clear: both;
+}
+
+.lst {
+    width: 100%;
+    height: 100vh;
+    clear: both;
+    overflow-y: auto;
+}
+
+.lst li {
+    width: 100%;
+    height: 140px;
+    clear: both;
+    border-bottom: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+}
+
+.lst .item5 {
+    margin-bottom: 160px
+}
+
+#p3 .lst .item4 {
+    margin-bottom: 160px
+}
+
+.lst li .img {
+    width: 110px;
+    height: 110px;
+    float: left;
+}
+
+.lst li img {
+    display: block;
+    width: 96px;
+    height: 96px;
+    margin: 14px;
+}
+
+.txt {
+    width: 250px;
+    float: right;
+}
+
+.txt .txt_wrap {
+    width: 230px;
+    margin: 10px auto;
+}
+
+.txt .txt_wrap .tit {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.txt .txt_wrap .tit_s {
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+.txt .txt_wrap .num {
+    display: block;
+    float: left;
+}
+
+.txt .txt_wrap .num1 {
+    display: block;
+    font-size: 18px;
+    color: #808183;
+    position: relative;
+    width: 62px;
+    margin-right: 10px;
+}
+
+.txt .txt_wrap .num1:after {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 1px;
+    background-color: #808183;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    z-index: 1;
+}
+
+.txt .txt_wrap .num2 {
+    display: block;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.txt .txt_wrap .seile {
+    display: block;
+    font-size: 12px;
+    color: red;
+}
+
+.fnb {
+    z-index: 97;
+}

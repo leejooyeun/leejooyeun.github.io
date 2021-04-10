@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html{
+    width: 100%;
+    clear: both;
+    font-family: 'Cafe24';
+}
+
+a {
+    text-decoration:none ; color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.hd {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 95;
+}
+
+.rt {
+    width: 100%;
+    height: 65px;
+}
+
+.rt .it {
+    margin-right: 10px;
+}
+
+.login_icon {
+    display: block;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.login_icon img {
+    display: block;
+}
+
+
+.hd.active .login_icon {
+    display: none;
+}
+
+.mb {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    float: right;
+    padding-top: 0;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+}
+
+.menu_btn i {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 7px auto;
+    background-color: #863e0e;
+}
+
+.hd.active ~ .mb .menu_btn i {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 99;
+}
+
+.hd.active ~ .mb.it > span > i.bar1 {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.hd.active ~ .mb.it > span > i.bar2 {
+    display: none;
+}
+
+.hd.active ~ .mb.it > span > i.bar3 {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+.fnb {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fceabb;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f8b500, #fceabb);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f8b500, #fceabb);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fnb li {
+    float: left;
+    width: 25%;
+    height: 60px;
+    position: relative;
+    border-left: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.fnb li:first-child {
+    border-left: 0;
+}
+
+.fnb li a {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.fnb li a img {
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -11px;
+}
+
+.fnb li a .num {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: chocolate;
+    color: #fff;
+    position: absolute;
+    top: -28px;
+    right: 0;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -360px;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 98;
+}
+
+.hd.active ~ .menu {
+    opacity: 1;
+    right: 0;
+}
+
+.login {
+    display: block;
+    width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid brown;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 35%;
+    color: #863e0e;
+    z-index: 99;
+}
+
+.gnb {
+    width: 70%;
+    height: 58%;
+    background-color: #fff;
+    padding-top: 50px;
+    float: right;
+}
+
+.clx:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.gnb li {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid brown;
+}
+
+.gnb li:first-child {
+    border-top: 1px solid brown;
+}
+
+.gnb li a {
+    display: block;
+    font-size: 16px;
+    line-height: 40px;
+    color: #863e0e;
+}
+
+.botomm {
+    width: 70%;
+    height: 34%;
+    background-color: #fff;
+    float: right;
+}
+
+.botomm .tit_box {
+    width: 100%;
+    margin-left: 5px;
+}
+
+.botomm .tit1 {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+    line-height: 20px;
+}
+
+.botomm .com {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.botomm .com span {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.link {
+    width: 100%;
+}
+
+.link a {
+    display: block;
+    float: left;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: 7px;
+    text-decoration: underline;
+}
