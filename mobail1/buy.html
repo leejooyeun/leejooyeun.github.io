@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="청년떡집 홈페이지">
+    <meta name="keywords" content="청년떡집, 떡, 마약떡, 식사대용떡, 선물용떡">
+    <meta name="description" content="청년떡집 홈페이지">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./mobil1css/reset.css">
+    <link rel="stylesheet" href="./mobil1css/fontset.css">
+    <link rel="stylesheet" href="./mobil1css/comomm.css">
+    <link rel="stylesheet" href="./mobil1css/sub_comomm.css">
+    <link rel="stylesheet" href="./mobil1css/buy.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <title>청년떡집</title>
+    <link rel="stylesheet" href="./bx/jquery.bxslider.css">
+    <script src="./bx/jquery.bxslider.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".mb .menu_btn").click(function(){
+            $(".hd").toggleClass("active");
+        });
+    });
+    </script>
+</head>
+<body>
+    <heard class="hd clx">
+        <a href="index_mobail.html" class="back it"><img src="./data/back.png" alt="뒤로가기"></a>
+        <h2 class="tit it">주문하기</h2>
+    </heard>
+    <div class="mb it">
+           <span class="menu_btn">
+                <i class="bar1"></i>
+                <i class="bar2"></i>
+                <i class="bar3"></i>
+            </span>
+    </div>
+    <div class="teb_lst">
+        <a href="index_mobail.html" class="teb1 tb">홈</a>
+        <button class="teb2 tb">기획전</button>
+        <button class="teb3 tb">선물세트</button>
+        <button class="teb4 tb">구워먹는 떡</button>
+        <script>
+        $(function(){
+            $(".teb_lst button").click(function(){
+                var idx = $(this).index();
+                $(".teb_lst button").removeClass("on");
+                $(this).addClass("on");
+                $(".teb_lst > div").css("display","none");
+                $(".teb_lst > div").eq(idx).css("display", "block");
+            });
+        });    
+        </script>
+        <div class="page" id="p0">
+            <ul class="lst">
+                <li class="item1">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it1.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">인절미가루가 듬뿍! 인생은 <br>아름다워 스폐셜팩 </h3><br>
+                                    <span class="tit_s">청년떡집 베스트셀러 인생떡 한정선물팩!</span><br>
+                                <span class="num2 num">24,900원</span>
+                                <span class="seile">(NEW)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item2">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it2.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">딸기크림떡(딸기찹쌀떡) 더블 세트</h3><br>
+                                <span class="tit_s">상큼한 딸기의 유혹! 딸기 더블 세트 ♡</span><br>
+                                <span class="num1 num">21,000원</span>
+                                <span class="num2 num">19,800원</span>
+                                <span class="seile">(9% 할인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item3">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it3.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">범벅초코크림떡 더블 세트</h3><br>
+                                <span class="tit_s">꾸덕한 초코가 진리! 초코 더블 세트 ♡</span><br>
+                                <span class="num1 num">23,000원</span>
+                                <span class="num2 num">19,800원</span>
+                                <span class="seile">(17% 할인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item4">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it4.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">딸기크림떡&amp;범벅초코크림떡 세트</h3><br>
+                                <span class="tit_s">함께 먹으면 두 배의 감동!</span><br>
+                                <span class="num1 num">22,000원</span>
+                                <span class="num2 num">19,800원</span>
+                                <span class="seile">(13% 할인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item5">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it5.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">범벅초코&amp;초코바나나 세트</h3><br>
+                                <span class="tit_s">겉부터 속까지 초코초코초코!</span><br>
+                                <span class="num1 num">22,000원</span>
+                                <span class="num2 num">19,800원</span>
+                                <span class="seile">(13% 할인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="page" id="p1">
+            <ul class="lst">
+                <li class="item1">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it1.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">인절미가루가 듬뿍! 인생은 <br>아름다워 스폐셜팩 </h3><br>
+                                    <span class="tit_s">청년떡집 베스트셀러 인생떡 한정선물팩!</span><br>
+                                <span class="num2 num">24,900원</span>
+                                <span class="seile">(NEW)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item2">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it2.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">딸기크림떡(딸기찹쌀떡) 더블 세트</h3><br>
+                                <span class="tit_s">상큼한 딸기의 유혹! 딸기 더블 세트 ♡</span><br>
+                                <span class="num1 num">21,000원</span>
+                                <span class="num2 num">19,800원</span>
+                                <span class="seile">(9% 할인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item3">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it3.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">범벅초코크림떡 더블 세트</h3><br>
+                                <span class="tit_s">꾸덕한 초코가 진리! 초코 더블 세트 ♡</span><br>
+                                <span class="num1 num">23,000원</span>
+                                <span class="num2 num">19,800원</span>
+                                <span class="seile">(17% 할인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item4">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it4.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">딸기크림떡&amp;범벅초코크림떡 세트</h3><br>
+                                <span class="tit_s">함께 먹으면 두 배의 감동!</span><br>
+                                <span class="num1 num">22,000원</span>
+                                <span class="num2 num">19,800원</span>
+                                <span class="seile">(13% 할인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item5">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p1_it5.jpg" alt="기획전"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">범벅초코&amp;초코바나나 세트</h3><br>
+                                <span class="tit_s">겉부터 속까지 초코초코초코!</span><br>
+                                <span class="num1 num">22,000원</span>
+                                <span class="num2 num">19,800원</span>
+                                <span class="seile">(13% 할인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="page" id="p2">
+            <ul class="lst">
+                <li class="item1">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p2_it1.jpg" alt="선물세트"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">[국내산황금] 황금떡 특1호</h3><br>
+                                    <span class="tit_s">황금깨찰떡/깨찰떡/마약떡/티라미슈크림떡/인생떡/로투스비스코프크림떡</span><br>
+                                <span class="num2 num">59,900원</span>
+                                <span class="seile">(NEW)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item2">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p2_it2.jpg" alt="선물세트"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">[국내산황금] 황금떡 1호</h3><br>
+                                <span class="tit_s">황금깨찰떡/깨찰떡/티라미슈크림떡/인생떡</span><br>
+                                <span class="num2 num">39,800원</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item3">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p2_it3.jpg" alt="선물세트"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">원조크림떡 스페셜팩<br>(맛있는 찹쌀떡)</h3><br>
+                                <span class="tit_s">원조가 나타났다! 스페셜팩 특급구성★</span><br>
+                                <span class="num2 num">44,700원</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item4">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p2_it4.jpg" alt="선물세트"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">인기떡세트<br>(뉴욕치즈케이크 크림떡) 외 2종</h3><br>
+                                <span class="tit_s">인싸들이 선택한 바로 그 떡! 인기크림떡 3종 세트</span><br>
+                                <span class="num1 num">34,700원</span>
+                                <span class="num2 num">31,200원</span>
+                                <span class="seile">(10% 할인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item5">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p2_it5.jpg" alt="선물세트"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">타이니탄 스페셜 보라팩</h3><br>
+                                <span class="num2 num">36,800원</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="page" id="p3">
+            <ul class="lst">
+                <li class="item1">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p3_it1.gif" alt="구워먹는떡"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">[무료배송] 구워먹는 떡 3종 구성</h3><br>
+                                    <span class="tit_s">인절미꿀호떡,쑥인절미꿀호떡,구워먹는 마약떡 3종</span><br>
+                                <span class="num2 num">38,700원</span>
+                                <span class="seile">(NEW)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item2">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p3_it2.jpg" alt="구워먹는떡"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">구워먹는 인절미 꿀호떡</h3><br>
+                                <span class="tit_s">청년떡집대표, 고소함 2배!</span><br>
+                                <span class="num2 num">12,900원</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item3">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p3_it3.gif" alt="구워먹는떡"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">구워먹는 쑥인절미 꿀호떡</h3><br>
+                                <span class="tit_s">향긋쑥향, 달콤 꿀떡</span><br>
+                                <span class="num2 num">12,900원</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item4">
+                   <a href="" class="link">
+                        <div class="img"><img src="./data/p3_it4.jpg" alt="구워먹는떡"></div>
+                        <div class="txt">
+                            <div class="txt_wrap">
+                                <h3 class="tit">구워먹는 마약떡</h3><br>
+                                <span class="tit_s">진~한 콘치즈 맛이 나는 구워먹는 마약떡</span><br>
+                                <span class="num2 num">12,900원</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="fnb clx">
+        <li class="item1"><a href="index_mobail.html"><img src="./data/home.png" alt="홈페이지">홈페이지</a></li>
+        <li class="item2"><a href=""><img src="./data/receipt.png" alt="주문내역">주문내역</a></li>
+        <li class="item3"><a href=""><img src="./data/delivery.png" alt="정기배송">정기배송</a></li>
+        <li class="item4"><a href="cart.html"><img src="./data/fix_cart.png" alt="장바구니">장바구니<span class="num">0</span></a></li>
+    </ul>
+    <nav class="menu clx">
+       <a href="login.html" class="login">로그인</a>
+        <ul class="gnb clx">
+            <li class="item1"><a href="buy.html">주문</a></li>
+            <li class="item2"><a href="">주문목록</a></li>
+            <li class="item3"><a href="">취소/반품/교환내역</a></li>
+            <li class="item4"><a href="">배송지관리</a></li>
+            <li class="item5"><a href="">할인쿠폰</a></li>
+            <li class="item6"><a href="">고객센터</a></li>
+            <li class="item7"><a href="noti.html">공지사항</a></li>
+            <li class="item8"><a href="">FAQ</a></li>
+            <li class="item9"><a href="">1:1문의</a></li>
+        </ul>
+        <div class="botomm">
+           <div class="tit_box">
+                <h3 class="tit1">무통장입금</h3>
+                <p class="com">국민은행 43760101461762<br>우리은행 1005103432309<br>신한은행 140006505577<br>예금주 : (주)양유</p>
+                <h3 class="tit1">고객센터</h3>
+                <p class="com"><span class="call">02-597-5032</span><br>운영시간 : 평일 오전9시30분 ~ 오후5시30분<br>점심시간 : 오후 12시 ~ 1시</p>
+                <div class="link">
+                    <a href="">개인정보처리방침</a>
+                    <a href="">이용약관</a>
+                    <a href="">회사정보</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

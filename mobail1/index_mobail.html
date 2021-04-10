@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="청년떡집 홈페이지">
+    <meta name="keywords" content="청년떡집, 떡, 마약떡, 식사대용떡, 선물용떡">
+    <meta name="description" content="청년떡집 홈페이지">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./mobil1css/reset.css">
+    <link rel="stylesheet" href="./mobil1css/fontset.css">
+    <link rel="stylesheet" href="./mobil1css/comomm.css">
+    <link rel="stylesheet" href="./bx/jquery.bxslider.css">
+    <link rel="stylesheet" href="./mobil1css/main.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <title>청년떡집</title>
+    <script src="./bx/jquery.bxslider.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".mb .menu_btn").click(function(){
+            $(".hd").toggleClass("active");
+        });
+    });
+    </script>
+</head>
+<body>
+    <heard class="hd">
+        <a href="login.html" class="login_icon it"><img src="./data/mypayge.png" alt="로그인아이콘"></a>
+    </heard>
+    <div class="mb it">
+       <span class="menu_btn">
+            <i class="bar1"></i>
+            <i class="bar2"></i>
+            <i class="bar3"></i>
+        </span>
+    </div>
+    <figuare class="vs">
+        <ul class="img_box">
+            <li class="vs1"><a href="buy.html#p1"></a></li>
+            <li class="vs2"><a href="buy.html#p2"></a></li>
+            <li class="vs3"><a href="buy.html#p3"></a></li>
+        </ul>
+    </figuare>
+    <script>
+    $(document).ready(function() {
+        $('.img_box').bxSlider({
+            auto: true, //자동 슬라이딩
+            speed: 500, //슬라이딩 시간
+            pause: 4000, //슬라이딩 주기
+            mode: 'horizontal', //슬라이딩 효과(fade, horizontal, vertical)
+            autoControls: true, //시작/중지 버튼 활성화/비활성화
+            pager: true, //페이지 바로가기 버튼
+            captions: false, //이미지의 캡션 보이기(img 요소에 title 속성이 있어야 함)
+        });
+    });
+    </script>
+    <ul class="Shortcuts">
+        <li class="sc1 sc"><a href="login.html"><img src="./data/mypayge.png" alt="바로가기"><span class="sc1_tit">마이페이지</span></a></li>
+        <li class="sc2 sc"><a href="buy.html"><img src="./data/cart.png" alt="바로가기"><span class="sc2_tit">주문하기</span></a></li>
+    </ul>
+    <ul class="fnb clx">
+        <li class="item1"><a href="index_mobail.html"><img src="./data/home.png" alt="홈페이지">홈페이지</a></li>
+        <li class="item2"><a href="login.html"><img src="./data/receipt.png" alt="주문내역">주문내역</a></li>
+        <li class="item3"><a href="login.html"><img src="./data/delivery.png" alt="정기배송">정기배송</a></li>
+        <li class="item4"><a href="login.html"><img src="./data/fix_cart.png" alt="장바구니">장바구니<span class="num">0</span></a></li>
+    </ul>
+    <nav class="menu clx">
+       <a href="login.html" class="login">로그인</a>
+        <ul class="gnb clx">
+            <li class="item1"><a href="buy.html">주문</a></li>
+            <li class="item2"><a href="login.html">주문목록</a></li>
+            <li class="item3"><a href="login.html">취소/반품/교환내역</a></li>
+            <li class="item4"><a href="login.html">배송지관리</a></li>
+            <li class="item5"><a href="login.html">할인쿠폰</a></li>
+            <li class="item6"><a href="login.html">고객센터</a></li>
+            <li class="item7"><a href="noti.html">공지사항</a></li>
+            <li class="item8"><a href="login.html">FAQ</a></li>
+            <li class="item9"><a href="login.html">1:1문의</a></li>
+        </ul>
+        <div class="botomm">
+           <div class="tit_box">
+                <h3 class="tit1">무통장입금</h3>
+                <p class="com">국민은행 43760101461762<br>우리은행 1005103432309<br>신한은행 140006505577<br>예금주 : (주)양유</p>
+                <h3 class="tit1">고객센터</h3>
+                <p class="com"><span class="call">02-597-5032</span><br>운영시간 : 평일 오전9시30분 ~ 오후5시30분<br>점심시간 : 오후 12시 ~ 1시</p>
+                <div class="link">
+                    <a href="">개인정보처리방침</a>
+                    <a href="">이용약관</a>
+                    <a href="">회사정보</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
