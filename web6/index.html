@@ -21,6 +21,7 @@
     <title>FILA</title>
     <link rel="stylesheet" href="./css/fontset.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/comonn.css">
     <script src="js/html5shiv.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -29,40 +30,6 @@
     ::-webkit-scrollbar { display:none; }
     ::-moz-scrollbar { display:none; }
     ::-o-scrollbar { display:none; }
-        .wrap{width: 100%; height: auto; clear: both; overflow: hidden; position: relative;}
-        .hd{width: 100%; clear: both; position: fixed;top: 0;left: 0;z-index: 99;}
-        .logo{display: block; position: absolute; top: 50px; left: 30px; width: 149px; height: 40px; background-image: url(./icon/logo_p.png); background-repeat: no-repeat; background-position: 0 0;}
-        .hd.active .logo{background-image: url(./icon/logo_p.png); background-repeat: no-repeat; background-position: 0 -40px;}
-        .gnb{width: 1200px; margin-left: 500px;margin-top: 50px;}
-        .hd.active .gnb{display: none;}
-        .gnb li{float: left; margin-right: 50px; position: relative;}
-        .gnb li a.dp1{display: block; font-size: 25px; text-align: center; color: #fff; font-weight: bold;}
-        .gnb li:hover a.dp1{text-decoration: underline; color: #002a65;}
-        
-        .gnb li a.dp1_red{display: block; font-size: 25px; font-weight: bold;text-align: center; color:#aa1d1d;}
-        .gnb li a.dp1_red:hover{text-decoration: underline; color: #fff;}
-        .gnb li .sub {margin-top: 20px;background-color: #fff; width: 110px; height: 0px; border-radius: 0 20px 0 20px; transition: 0.3s; position: absolute; top: 20px;left: 0;}
-        .gnb li:hover .sub{height: 200px;}
-        .gnb li .sub li {clear: both; width: 100%; }
-        .gnb li .sub li:first-child{margin-top: 15px;}
-        .gnb li .sub li a{display: block; font-size: 15px;  line-height: 30px;text-align: center; opacity: 0; transition: 0.5s;}
-        .gnb li:hover .sub li a{opacity: 1;}
-        .gnb li .sub li a:hover{color: #002a65; font-weight: bold; text-decoration: underline;}
-        .right_menu{ float: right; margin-right: 30px;}
-        .hd.active .right_menu{ margin-top: 50px;}
-        .right_menu .it{ float: left; margin-right: 30px;}
-        .right_menu .login{display: block; width: 80px; height: 25px; border-radius: 25px; color: #fff; font-size: 15px; text-align: center; line-height: 25px;}
-        .right_menu .login:hover{text-decoration: underline; color: #002a65; background-color: #fff;}
-        .hd.active .right_menu .login:hover{text-decoration: underline; color: #fff; background-color: #002a65;}
-        .right_menu .lang{background-color: transparent; border: 0; color: #fff; font-size: 15px; margin-top: 5px;cursor: pointer;}
-        .hd.active .login, .hd.active .right_menu .lang {color: #333;}
-        .right_menu .menu_icon{width: 50px; height: 50px; cursor: pointer;}
-        .right_menu .close{display: block; width: 50px; height: 50px; position: relative;}
-        .right_menu .close i{display: block; width: 35px; height: 3px; background-color: #fff;margin-bottom: 10px;}
-        .hd.active .close i{background-color: #333; position: absolute;top: 0;left: 0;}
-        .hd.active .close i.bar1{transform: rotate(45deg);top: 10px;}
-        .hd.active .close i.bar2{display: none;}
-        .hd.active .close i.bar3{transform: rotate(-45deg);top: 10px;}
         .vs_box{width: 500%; height: 100vh; clear: both; display: table; table-layout: fixed;}
         .page{ display: table-cell; width: 20%; height: 100vh; background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; position: relative;}
         .page .more{display: block; width: 120px;height: 40px; line-height: 40px;position: absolute; top: 70%;left: 50%; font-size: 20px; color: #fff; border: 2px solid #fff; border-radius: 10px; text-align: center;}
@@ -73,52 +40,6 @@
         #p3{background-image: url(img/vs3.jpg);}
         #p4{background-image: url(img/vs4.jpg);}
         #p5{background-image: url(img/vs5.jpg);}
-        .open{width: 100vw; height: 0; overflow: hidden; clear: both; opacity: 0; position: absolute; top: 0; left: 0; transition: 0.7s; }
-        .hd.active ~ .open{display: block;height: 100vh;opacity: 1;}
-        .open .left{width: 710px; height: 100vh;float: left;}
-        .open .right{width: calc(100% - 710px);height: 100vh;float: right; background-color: #fff;}
-        .left_gnb{width: 100%; height: 100vh; position: relative; background-image: url(img/menu1.jpg); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%;z-index: 1;}
-        .left_menu{width: 670px;padding-top: 120px;padding-left: 40px;z-index: 97;}
-        .left_menu li.mm{width: 130px; line-height: 50px; z-index: 98;position: relative; transition: 0.5s;}
-        .left_menu li.mm1{width: 130px; line-height: 50px; z-index: 98;position: relative; transition: 0.5s;}
-        .left_menu li.mm:hover{ height: 150px;}
-        .left_menu li:hover .dp2{ color:#aa1d1d;}
-        .left_menu li:hover .dp2_red{ color:#fff;}
-        .left_menu .dp2{display: block; font-size: 25px; color: #fff; font-weight: bold;}
-        .left_menu .dp2_red{display: block; font-size: 25px; color:#aa1d1d; font-weight: bold;}
-        .left_menu .sub{position: absolute; top: 20px;left: 120px; background-color: #fff; width: 110px; opacity: 0;  border-radius: 0 20px 0 20px; transition: 0.3s;z-index: 98;}
-        .left_menu li:hover .sub {height: auto;margin-bottom:30px;opacity: 1;}
-        .left_menu li .sub li a{display: block; font-size: 15px;  line-height: 30px;text-align: center; opacity: 0; transition: 0.5s; }
-        .left_menu li:hover .sub li a{opacity: 1;}
-        .left_menu li .sub li a:hover{color: #002a65; font-weight: bold; text-decoration: underline;}
-        .left_menu .bg{ width: 710px; height: 100vh; background-repeat: no-repeat; background-position: center center; position: absolute; top: 0;left: 0; z-index: 90;opacity: 0; transition: 0.7s;}
-        .left .menu_con1{background-image: url(img/menu1.jpg); }
-        .left .menu_con2{background-image: url(img/menu2.jpg); }
-        .left .menu_con3{background-image: url(img/menu3.jpg); }
-        .left .menu_con4{background-image: url(img/menu4.jpg); }
-        .left .menu_con5{background-image: url(img/menu5.jpg); }
-        #menu_lst1:hover ~ .menu_con1{opacity: 1;}
-        #menu_lst2:hover ~ .menu_con2{opacity: 1;}
-        #menu_lst3:hover ~ .menu_con3{opacity: 1;}
-        #menu_lst4:hover ~ .menu_con4{opacity: 1;}
-        #menu_lst5:hover ~ .menu_con5{opacity: 1;}
-        .right_top{width: 100%; height: 400px;padding-top: 100px;}
-        .right_top li{width: 33.33333%;height: 180px; float: left;text-align: center; margin-bottom: 30px;}
-        .right_top li a{display: block; clear: both;}
-        .right_top li a.tit{font-size: 20px; font-weight: bold; line-height: 40px;}
-        .right_top li a.tit:after{content: ""; display: block; width: 0px; height: 4px; margin: 0 auto;background-color:#002a65; transition: 0.4s; }
-        .right_top li:hover a.tit:after{content: ""; display: block; width: 120px; height: 4px; margin: 0 auto;background-color:#002a65; }
-        .right_top li a.com{font-size: 16px; line-height: 30px;}
-        .right_top li a.com:hover{text-decoration: underline;}
-        .right_bottom{width: 100%; height: calc(100%-400px); clear: both;}
-        .right_bottom h2{font-size: 18px;  font-weight: bold; margin-left: 30px; float: left; line-height: 30px;}
-        .right_bottom .sns_box{float: right;margin-right: 50px; margin-bottom: 10px;}
-        .right_bottom .sns_box a{display: block; width: 30px;height: 30px; border-radius: 25px; float: left; margin-right: 10px;}
-        .right_bottom .sns_box a:hover{background-color: yellow;}
-        .right_bottom .img_box{width: 100%; clear: both; border-top: 1px solid #ccc;padding-left: 30px;}
-        .right_bottom .img_box li{float: left;width: 33.33333%; }
-        .right_bottom .img_box li a{display: block; width: 33.33333%;height: 110px; }
-        .right_bottom .img_box li img{display: block; width: 200px;height: 110px;margin: 20px auto;}
         
         
     </style>
