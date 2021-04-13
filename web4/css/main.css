@@ -1,0 +1,442 @@
+#vs1 {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#vs1 .bxslider {
+    position: relative;
+}
+
+#vs1 .bxslider li.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bx-wrapper .bx-caption span {
+    display: none;
+}
+
+#vs1 .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager > div.bx-controls-direction > a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+
+.bx-wrapper .bx-prev {
+    background-image: url(../data/lrftbtn.png);
+    display: block;
+    top: 0;
+    left: 20px;
+    background-position: center center;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.bx-wrapper .bx-next {
+    background-image: url(../data/rightbtn.png);
+    display: block;
+    top: 0;
+    right: 20px;
+    background-position: center center;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+#vs1 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    bottom: 50px;
+    width: 150px;
+    left: 75%;
+}
+
+#vs1 .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(1) a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 27px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    z-index: 9999;
+    bottom: 0px;
+    left: 0px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+#vs1 .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(2) a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 27px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    z-index: 9999;
+    bottom: 0px;
+    left: 60px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 3px #000;
+}
+
+#vs1 .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(3) a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 27px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    z-index: 9999;
+    bottom: 0px;
+    right: 0px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+#vs1 .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div a.active {
+    background-color: rgba(30, 93, 49, 0.85);
+}
+
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+    background-position: center center;
+}
+
+#vs2 {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#vs2:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#vs2 .slick-track {
+    width: 1920px;
+}
+
+#vs2 .slider {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#vs2 .slider div.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#vs2 button.slick-prev.slick-arrow,
+#vs2 button.slick-next.slick-arrow {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 400px;
+    margin-top: -30px;
+    z-index: 99;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    background-size: 100% 100%;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#vs2 button.slick-prev.slick-arrow {
+    background-image: url(../data/lrftbtn.png);
+    left: 30px;
+}
+
+#vs2 button.slick-next.slick-arrow {
+    background-image: url(../data/rightbtn.png);
+    right: 30px;
+    background-position: center center;
+}
+
+#vs2 .slick-dots {
+    position: absolute;
+    top: 800px;
+    left: 50%;
+    margin-left: -72px;
+    z-index: 99;
+}
+
+#vs2 .slick-dots li {
+    float: left;
+}
+
+#vs2 .slick-dots li button {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #000;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+#vs2 .slick-dots li.slick-active button {
+    background-color: rgba(30, 93, 49, 0.85);
+}
+
+#vs2 .item {
+    position: relative;
+}
+
+#vs2 .slick-slide {
+    float: left;
+}
+
+#vs2 .ytb_box {
+    position: absolute;
+    top: 20%;
+    right: 13%;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#p2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#p3 {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#p3 .bxslider {
+    position: relative;
+}
+
+#p3 button.slick-prev.slick-arrow,
+#vs2 button.slick-next.slick-arrow {
+    display: none;
+}
+
+#p3 .ct_left,
+.ct_center,
+.ct_right {
+    float: left;
+    width: 33.33333%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#p3 .bxslider li.item {
+    float: left;
+}
+
+#p3 .bx-viewport li img {
+    width: 380px;
+    height: 364px;
+    margin: 0 auto;
+    display: block;
+}
+
+.bx-wrapper .bx-caption span {
+    display: none;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    display: none;
+}
+
+.bxslider .item .tit_box {
+    font-size: 27px;
+    font-weight: 600;
+    padding-left: 130px;
+    padding-bottom: 30px;
+}
+
+.bxslider .item .tit_box .tit1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fec46f;
+}
+
+.bxslider .item .tit_box .tit2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #59a25b;
+}
+
+.bxslider .item .tit_box .tit3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #e64d40;
+}
+
+#p3 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    position: absolute;
+    bottom: -80px;
+    left: 30%;
+    width: 244px;
+    margin: 0 auto;
+}
+
+#p3 .ct_left .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(1) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_leftm1.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_left .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(2) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_leftm2.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_left .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(3) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_leftm3.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_left .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(4) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_leftm4.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_center .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(1) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_centerm1.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_center .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(2) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_centerm2.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_center .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(3) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_centerm3.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_center .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(4) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_centerm4.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_right .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(1) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_rightm1.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_right .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(2) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_rightm2.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_right .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(3) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_rightm3.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .ct_right .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div:nth-child(4) a {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-position: center center;
+    background-image: url(../data/p3_rightm4.png);
+    background-repeat: no-repeat;
+}
+
+#p3 .bx-controls.bx-has-controls-direction.bx-has-controls-auto.bx-has-pager .bx-pager.bx-default-pager > div a.active {
+    background-color: rgba(30, 93, 49, 0.85);
+}
+
+#p3 .more {
+    display: block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    margin: 90px auto;
+    border-radius: 30px;
+    background-color: #1e5d31;
+    color: #fff;
+    border: 5px solid #fff;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+}
+
+#p4 img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
