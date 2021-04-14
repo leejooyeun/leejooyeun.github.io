@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Meditative - Free Bootstrap 4 Template by Colorlib</title>
+    <title>JooLand</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link rel="icon" href="./data/favicon.png">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -28,12 +29,50 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontset.css">
+    <style>
+        body{width: 1440px; margin: 0 auto; position: relative;}
+        ul{list-style: none;}
+      .logo{display: block; width: 150px; height: 100px; background-repeat: no-repeat; background-position: center center; background-image: url(../data/logo.png); position: absolute; top: 30px;left: 100px; z-index: 99;}
+    #ck1{display: none;}    
+    #ck1:checked ~ #hd { right:0; } 
+    .lst_btn { display:block; width: 60px; height: 60px; cursor:pointer;position: absolute; top: 4%;left: 66%; z-index: 99; }    
+    .line_box { position:relative; width:60px; height:60px; }    
+    .lst_btn span { display:block; width:50px; height:3px; background-color:#9bd7d2; position:absolute; left:16px; transition:0.4s; }
+    .lst_btn span#l1 { top: 18px; }
+    .lst_btn span#l2 { top: 35px; }    
+    .lst_btn span#l3 { bottom: 5px; }     
+    #ck1:checked ~ .lst_btn { border-color:#9bd7d2; }    
+    #ck1:checked ~ .lst_btn span { background:#9bd7d2; }  
+    #ck1:checked ~ .lst_btn span#l1 { transform:rotate(45deg); top:29px; }  
+    #ck1:checked ~ .lst_btn span#l2 { opacity:0; }  
+    #ck1:checked ~ .lst_btn span#l3 { transform:rotate(-45deg); bottom:28px; }
+        .open{width: 100%; height: 100vh; background-color: #f7f5d1; display: none;position: absolute; top: 160px;left: 0;z-index: 999;}
+        .open ul{width: 100%; height: 100vh;}
+        .open ul li{width: 100%; line-height: 100px;}
+        .open ul li a{display: block; text-align: center; font-size: 60px; font-family: "kft";}
+        .open ul li:hover a{color: green;}
+      </style>
   </head>
   <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   		<div class="container">
-  		</div>
-	  </nav>
+  		<a href="../index.html" class="logo it"></a>
+       <input type="checkbox" class="ck_item" id="ck1">
+        <label for="ck1" class="lst_btn it">
+        <div class="line_box">
+            <span class="line" id="l1"></span>
+            <span class="line" id="l2"></span>
+            <span class="line" id="l3"></span>
+        </div>       
+        </label>
+    <div class="open">
+            <ul>
+                <li><a href="../about/about.html">ABOUT</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="gallery">GALLERY</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+</div>
     <!-- END nav -->
 
     <section class="hero-wrap hero-wrap-2" data-stellar-background-ratio="0.5">
@@ -63,7 +102,7 @@
 	              <p><span>Phone:</span> <a href="tel://1234567920">010. 4641. 7782</a></p>
 	            </div>
 	            <div class="col-md-12 mb-3">
-	              <p><span>Email:</span> <a href="mailto:info@yoursite.com">dlwndus7782@naver.com</a></p>
+	              <p><span>Email:</span> <a href="mailto:dlwndus7782@naver.com">dlwndus7782@naver.com</a></p>
 	            </div>
 	            <div class="col-md-12 mb-3">
 	              <p><span>github:</span> <a href="https://leejooyeun.github.io/portfolio/">leejooyeun.github.io/portfolio/
@@ -93,7 +132,9 @@
                 <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
+               <a href="mailto:dlwndus7782@naver.com">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                </a>
               </div>
             </form>
           </div>
@@ -127,11 +168,11 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">MENU</h2>
               <ul class="list-unstyled">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Classes</a></li>
-                <li><a href="#">Schedule</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../work/work.html">Woke</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -142,7 +183,7 @@
                 <ul>
                   <li><span class="icon icon-map-marker"></span><span class="text">대전광역시 대덕구 석봉동177-2번지 서우아파트</span></li>
                   <li><a href="#"><span class="icon icon-phone"></span><span class="text"> 010. 4641. 7782</span></a></li>
-                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dlwndus7782@naver.com</span></a></li>
+                  <li><a href="mailto:dlwndus7782@naver.com"><span class="icon icon-envelope"></span><span class="text">dlwndus7782@naver.com</span></a></li>
                 </ul>
               </div>
             </div>
@@ -187,6 +228,13 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+   <script>
+    $(document).ready(function(){
+        $(".lst_btn").click(function(){
+           $(".open").fadeToggle(); 
+        });
+    }); 
+    </script>
     
   </body>
 </html>
