@@ -1,0 +1,1112 @@
+@keyframes changeBg {
+  0% {
+    background: #f7f5d1;
+  }
+  33.3333% {
+    background: #f7f5d1;
+  }
+  66.6666% {
+    background: #f7f5d1;
+  }
+}
+.bottom-particles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.bottom-particles .bubble {
+  opacity: 0;
+  position: absolute;
+  bottom: -1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+    background-image: url(.../data/data/flower1.png);
+}
+.bottom-particles .bubble:nth-child(1) {
+  left: 67%;
+  animation: blow 9426ms infinite;
+  animation-delay: 11980ms;
+}
+.bottom-particles .bubble:nth-child(2) {
+  left: 18%;
+  animation: blow 5000ms infinite;
+  animation-delay: 8739ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(3) {
+  left: 89%;
+  animation: blow 5000ms infinite;
+  animation-delay: 7902ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(4) {
+  left: 74%;
+  animation: blow 5000ms infinite;
+  animation-delay: 753ms;
+}
+.bottom-particles .bubble:nth-child(5) {
+  left: 31%;
+  animation: blow 8762ms infinite;
+  animation-delay: 6766ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(6) {
+  left: 66%;
+  animation: blow 5000ms infinite;
+  animation-delay: 2385ms;
+}
+.bottom-particles .bubble:nth-child(7) {
+  left: 34%;
+  animation: blow 8126ms infinite;
+  animation-delay: 8934ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(8) {
+  left: 53%;
+  animation: blow 12074ms infinite;
+  animation-delay: 1830ms;
+}
+.bottom-particles .bubble:nth-child(9) {
+  left: 35%;
+  animation: blow 14768ms infinite;
+  animation-delay: 3693ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(10) {
+  left: 60%;
+  animation: blow 5000ms infinite;
+  animation-delay: 6319ms;
+}
+.bottom-particles .bubble:nth-child(11) {
+  left: 44%;
+  animation: blow 11939ms infinite;
+  animation-delay: 10615ms;
+}
+.bottom-particles .bubble:nth-child(12) {
+  left: 22%;
+  animation: blow 6665ms infinite;
+  animation-delay: 11775ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(13) {
+  left: 20%;
+  animation: blow 12258ms infinite;
+  animation-delay: 7051ms;
+}
+.bottom-particles .bubble:nth-child(14) {
+  left: 88%;
+  animation: blow 5000ms infinite;
+  animation-delay: 9204ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(15) {
+  left: 56%;
+  animation: blow 8056ms infinite;
+  animation-delay: 9265ms;
+}
+.bottom-particles .bubble:nth-child(16) {
+  left: 91%;
+  animation: blow 9686ms infinite;
+  animation-delay: 1387ms;
+}
+.bottom-particles .bubble:nth-child(17) {
+  left: 93%;
+  animation: blow 5000ms infinite;
+  animation-delay: 3979ms;
+}
+.bottom-particles .bubble:nth-child(18) {
+  left: 39%;
+  animation: blow 9051ms infinite;
+  animation-delay: 500ms;
+}
+.bottom-particles .bubble:nth-child(19) {
+  left: 53%;
+  animation: blow 5000ms infinite;
+  animation-delay: 1937ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(20) {
+  left: 77%;
+  animation: blow 11002ms infinite;
+  animation-delay: 8319ms;
+}
+.bottom-particles .bubble:nth-child(21) {
+  left: 47%;
+  animation: blow 12451ms infinite;
+  animation-delay: 2992ms;
+}
+.bottom-particles .bubble:nth-child(22) {
+  left: 62%;
+  animation: blow 14053ms infinite;
+  animation-delay: 9018ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(23) {
+  left: 16%;
+  animation: blow 14359ms infinite;
+  animation-delay: 3998ms;
+}
+.bottom-particles .bubble:nth-child(24) {
+  left: 77%;
+  animation: blow 5000ms infinite;
+  animation-delay: 3129ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(25) {
+  left: 1%;
+  animation: blow 10827ms infinite;
+  animation-delay: 4922ms;
+}
+.bottom-particles .bubble:nth-child(26) {
+  left: 14%;
+  animation: blow 11112ms infinite;
+  animation-delay: 4720ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(27) {
+  left: 26%;
+  animation: blow 8591ms infinite;
+  animation-delay: 4244ms;
+}
+.bottom-particles .bubble:nth-child(28) {
+  left: 35%;
+  animation: blow 6135ms infinite;
+  animation-delay: 9799ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(29) {
+  left: 87%;
+  animation: blow 13142ms infinite;
+  animation-delay: 3451ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(30) {
+  left: 27%;
+  animation: blow 6401ms infinite;
+  animation-delay: 2818ms;
+}
+.bottom-particles .bubble:nth-child(31) {
+  left: 87%;
+  animation: blow 7638ms infinite;
+  animation-delay: 6601ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(32) {
+  left: 47%;
+  animation: blow 9901ms infinite;
+  animation-delay: 187ms;
+}
+.bottom-particles .bubble:nth-child(33) {
+  left: 55%;
+  animation: blow 5000ms infinite;
+  animation-delay: 10727ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(34) {
+  left: 89%;
+  animation: blow 13951ms infinite;
+  animation-delay: 7006ms;
+}
+.bottom-particles .bubble:nth-child(35) {
+  left: 10%;
+  animation: blow 5000ms infinite;
+  animation-delay: 8512ms;
+}
+.bottom-particles .bubble:nth-child(36) {
+  left: 48%;
+  animation: blow 13752ms infinite;
+  animation-delay: 1004ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(37) {
+  left: 23%;
+  animation: blow 5000ms infinite;
+  animation-delay: 6643ms;
+}
+.bottom-particles .bubble:nth-child(38) {
+  left: 16%;
+  animation: blow 12631ms infinite;
+  animation-delay: 9588ms;
+}
+.bottom-particles .bubble:nth-child(39) {
+  left: 84%;
+  animation: blow 5922ms infinite;
+  animation-delay: 6951ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(40) {
+  left: 86%;
+  animation: blow 12732ms infinite;
+  animation-delay: 10136ms;
+}
+.bottom-particles .bubble:nth-child(41) {
+  left: 58%;
+  animation: blow 5000ms infinite;
+  animation-delay: 4669ms;
+    background-image: url(../data/flower2.png)
+}
+.bottom-particles .bubble:nth-child(42) {
+  left: 5%;
+  animation: blow 7252ms infinite;
+  animation-delay: 6120ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(43) {
+  left: 25%;
+  animation: blow 5000ms infinite;
+  animation-delay: 2658ms;
+}
+.bottom-particles .bubble:nth-child(44) {
+  left: 45%;
+  animation: blow 9049ms infinite;
+  animation-delay: 2111ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(45) {
+  left: 52%;
+  animation: blow 14290ms infinite;
+  animation-delay: 9625ms;
+}
+.bottom-particles .bubble:nth-child(46) {
+  left: 35%;
+  animation: blow 6981ms infinite;
+  animation-delay: 3130ms;
+}
+.bottom-particles .bubble:nth-child(47) {
+  left: 79%;
+  animation: blow 12280ms infinite;
+  animation-delay: 2416ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(48) {
+  left: 42%;
+  animation: blow 5000ms infinite;
+  animation-delay: 11192ms;
+}
+.bottom-particles .bubble:nth-child(49) {
+  left: 39%;
+  animation: blow 14760ms infinite;
+  animation-delay: 611ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(50) {
+  left: 47%;
+  animation: blow 5000ms infinite;
+  animation-delay: 5254ms;
+}
+.bottom-particles .bubble:nth-child(51) {
+  left: 74%;
+  animation: blow 13447ms infinite;
+  animation-delay: 1421ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(52) {
+  left: 26%;
+  animation: blow 5000ms infinite;
+  animation-delay: 6250ms;
+}
+.bottom-particles .bubble:nth-child(53) {
+  left: 69%;
+  animation: blow 12194ms infinite;
+  animation-delay: 5319ms;
+}
+.bottom-particles .bubble:nth-child(54) {
+  left: 64%;
+  animation: blow 12251ms infinite;
+  animation-delay: 8256ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(55) {
+  left: 47%;
+  animation: blow 11556ms infinite;
+  animation-delay: 9774ms;
+}
+.bottom-particles .bubble:nth-child(56) {
+  left: 9%;
+  animation: blow 8414ms infinite;
+  animation-delay: 4813ms;
+}
+.bottom-particles .bubble:nth-child(57) {
+  left: 44%;
+  animation: blow 5702ms infinite;
+  animation-delay: 187ms;
+}
+.bottom-particles .bubble:nth-child(58) {
+  left: 81%;
+  animation: blow 9004ms infinite;
+  animation-delay: 786ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(59) {
+  left: 91%;
+  animation: blow 9086ms infinite;
+  animation-delay: 7732ms;
+}
+.bottom-particles .bubble:nth-child(60) {
+  left: 41%;
+  animation: blow 10904ms infinite;
+  animation-delay: 2327ms;
+}
+.bottom-particles .bubble:nth-child(61) {
+  left: 83%;
+  animation: blow 5000ms infinite;
+  animation-delay: 6416ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(62) {
+  left: 8%;
+  animation: blow 8827ms infinite;
+  animation-delay: 11202ms;
+}
+.bottom-particles .bubble:nth-child(63) {
+  left: 38%;
+  animation: blow 8754ms infinite;
+  animation-delay: 5144ms;
+}
+.bottom-particles .bubble:nth-child(64) {
+  left: 47%;
+  animation: blow 5946ms infinite;
+  animation-delay: 5489ms;
+}
+.bottom-particles .bubble:nth-child(65) {
+  left: 93%;
+  animation: blow 6442ms infinite;
+  animation-delay: 3786ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(66) {
+  left: 20%;
+  animation: blow 12315ms infinite;
+  animation-delay: 7997ms;
+}
+.bottom-particles .bubble:nth-child(67) {
+  left: 99%;
+  animation: blow 5439ms infinite;
+  animation-delay: 3332ms;
+}
+.bottom-particles .bubble:nth-child(68) {
+  left: 66%;
+  animation: blow 5000ms infinite;
+  animation-delay: 11123ms;
+}
+.bottom-particles .bubble:nth-child(69) {
+  left: 33%;
+  animation: blow 8984ms infinite;
+  animation-delay: 10373ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(70) {
+  left: 73%;
+  animation: blow 9171ms infinite;
+  animation-delay: 167ms;
+}
+.bottom-particles .bubble:nth-child(71) {
+  left: 68%;
+  animation: blow 11099ms infinite;
+  animation-delay: 1722ms;
+}
+.bottom-particles .bubble:nth-child(72) {
+  left: 87%;
+  animation: blow 8203ms infinite;
+  animation-delay: 2772ms;
+}
+.bottom-particles .bubble:nth-child(73) {
+  left: 43%;
+  animation: blow 13564ms infinite;
+  animation-delay: 8322ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(74) {
+  left: 58%;
+  animation: blow 8194ms infinite;
+  animation-delay: 4210ms;
+}
+.bottom-particles .bubble:nth-child(75) {
+  left: 35%;
+  animation: blow 10316ms infinite;
+  animation-delay: 9130ms;
+}
+.bottom-particles .bubble:nth-child(76) {
+  left: 79%;
+  animation: blow 13934ms infinite;
+  animation-delay: 7368ms;
+}
+.bottom-particles .bubble:nth-child(77) {
+  left: 95%;
+  animation: blow 5000ms infinite;
+  animation-delay: 865ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(78) {
+  left: 91%;
+  animation: blow 6458ms infinite;
+  animation-delay: 6154ms;
+}
+.bottom-particles .bubble:nth-child(79) {
+  left: 93%;
+  animation: blow 5000ms infinite;
+  animation-delay: 6064ms;
+}
+.bottom-particles .bubble:nth-child(80) {
+  left: 35%;
+  animation: blow 7628ms infinite;
+  animation-delay: 4318ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(81) {
+  left: 6%;
+  animation: blow 13395ms infinite;
+  animation-delay: 9018ms;
+}
+.bottom-particles .bubble:nth-child(82) {
+  left: 11%;
+  animation: blow 5000ms infinite;
+  animation-delay: 4350ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(83) {
+  left: 31%;
+  animation: blow 5000ms infinite;
+  animation-delay: 3052ms;
+}
+.bottom-particles .bubble:nth-child(84) {
+  left: 17%;
+  animation: blow 12158ms infinite;
+  animation-delay: 540ms;
+}
+.bottom-particles .bubble:nth-child(85) {
+  left: 8%;
+  animation: blow 9291ms infinite;
+  animation-delay: 7928ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(86) {
+  left: 37%;
+  animation: blow 10198ms infinite;
+  animation-delay: 3729ms;
+}
+.bottom-particles .bubble:nth-child(87) {
+  left: 75%;
+  animation: blow 5000ms infinite;
+  animation-delay: 9121ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(88) {
+  left: 39%;
+  animation: blow 5000ms infinite;
+  animation-delay: 74ms;
+}
+.bottom-particles .bubble:nth-child(89) {
+  left: 97%;
+  animation: blow 5000ms infinite;
+  animation-delay: 10502ms;
+}
+.bottom-particles .bubble:nth-child(90) {
+  left: 63%;
+  animation: blow 5000ms infinite;
+  animation-delay: 7846ms;
+}
+.bottom-particles .bubble:nth-child(91) {
+  left: 100%;
+  animation: blow 10550ms infinite;
+  animation-delay: 8453ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(92) {
+  left: 60%;
+  animation: blow 9887ms infinite;
+  animation-delay: 9086ms;
+}
+.bottom-particles .bubble:nth-child(93) {
+  left: 67%;
+  animation: blow 14808ms infinite;
+  animation-delay: 7356ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(94) {
+  left: 14%;
+  animation: blow 9073ms infinite;
+  animation-delay: 3492ms;
+}
+.bottom-particles .bubble:nth-child(95) {
+  left: 58%;
+  animation: blow 7765ms infinite;
+  animation-delay: 7706ms;
+}
+.bottom-particles .bubble:nth-child(96) {
+  left: 91%;
+  animation: blow 10554ms infinite;
+  animation-delay: 11207ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(97) {
+  left: 18%;
+  animation: blow 6356ms infinite;
+  animation-delay: 7995ms;
+}
+.bottom-particles .bubble:nth-child(98) {
+  left: 99%;
+  animation: blow 6497ms infinite;
+  animation-delay: 996ms;
+    background-image: url(../data/flower3.png)
+}
+.bottom-particles .bubble:nth-child(99) {
+  left: 88%;
+  animation: blow 5563ms infinite;
+  animation-delay: 6621ms;
+}
+.bottom-particles .bubble:nth-child(100) {
+  left: 98%;
+  animation: blow 13184ms infinite;
+  animation-delay: 7483ms;
+    background-image: url(../data/flower2.png)
+}
+.bottom-particles .bubble:nth-child(101) {
+  left: 60%;
+  animation: blow 6549ms infinite;
+  animation-delay: 9892ms;
+}
+.bottom-particles .bubble:nth-child(102) {
+  left: 82%;
+  animation: blow 12117ms infinite;
+  animation-delay: 11578ms;
+    background-image: url(../data/flower2.png)
+}
+.bottom-particles .bubble:nth-child(103) {
+  left: 12%;
+  animation: blow 5054ms infinite;
+  animation-delay: 2027ms;
+}
+.bottom-particles .bubble:nth-child(104) {
+  left: 81%;
+  animation: blow 5000ms infinite;
+  animation-delay: 10272ms;
+}
+.bottom-particles .bubble:nth-child(105) {
+  left: 47%;
+  animation: blow 8557ms infinite;
+  animation-delay: 8661ms;
+}
+.bottom-particles .bubble:nth-child(106) {
+  left: 10%;
+  animation: blow 9515ms infinite;
+  animation-delay: 2921ms;
+    background-image: url(../data/flower2.png)
+}
+.bottom-particles .bubble:nth-child(107) {
+  left: 59%;
+  animation: blow 6871ms infinite;
+  animation-delay: 5293ms;
+}
+.bottom-particles .bubble:nth-child(108) {
+  left: 93%;
+  animation: blow 5000ms infinite;
+  animation-delay: 11082ms;
+}
+.bottom-particles .bubble:nth-child(109) {
+  left: 3%;
+  animation: blow 12142ms infinite;
+  animation-delay: 6728ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(110) {
+  left: 80%;
+  animation: blow 5047ms infinite;
+  animation-delay: 9858ms;
+}
+.bottom-particles .bubble:nth-child(111) {
+  left: 13%;
+  animation: blow 13472ms infinite;
+  animation-delay: 6523ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(112) {
+  left: 88%;
+  animation: blow 7829ms infinite;
+  animation-delay: 7108ms;
+}
+.bottom-particles .bubble:nth-child(113) {
+  left: 27%;
+  animation: blow 5274ms infinite;
+  animation-delay: 8362ms;
+}
+.bottom-particles .bubble:nth-child(114) {
+  left: 3%;
+  animation: blow 6256ms infinite;
+  animation-delay: 1693ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(115) {
+  left: 57%;
+  animation: blow 6330ms infinite;
+  animation-delay: 4291ms;
+}
+.bottom-particles .bubble:nth-child(116) {
+  left: 15%;
+  animation: blow 5000ms infinite;
+  animation-delay: 6234ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(117) {
+  left: 18%;
+  animation: blow 5000ms infinite;
+  animation-delay: 7009ms;
+}
+.bottom-particles .bubble:nth-child(118) {
+  left: 52%;
+  animation: blow 9401ms infinite;
+  animation-delay: 11151ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(119) {
+  left: 65%;
+  animation: blow 5925ms infinite;
+  animation-delay: 10582ms;
+}
+.bottom-particles .bubble:nth-child(120) {
+  left: 67%;
+  animation: blow 14207ms infinite;
+  animation-delay: 4178ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(121) {
+  left: 77%;
+  animation: blow 5000ms infinite;
+  animation-delay: 4279ms;
+}
+.bottom-particles .bubble:nth-child(122) {
+  left: 93%;
+  animation: blow 5000ms infinite;
+  animation-delay: 9941ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(123) {
+  left: 55%;
+  animation: blow 5000ms infinite;
+  animation-delay: 2908ms;
+}
+.bottom-particles .bubble:nth-child(124) {
+  left: 46%;
+  animation: blow 5000ms infinite;
+  animation-delay: 6220ms;
+}
+.bottom-particles .bubble:nth-child(125) {
+  left: 75%;
+  animation: blow 9889ms infinite;
+  animation-delay: 5824ms;
+}
+.bottom-particles .bubble:nth-child(126) {
+  left: 81%;
+  animation: blow 13328ms infinite;
+  animation-delay: 5786ms;
+}
+.bottom-particles .bubble:nth-child(127) {
+  left: 48%;
+  animation: blow 9232ms infinite;
+  animation-delay: 9730ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(128) {
+  left: 83%;
+  animation: blow 6413ms infinite;
+  animation-delay: 4733ms;
+}
+.bottom-particles .bubble:nth-child(129) {
+  left: 69%;
+  animation: blow 11550ms infinite;
+  animation-delay: 4394ms;
+}
+.bottom-particles .bubble:nth-child(130) {
+  left: 37%;
+  animation: blow 11092ms infinite;
+  animation-delay: 9379ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(131) {
+  left: 28%;
+  animation: blow 13858ms infinite;
+  animation-delay: 6509ms;
+}
+.bottom-particles .bubble:nth-child(132) {
+  left: 84%;
+  animation: blow 6867ms infinite;
+  animation-delay: 10799ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(133) {
+  left: 41%;
+  animation: blow 6944ms infinite;
+  animation-delay: 1794ms;
+}
+.bottom-particles .bubble:nth-child(134) {
+  left: 24%;
+  animation: blow 5326ms infinite;
+  animation-delay: 2577ms;
+}
+.bottom-particles .bubble:nth-child(135) {
+  left: 46%;
+  animation: blow 7223ms infinite;
+  animation-delay: 7623ms;
+}
+.bottom-particles .bubble:nth-child(136) {
+  left: 38%;
+  animation: blow 14383ms infinite;
+  animation-delay: 10502ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(137) {
+  left: 65%;
+  animation: blow 5000ms infinite;
+  animation-delay: 10239ms;
+}
+.bottom-particles .bubble:nth-child(138) {
+  left: 65%;
+  animation: blow 5000ms infinite;
+  animation-delay: 11912ms;
+}
+.bottom-particles .bubble:nth-child(139) {
+  left: 43%;
+  animation: blow 5777ms infinite;
+  animation-delay: 11271ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(140) {
+  left: 95%;
+  animation: blow 5251ms infinite;
+  animation-delay: 3763ms;
+}
+.bottom-particles .bubble:nth-child(141) {
+  left: 36%;
+  animation: blow 13531ms infinite;
+  animation-delay: 6948ms;
+}
+.bottom-particles .bubble:nth-child(142) {
+  left: 21%;
+  animation: blow 5000ms infinite;
+  animation-delay: 3578ms;
+}
+.bottom-particles .bubble:nth-child(143) {
+  left: 19%;
+  animation: blow 5569ms infinite;
+  animation-delay: 5436ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(144) {
+  left: 56%;
+  animation: blow 9405ms infinite;
+  animation-delay: 8618ms;
+}
+.bottom-particles .bubble:nth-child(145) {
+  left: 92%;
+  animation: blow 5000ms infinite;
+  animation-delay: 7879ms;
+}
+.bottom-particles .bubble:nth-child(146) {
+  left: 20%;
+  animation: blow 10059ms infinite;
+  animation-delay: 9251ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(147) {
+  left: 84%;
+  animation: blow 7072ms infinite;
+  animation-delay: 8903ms;
+}
+.bottom-particles .bubble:nth-child(148) {
+  left: 42%;
+  animation: blow 5000ms infinite;
+  animation-delay: 1074ms;
+}
+.bottom-particles .bubble:nth-child(149) {
+  left: 73%;
+  animation: blow 14754ms infinite;
+  animation-delay: 5608ms;
+}
+.bottom-particles .bubble:nth-child(150) {
+  left: 47%;
+  animation: blow 7997ms infinite;
+  animation-delay: 8983ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(151) {
+  left: 25%;
+  animation: blow 5000ms infinite;
+  animation-delay: 7651ms;
+}
+.bottom-particles .bubble:nth-child(152) {
+  left: 98%;
+  animation: blow 5591ms infinite;
+  animation-delay: 4987ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(153) {
+  left: 55%;
+  animation: blow 13446ms infinite;
+  animation-delay: 10575ms;
+}
+.bottom-particles .bubble:nth-child(154) {
+  left: 47%;
+  animation: blow 7067ms infinite;
+  animation-delay: 2707ms;
+}
+.bottom-particles .bubble:nth-child(155) {
+  left: 51%;
+  animation: blow 11392ms infinite;
+  animation-delay: 7739ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(156) {
+  left: 64%;
+  animation: blow 11797ms infinite;
+  animation-delay: 1878ms;
+}
+.bottom-particles .bubble:nth-child(157) {
+  left: 22%;
+  animation: blow 9216ms infinite;
+  animation-delay: 7209ms;
+}
+.bottom-particles .bubble:nth-child(158) {
+  left: 17%;
+  animation: blow 11614ms infinite;
+  animation-delay: 1555ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(159) {
+  left: 13%;
+  animation: blow 7409ms infinite;
+  animation-delay: 2281ms;
+}
+.bottom-particles .bubble:nth-child(160) {
+  left: 7%;
+  animation: blow 5000ms infinite;
+  animation-delay: 1643ms;
+}
+.bottom-particles .bubble:nth-child(161) {
+  left: 13%;
+  animation: blow 10308ms infinite;
+  animation-delay: 6894ms;
+}
+.bottom-particles .bubble:nth-child(162) {
+  left: 71%;
+  animation: blow 5000ms infinite;
+  animation-delay: 3149ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(163) {
+  left: 60%;
+  animation: blow 5940ms infinite;
+  animation-delay: 9663ms;
+}
+.bottom-particles .bubble:nth-child(164) {
+  left: 35%;
+  animation: blow 8031ms infinite;
+  animation-delay: 8334ms;
+}
+.bottom-particles .bubble:nth-child(165) {
+  left: 10%;
+  animation: blow 6459ms infinite;
+  animation-delay: 3986ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(166) {
+  left: 45%;
+  animation: blow 5000ms infinite;
+  animation-delay: 4086ms;
+}
+.bottom-particles .bubble:nth-child(167) {
+  left: 36%;
+  animation: blow 8465ms infinite;
+  animation-delay: 8082ms;
+}
+.bottom-particles .bubble:nth-child(168) {
+  left: 22%;
+  animation: blow 6232ms infinite;
+  animation-delay: 4491ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(169) {
+  left: 73%;
+  animation: blow 14022ms infinite;
+  animation-delay: 6556ms;
+}
+.bottom-particles .bubble:nth-child(170) {
+  left: 67%;
+  animation: blow 13679ms infinite;
+  animation-delay: 8311ms;
+}
+.bottom-particles .bubble:nth-child(171) {
+  left: 6%;
+  animation: blow 9166ms infinite;
+  animation-delay: 9259ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(172) {
+  left: 19%;
+  animation: blow 13117ms infinite;
+  animation-delay: 8510ms;
+}
+.bottom-particles .bubble:nth-child(173) {
+  left: 17%;
+  animation: blow 11099ms infinite;
+  animation-delay: 6838ms;
+}
+.bottom-particles .bubble:nth-child(174) {
+  left: 45%;
+  animation: blow 5000ms infinite;
+  animation-delay: 2973ms;
+}
+.bottom-particles .bubble:nth-child(175) {
+  left: 84%;
+  animation: blow 12326ms infinite;
+  animation-delay: 1524ms;
+}
+.bottom-particles .bubble:nth-child(176) {
+  left: 79%;
+  animation: blow 7850ms infinite;
+  animation-delay: 2508ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(177) {
+  left: 62%;
+  animation: blow 5000ms infinite;
+  animation-delay: 1035ms;
+}
+.bottom-particles .bubble:nth-child(178) {
+  left: 85%;
+  animation: blow 7032ms infinite;
+  animation-delay: 253ms;
+}
+.bottom-particles .bubble:nth-child(179) {
+  left: 88%;
+  animation: blow 11802ms infinite;
+  animation-delay: 6986ms;
+}
+.bottom-particles .bubble:nth-child(180) {
+  left: 16%;
+  animation: blow 9194ms infinite;
+  animation-delay: 11826ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(181) {
+  left: 28%;
+  animation: blow 7264ms infinite;
+  animation-delay: 6839ms;
+}
+.bottom-particles .bubble:nth-child(182) {
+  left: 95%;
+  animation: blow 6410ms infinite;
+  animation-delay: 3932ms;
+}
+.bottom-particles .bubble:nth-child(183) {
+  left: 13%;
+  animation: blow 14795ms infinite;
+  animation-delay: 2807ms;
+}
+.bottom-particles .bubble:nth-child(184) {
+  left: 62%;
+  animation: blow 10628ms infinite;
+  animation-delay: 6356ms;
+}
+.bottom-particles .bubble:nth-child(185) {
+  left: 88%;
+  animation: blow 5000ms infinite;
+  animation-delay: 3118ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(186) {
+  left: 30%;
+  animation: blow 5000ms infinite;
+  animation-delay: 5ms;
+}
+.bottom-particles .bubble:nth-child(187) {
+  left: 15%;
+  animation: blow 5000ms infinite;
+  animation-delay: 3000ms;
+}
+.bottom-particles .bubble:nth-child(188) {
+  left: 97%;
+  animation: blow 5000ms infinite;
+  animation-delay: 5635ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(189) {
+  left: 21%;
+  animation: blow 13713ms infinite;
+  animation-delay: 11598ms;
+}
+.bottom-particles .bubble:nth-child(190) {
+  left: 86%;
+  animation: blow 5000ms infinite;
+  animation-delay: 6818ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(191) {
+  left: 81%;
+  animation: blow 5755ms infinite;
+  animation-delay: 10850ms;
+}
+.bottom-particles .bubble:nth-child(192) {
+  left: 30%;
+  animation: blow 14379ms infinite;
+  animation-delay: 6172ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(193) {
+  left: 26%;
+  animation: blow 5000ms infinite;
+  animation-delay: 5999ms;
+}
+.bottom-particles .bubble:nth-child(194) {
+  left: 63%;
+  animation: blow 5000ms infinite;
+  animation-delay: 3410ms;
+}
+.bottom-particles .bubble:nth-child(195) {
+  left: 47%;
+  animation: blow 9410ms infinite;
+  animation-delay: 687ms;
+}
+.bottom-particles .bubble:nth-child(196) {
+  left: 68%;
+  animation: blow 5000ms infinite;
+  animation-delay: 4917ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(197) {
+  left: 15%;
+  animation: blow 12374ms infinite;
+  animation-delay: 9831ms;
+}
+.bottom-particles .bubble:nth-child(198) {
+  left: 83%;
+  animation: blow 8617ms infinite;
+  animation-delay: 1563ms;
+    background-image: url(../data/flower2.png);
+}
+.bottom-particles .bubble:nth-child(199) {
+  left: 80%;
+  animation: blow 5000ms infinite;
+  animation-delay: 6065ms;
+}
+.bottom-particles .bubble:nth-child(200) {
+  left: 75%;
+  animation: blow 10130ms infinite;
+  animation-delay: 9492ms;
+    background-image: url(../data/flower2.png);
+}
+
+@keyframes blow {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100vh);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.2);
+  }
+}    
