@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Shutter &mdash; Colorlib Website Template</title>
+    <title>JooLand</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,9 +20,41 @@
 
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/fancybox.min.css">
-
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="icon" href="../data/favicon.png">
     <link rel="stylesheet" href="css/style.css">
-    
+    <style>
+        body, html{ width: 1440px; margin: 0 auto;font-family: "kft"; background-color: #f7f5d1;}
+    .logo{display: block; width: 150px; height: 100px; background-repeat: no-repeat; background-position: center center; background-image: url(../data/logo.png); margin-left: 25px;}
+        #ck1{display: none;}
+    #ck1:checked ~ #hd { right:0; } 
+    .lst_btn { display:block; width: 60px; height: 60px; cursor:pointer;position: absolute; top: 1.7%;left: 50%; z-index: 99; margin-left: -30px; }    
+    .line_box { position:relative; width:60px; height:60px; }    
+    .lst_btn span { display:block; width:50px; height:3px; background-color:#9bd7d2; position:absolute; left:16px; transition:0.4s; }
+    .lst_btn span#l1 { top: 18px; }
+    .lst_btn span#l2 { top: 35px; }    
+    .lst_btn span#l3 { bottom: 5px; }     
+    #ck1:checked ~ .lst_btn { border-color:#9bd7d2; }    
+    #ck1:checked ~ .lst_btn span { background:#9bd7d2; }  
+    #ck1:checked ~ .lst_btn span#l1 { transform:rotate(45deg); top:29px; }  
+    #ck1:checked ~ .lst_btn span#l2 { opacity:0; }  
+    #ck1:checked ~ .lst_btn span#l3 { transform:rotate(-45deg); bottom:28px; }
+        .open{width: 100%; height: 100vh; background-color: #f7f5d1; display: none;position: absolute; top: 140px;left: 0;z-index: 999;}
+        .open ul{width: 100%; height: 100vh;}
+        .open ul li{width: 100%; line-height: 100px;}
+        .open ul li a{display: block; text-align: center; font-size: 60px;color: #104155;}
+        .open ul li:hover a{color: green;}
+        .bg-light{width: 1440px; padding-top: 15px;}
+        footer{background-color: #fafafa ;}
+        h2.ftco-heading-2{font-size: 20px; font-family: "kft";}
+        .list-unstyled a{font-size: 15px; font-family: "kft";}
+        .list-unstyled a:hover{color: green;}
+        
+body > div > main > div > div.row.justify-content-center > footer > div > div.row.d-flex > div:nth-child(1) > div > ul li{float: left; margin-right: 20px;}
+        body > div.site-wrap > main > div > div.row.justify-content-center > footer > div > div.row.d-flex > div:nth-child(4) > div > div > ul > li > a > span:hover{color: green;}
+        body > div.site-wrap > main > div > div.row.justify-content-center > footer > div > div.row.d-flex > div:nth-child(4) > div > div > ul > li > a > span:hover{color: green;}
+    </style>
   </head>
   <body>
   
@@ -38,263 +70,225 @@
     <div class="site-mobile-menu-body"></div>
   </div>
 
-  <header class="header-bar d-flex d-lg-block align-items-center" data-aos="fade-left">
-    <div class="site-logo">
-      <a href="index.html">Shutter</a>
-    </div>
-    
-    <div class="d-inline-block d-xl-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-
-    <div class="main-menu">
-      <ul class="js-clone-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="photos.html">Photos</a></li>
-        <li><a href="bio.html">Bio</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <ul class="social js-clone-nav">
-        <li><a href="#"><span class="icon-facebook"></span></a></li>
-        <li><a href="#"><span class="icon-twitter"></span></a></li>
-        <li><a href="#"><span class="icon-instagram"></span></a></li>
-      </ul>
-    </div>
-  </header> 
   <main class="main-content">
     <div class="container-fluid photos">
+
+      <div class="row pt-4 mb-5 text-center">
+        <div class="col-12">
+          <div class="site-logo logo">
+          <a href="../index.html"></a>
+        </div>
+        <input type="checkbox" class="ck_item" id="ck1">
+    <label for="ck1" class="lst_btn it">
+        <div class="line_box">
+            <span class="line" id="l1"></span>
+            <span class="line" id="l2"></span>
+            <span class="line" id="l3"></span>
+        </div>       
+    </label>
+    <div class="open">
+            <ul>
+                <li><a href="../about/about.html">ABOUT</a></li>
+                <li><a href="../work/work.html">WORK</a></li>
+                <li><a href="./gallery.html">GALLERY</a></li>
+                <li><a href="../contact/contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        </div>
+      </div>
+
       <div class="row align-items-stretch">
         
-        <div class="col-6 col-md-6 col-lg-8" data-aos="fade-up">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_4.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_5.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-            </div>
-          </a>
-        </div>
-
         <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+          <a href="./data/carit.jpg" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/carit.jpg" alt="Image" class="img-fluid">
             <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-            </div>
-          </a>
-        </div>
-
-        
-
-        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_6.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
+             <h3 class="tit">케리커쳐그림-일러스트</h3>
+              <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
         <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_7.jpg" alt="Image" class="img-fluid">
+          <a href="./data/makegif.gif" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/makegif.gif" alt="Image" class="img-fluid">
             <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_8.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_9.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_10.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-            </div>
-          </a>
-        </div>
-
-
-        <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-            <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
+             <h3 class="tit">동물케리커쳐로 gif만들기-일러스트</h3>
+              <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
         <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+          <a href="./data/caric.png" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/caric.png" alt="Image" class="img-fluid">
             <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
+             <h3 class="tit">kt&amp;g캐릭터제작-일러스트</h3>
+              <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
 
-        <div class="col-6 col-md-6 col-lg-8" data-aos="fade-up" data-aos-delay="">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_4.jpg" alt="Image" class="img-fluid">
+        <div class="col-6 col-md-6 col-lg-8" data-aos="fade-up">
+          <a href="./data/kt&gsian.JPG" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/kt&gsian.JPG" alt="Image" class="img-fluid">
             <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
+             <h3 class="tit">kt&amp;g시안제작-포토샾</h3>
+              <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
         <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_5.jpg" alt="Image" class="img-fluid">
+          <a href="./data/poster.JPG" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/poster.JPG" alt="Image" class="img-fluid">
             <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
+             <h3 class="tit">kt&amp;g포스터제작-일러스트</h3>
+              <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
 
-        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_6.jpg" alt="Image" class="img-fluid">
+        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up">
+          <a href="./data/p4_bg.jpg" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/p4_bg.jpg" alt="Image" class="img-fluid">
             <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
+             <h3 class="tit">deltaindex 기업 콘텐츠 이미지 제작-일러스트</h3>
+              <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
         <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_7.jpg" alt="Image" class="img-fluid">
+          <a href="./data/P2_BG.JPG" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/P2_BG.JPG" alt="Image" class="img-fluid">
             <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
+             <h3 class="tit">이니스프리 메인베너 제작1-포토샾</h3>
+              <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
 
 
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_8.jpg" alt="Image" class="img-fluid">
+        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
+          <a href="./data/p4.jpg" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/p4.jpg" alt="Image" class="img-fluid">
             <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
+             <h3 class="tit">이니스프리 메인베너 제작2-포토샾</h3>
+              <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
-        <div class="col-6 col-md-6 col-lg-8" data-aos="fade-up" data-aos-delay="100">
-          <a href="single.html" class="d-block photo-item">
-            <img src="images/img_9.jpg" alt="Image" class="img-fluid">
+        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="./data/yonginmain.jpg" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/yonginmain.jpg" alt="Image" class="img-fluid">
             <div class="photo-text-more">
-              <div class="photo-text-more">
-              <h3 class="heading">Photos Title Here</h3>
-              <span class="meta">42 Photos</span>
-            </div>
+             <h3 class="tit">용인시청 메인 시안-포토샾</h3>
+              <span class="icon icon-search"></span>
             </div>
           </a>
         </div>
-        
+        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="./data/yonginsub.jpg" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/yonginsub.jpg" alt="Image" class="img-fluid">
+            <div class="photo-text-more">
+             <h3 class="tit">용인시청 서브 시안-포토샾</h3>
+              <span class="icon icon-search"></span>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up">
+          <a href="./data/3-1%20(2).JPG" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/3-1%20(2).JPG" alt="Image" class="img-fluid">
+            <div class="photo-text-more">
+             <h3 class="tit">아이콘제작-일러스트</h3>
+              <span class="icon icon-search"></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="./data/2-3.JPG" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/2-3.JPG" alt="Image" class="img-fluid">
+            <div class="photo-text-more">
+             <h3 class="tit">아이콘제작-일러스트</h3>
+              <span class="icon icon-search"></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <a href="./data/sub9_ceo_bg.jpg" class="d-block photo-item" data-fancybox="gallery">
+            <img src="./data/sub9_ceo_bg.jpg" alt="Image" class="img-fluid">
+            <div class="photo-text-more">
+             <h3 class="tit">브랜드 베너 제작-포토샾</h3>
+              <span class="icon icon-search"></span>
+            </div>
+          </a>
+        </div>
 
       </div>
 
+
       <div class="row justify-content-center">
-        <div class="col-md-12 text-center py-5">
-          <p>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      </p>
+        <footer class="ftco-footer ftco-section bg-light">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">SNS</h2>
+              <ul class="ftco-footer-social list-unstyled float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">MAKE WEB</h2>
+              <ul class="list-unstyled">
+                <li><a href="https://leejooyeun.github.io/w1/">반응형</a></li>
+                <li><a href="https://leejooyeun.github.io/web4/">데스크탑</a></li>
+                <li><a href="https://leejooyeun.github.io/mobail1/">모바일</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">MENU</h2>
+              <ul class="list-unstyled">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../work/work.html">Woke</a></li>
+                <li><a href="../gallery/gallery.html">Gallery</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">대전광역시 대덕구 석봉동177-2번지 서우아파트</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text"> 010. 4641. 7782</span></a></li>
+                  <li><a href="mailto:dlwndus7782@naver.com"><span class="icon icon-envelope"></span><span class="text">dlwndus7782@naver.com</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p class="mb-0">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>
+                document.write(new Date().getFullYear());
+
+              </script>.LeeJooYeun All rights reserved  <i class="icon-heart" aria-hidden="true"></i> 
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
       </div>
     </div>
   </main>
@@ -316,6 +310,12 @@
   <script src="js/jquery.fancybox.min.js"></script>
 
   <script src="js/main.js"></script>
-    
+  <script>
+    $(document).ready(function(){
+        $(".lst_btn").click(function(){
+           $(".open").fadeToggle(); 
+        });
+    }); 
+    </script>  
   </body>
 </html>
