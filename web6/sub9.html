@@ -21,107 +21,24 @@
     <title>FILA</title>
     <link rel="stylesheet" href="./css/fontset.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/comonn.css">
     <script src="js/html5shiv.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <style>
-    body, html{width: 100%; font-family:'HL_Regular'; -ms-overflow-style: none;}
-    ::-webkit-scrollbar { display:none; }
-    ::-moz-scrollbar { display:none; }
-    ::-o-scrollbar { display:none; }
-        .wrap{width: 100%; height: auto; clear: both; overflow: hidden; position: relative;}
-        .hd{width: 100%; clear: both; position: fixed;top: 0;left: 0;z-index: 99;}
-        .logo{display: block; position: absolute; top: 50px; left: 30px; width: 149px; height: 40px; background-image: url(./icon/logo_p.png); background-repeat: no-repeat; background-position: 0 0;}
-        .hd.active .logo{background-image: url(./icon/logo_p.png); background-repeat: no-repeat; background-position: 0 -40px;}
-        .gnb{width: 1200px; margin-left: 500px;margin-top: 50px;}
-        .hd.active .gnb{display: none;}
-        .gnb li{float: left; margin-right: 50px; position: relative;}
-        .gnb li a.dp1{display: block; font-size: 25px; text-align: center; color: #fff; font-weight: bold;}
-        .gnb li:hover a.dp1{text-decoration: underline; color: #002a65;}
-        
-        .gnb li a.dp1_red{display: block; font-size: 25px; font-weight: bold;text-align: center; color:#aa1d1d;}
-        .gnb li a.dp1_red:hover{text-decoration: underline; color: #fff;}
-        .gnb li .sub {margin-top: 20px;background-color: #fff; width: 110px; height: 0px; border-radius: 0 20px 0 20px; transition: 0.3s; position: absolute; top: 20px;left: 0;}
-        .gnb li:hover .sub{height: 200px;}
-        .gnb li .sub li {clear: both; width: 100%; }
-        .gnb li .sub li:first-child{margin-top: 15px;}
-        .gnb li .sub li a{display: block; font-size: 15px;  line-height: 30px;text-align: center; opacity: 0; transition: 0.5s;}
-        .gnb li:hover .sub li a{opacity: 1;}
-        .gnb li .sub li a:hover{color: #002a65; font-weight: bold; text-decoration: underline;}
-        .right_menu{ float: right; margin-right: 30px;}
-        .hd.active .right_menu{ margin-top: 50px;}
-        .right_menu .it{ float: left; margin-right: 30px;}
-        .right_menu .login{display: block; width: 80px; height: 25px; border-radius: 25px; color: #fff; font-size: 15px; text-align: center; line-height: 25px;}
-        .right_menu .login:hover{text-decoration: underline; color: #002a65; background-color: #fff;}
-        .hd.active .right_menu .login:hover{text-decoration: underline; color: #fff; background-color: #002a65;}
-        .right_menu .lang{background-color: transparent; border: 0; color: #fff; font-size: 15px; margin-top: 5px;cursor: pointer;}
-        .hd.active .login, .hd.active .right_menu .lang {color: #333;}
-        .right_menu .menu_icon{width: 50px; height: 50px; cursor: pointer;}
-        .right_menu .close{display: block; width: 50px; height: 50px; position: relative;}
-        .right_menu .close i{display: block; width: 35px; height: 3px; background-color: #fff;margin-bottom: 10px;}
-        .hd.active .close i{background-color: #333; position: absolute;top: 0;left: 0;}
-        .hd.active .close i.bar1{transform: rotate(45deg);top: 10px;}
-        .hd.active .close i.bar2{display: none;}
-        .hd.active .close i.bar3{transform: rotate(-45deg);top: 10px;}
-        .vs_box{width: 500%; height: 100vh; clear: both; display: table; table-layout: fixed;}
-        .page{ display: table-cell; width: 20%; height: 100vh; background-repeat: no-repeat; background-position: center center; background-size: 100% 100%; position: relative;}
-        .page .more{display: block; width: 120px;height: 40px; line-height: 40px;position: absolute; top: 70%;left: 50%; font-size: 20px; color: #fff; border: 2px solid #fff; border-radius: 10px; text-align: center;}
-        #p5 .more{color: #333; font-weight: 800; border: 2px solid #333; }
-        .page .more:hover{background-color: rgba(255,255,255,0.5);}
-        #p1{background-image: url(img/vs1.jpg);}
-        #p2{background-image: url(img/vs2.jpg);}
-        #p3{background-image: url(img/vs3.jpg);}
-        #p4{background-image: url(img/vs4.jpg);}
-        #p5{background-image: url(img/vs5.jpg);}
-        .open{width: 100vw; height: 0; overflow: hidden; clear: both; opacity: 0; position: absolute; top: 0; left: 0; transition: 0.7s; }
-        .hd.active ~ .open{display: block;height: 100vh;opacity: 1;}
-        .open .left{width: 710px; height: 100vh;float: left;}
-        .open .right{width: calc(100% - 710px);height: 100vh;float: right; background-color: #fff;}
-        .left_gnb{width: 100%; height: 100vh; position: relative; background-image: url(img/menu1.jpg); background-repeat: no-repeat; background-position: center center; background-size: 100% 100%;z-index: 1;}
-        .left_menu{width: 670px;padding-top: 120px;padding-left: 40px;z-index: 97;}
-        .left_menu li.mm{width: 130px; line-height: 50px; z-index: 98;position: relative; transition: 0.5s;}
-        .left_menu li.mm1{width: 130px; line-height: 50px; z-index: 98;position: relative; transition: 0.5s;}
-        .left_menu li.mm:hover{ height: 150px;}
-        .left_menu li:hover .dp2{ color:#aa1d1d;}
-        .left_menu li:hover .dp2_red{ color:#fff;}
-        .left_menu .dp2{display: block; font-size: 25px; color: #fff; font-weight: bold;}
-        .left_menu .dp2_red{display: block; font-size: 25px; color:#aa1d1d; font-weight: bold;}
-        .left_menu .sub{position: absolute; top: 20px;left: 120px; background-color: #fff; width: 110px; opacity: 0;  border-radius: 0 20px 0 20px; transition: 0.3s;z-index: 98;}
-        .left_menu li:hover .sub {height: auto;margin-bottom:30px;opacity: 1;}
-        .left_menu li .sub li a{display: block; font-size: 15px;  line-height: 30px;text-align: center; opacity: 0; transition: 0.5s; }
-        .left_menu li:hover .sub li a{opacity: 1;}
-        .left_menu li .sub li a:hover{color: #002a65; font-weight: bold; text-decoration: underline;}
-        .left_menu .bg{ width: 710px; height: 100vh; background-repeat: no-repeat; background-position: center center; position: absolute; top: 0;left: 0; z-index: 90;opacity: 0; transition: 0.7s;}
-        .left .menu_con1{background-image: url(img/menu1.jpg); }
-        .left .menu_con2{background-image: url(img/menu2.jpg); }
-        .left .menu_con3{background-image: url(img/menu3.jpg); }
-        .left .menu_con4{background-image: url(img/menu4.jpg); }
-        .left .menu_con5{background-image: url(img/menu5.jpg); }
-        #menu_lst1:hover ~ .menu_con1{opacity: 1;}
-        #menu_lst2:hover ~ .menu_con2{opacity: 1;}
-        #menu_lst3:hover ~ .menu_con3{opacity: 1;}
-        #menu_lst4:hover ~ .menu_con4{opacity: 1;}
-        #menu_lst5:hover ~ .menu_con5{opacity: 1;}
-        .right_top{width: 100%; height: 400px;padding-top: 100px;}
-        .right_top li{width: 33.33333%;height: 180px; float: left;text-align: center; margin-bottom: 30px;}
-        .right_top li a{display: block; clear: both;}
-        .right_top li a.tit{font-size: 20px; font-weight: bold; line-height: 40px;}
-        .right_top li a.tit:after{content: ""; display: block; width: 0px; height: 4px; margin: 0 auto;background-color:#002a65; transition: 0.4s; }
-        .right_top li:hover a.tit:after{content: ""; display: block; width: 120px; height: 4px; margin: 0 auto;background-color:#002a65; }
-        .right_top li a.com{font-size: 16px; line-height: 30px;}
-        .right_top li a.com:hover{text-decoration: underline;}
-        .right_bottom{width: 100%; height: calc(100%-400px); clear: both;}
-        .right_bottom h2{font-size: 18px;  font-weight: bold; margin-left: 30px; float: left; line-height: 30px;}
-        .right_bottom .sns_box{float: right;margin-right: 50px; margin-bottom: 10px;}
-        .right_bottom .sns_box a{display: block; width: 30px;height: 30px; border-radius: 25px; float: left; margin-right: 10px;}
-        .right_bottom .sns_box a:hover{background-color: yellow;}
-        .right_bottom .img_box{width: 100%; clear: both; border-top: 1px solid #ccc;padding-left: 30px;}
-        .right_bottom .img_box li{float: left;width: 33.33333%; }
-        .right_bottom .img_box li a{display: block; width: 33.33333%;height: 110px; }
-        .right_bottom .img_box li img{display: block; width: 200px;height: 110px;margin: 20px auto;}
-        
-        
-    </style>
+    <script src="./js/jquery-1.10.0.js">
+    </script>
+    <script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var scTop = parseInt($(window).scrollTop());
+            if(scTop>=300){
+                $(".hd").addClass("on");
+            } else {
+                $(".hd").removeClass("on");
+            }
+        });
+    });
+    </script>
     <script>
     $(document).ready(function(){
         $(".menu_icon .close").click(function(){
@@ -129,49 +46,18 @@
         });
     });
     </script>
-    <script>
-    $(document).ready(function(){
-        $(".page").each(function (index) {
-            // 개별적으로 Wheel 이벤트 적용
-            $(this).on("mousewheel DOMMouseScroll", function (e) {
-                e.preventDefault();
-                var delta = 0;
-                if (!event) event = window.event;
-                if (event.wheelDelta) {
-                    delta = event.wheelDelta / 120;
-                    if (window.opera) delta = -delta;
-                } 
-                else if (event.detail)
-                    delta = -event.detail / 3;
-                var moveTop = $(window).scrollLeft();
-                var elmSelecter = $(".page").eq(index);
-                // 마우스휠을 위에서 아래로
-                if (delta < 0) {
-                    if ($(elmSelecter).next() != undefined) {
-                        try{
-                            moveTop = $(elmSelecter).next().offset().left;
-                        }catch(e){}
-                    }
-                // 마우스휠을 아래에서 위로
-                } else {
-                    if ($(elmSelecter).prev() != undefined) {
-                        try{
-                            moveTop = $(elmSelecter).prev().offset().left;
-                        }catch(e){}
-                    }
-                }
-
-                // 화면 이동 0.8초(800)
-                $("html,body").stop().animate({
-                    scrollLeft: moveTop + 'px'
-                }, {
-                    duration: 800, complete: function () {
-                    }
-                });
-            });
-        }); 
-    });    
-    </script>
+    <style>
+        .vs{width: 100%; height: auto; }
+        .vs img{display: block; width: 100%; height: auto;}
+        .item{width: 100%; height: auto;position: relative;}
+        .item img{display: block; width: 100%; height: auto;}
+        .item .text{ width: 800px;position: absolute; color: #fff;font-size: 30px; line-height: 50px;}
+        .item .coms{font-size: 18px;line-height: 40px;}
+        #p2 .text{top: 37%;left: 5%;}
+        #p3 .text{top: 37%;right: -10%;}
+        #p4 .text:first-child{top: 5%;left: 5%; font-size: 25px;}
+        #p4 > h2:nth-child(2){top: 55%;left: 5%; font-size: 25px;}
+    </style>
 </head>
 <body>
 <div class="wrap">
@@ -375,6 +261,48 @@
             </div>
         </div>
     </div>
+    <div class="vs"><img src="./img/sub9_ceo_bg.jpg" alt="베너"></div>
+    <div class="item" id="p1"><img src="./img/sub9_ceo.jpg" alt="베너"></div>
+    <div class="item" id="p2">
+    <h2 class="text">1911년 이탈리아에서 탄생한 스포츠 브랜드<br> 
+FILA는 1991년 국내에 소개되어 현재 명실상부<br> 
+국내 최고의 스포츠 브랜드 중 하나로 자리<br> 
+잡았습니다. FILA가 글로벌 4대 스포츠 브랜드로<br>
+성장할 수 있었던 것은 오롯이 고객 여러분들께서<br> 
+보여주신 관심과 사랑이 있었기에 가능한 것이었습니다.</h2>
+   <img src="./img/sub9_ceo1.jpg" alt="베너"></div>
+    <div class="item" id="p3">
+    <h2 class="text">고객이 최우선 가치<br> 
+
+저희 FILA 임직원 모두는 ‘고객이 최우선’<br> 
+이라는 가치 경영을 지속적으로 실천할 것<br> 
+입니다. 더불어 대한민국 패션 산업의 발전은<br> 
+물론 세계 속에 코리아의 위상을 높이는데<br>  
+기여할 수 있도록 더욱더 정진하겠습니다.</h2>
+    <img src="./img/sub9_ceo2.jpg" alt="베너"></div>
+    <div class="item" id="p4">
+    <h2 class="text">TWO be OUTSTANDING<br>
+<p class="coms">
+FILA는 이미 세계적인 스포츠 브랜드로 알려져<br> 
+있지만 앞으로 더욱 성장하여 브랜드의 가치,<br> 
+고객의 가치를 높이기 위해 ‘2020 FILA NEW VISION’을<br>
+정립하였습니다.현재의 기업가치를 2배로 끌어올리고<br> 
+경쟁사보다 뛰어난 가치를 제공하여 고객 여러분의 만족도<br> 
+1위를 달성하기 위한 FILA의 새로운 비전은 바로<br> 
+‘TWO be OUTSTANDING’입니다.<br>
+이제 FILA는 건전한 조직 문화 형성과 차별화된 가치<br> 
+제안으로 고객 여러분의 마음속에 No.1 브랜드가<br>되기 위해 열정에 노력을 더하겠습니다.</p></h2>
+<h2 class="text">
+STYLISH PERFORMANCE<br>
+<p class="coms">
+FILA는 고객 여러분의 보다 건강한 삶의 영위와 질을 높이기<br> 
+위하여 스포츠 활동 시 퍼포먼스 향상을 기본으로 세련된<br> 
+스타일리쉬를 더해 새로운 스포츠 라이프스타일을 제안 드릴<br> 
+것입니다. FILA는 단순히 스포츠 용품을 판매하는 기업이 아닌<br> 
+건전한 스포츠 문화 형성에 노력하는 브랜드가 되겠습니다.<br>
+앞으로도 지속적인 애정으로 지켜봐 주시길 바라며<br> 
+    새롭게 변화하는 FILA를 기대해 주시기 바랍니다.</p></h2>
+    <img src="./img/sub9_ceo3.jpg" alt="베너"></div>
 </div>
 </body>
 </html>
