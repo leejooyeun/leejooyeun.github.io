@@ -1,3 +1,7 @@
+body, html{width: 100%; font-family:'HL_Regular'; -ms-overflow-style: none;}
+    ::-webkit-scrollbar { display:none; }
+    ::-moz-scrollbar { display:none; }
+    ::-o-scrollbar { display:none; }
 .wrap {
     width: 100%;
     height: auto;
@@ -14,18 +18,9 @@
     left: 0;
     z-index: 99;
 }
-
-.logo {
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 30px;
-    width: 149px;
-    height: 40px;
-    background-image: url(../icon/logo_p.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
+.hd.on{background-color: rgba(0,0,0,0.5);}
+        .hd.on .logo{background-image: url(../icon/logo_p.png); background-repeat: no-repeat; background-position: 0 -40px;}
+        .logo{display: block; position: absolute; top: 40px; left: 30px; width: 149px; height: 40px; background-image: url(../icon/logo_p.png); background-repeat: no-repeat; background-position: 0 0; transition: 0.5s;}
 
 .hd.active .logo {
     background-image: url(../icon/logo_p.png);
@@ -127,7 +122,7 @@
 
 .right_menu {
     float: right;
-    margin-right: 30px;
+    margin-right: 30px; margin-top: -25px;
 }
 
 .hd.active .right_menu {
