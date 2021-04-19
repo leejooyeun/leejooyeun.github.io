@@ -15,6 +15,7 @@
         <title>JooLand</title>
     <link rel="stylesheet" href="../css/fontset.css">
     <link rel="stylesheet" href="../css/reset.css">
+<!--    <link rel="stylesheet" href="../css/comomm.css">-->
     <link rel="icon" href="../data/favicon.png">
 
         <!-- FAVICON -->
@@ -26,13 +27,13 @@
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
     <style>
-        .logo{display: block; width: 150px; height: 100px; background-repeat: no-repeat; background-position: center center; background-image: url(../data/logo.png);position: absolute; top: 30px;left: 100px; z-index: 99;}
+        .logo{display: block; width: 150px; height: 100px; background-repeat: no-repeat; background-position: center center; background-image: url(./assets/img/logo.png);position: absolute; top: 30px;left: 100px; z-index: 99;}
         
     #ck1{display: none;}
     #ck1:checked ~ #hd { right:0; } 
-    .lst_btn { display:block; width: 60px; height: 60px; cursor:pointer;position:absolute; top: 1%;left: 50%; z-index: 99; margin-left: -30px; }    
+    .lst_btn { display:block; width: 60px; height: 60px; cursor:pointer;position:absolute; top: 1%;right: 18%; z-index: 99; margin-left: -30px; }    
     .line_box { position:relative; width:60px; height:60px; }    
-    .lst_btn span { display:block; width:50px; height:3px; background-color:#9bd7d2; position:absolute; left:16px; transition:0.4s; }
+    .lst_btn span { display:block; width:50px; height:3px; background-color:#41a296; position:absolute; left:16px; transition:0.4s; }
     .lst_btn span#l1 { top: 18px; }
     .lst_btn span#l2 { top: 35px; }    
     .lst_btn span#l3 { bottom: 5px; }     
@@ -41,11 +42,38 @@
     #ck1:checked ~ .lst_btn span#l1 { transform:rotate(45deg); top:29px; }  
     #ck1:checked ~ .lst_btn span#l2 { opacity:0; }  
     #ck1:checked ~ .lst_btn span#l3 { transform:rotate(-45deg); bottom:28px; }
-        .open{width: 100%; height: 100vh; background-color: #f7f5d1; display: none;position: absolute; top: 160px;left: 0;z-index: 999;}
-        .open ul{width: 100%; height: 100vh;}
-        .open ul li{width: 100%; line-height: 100px;}
-        .open ul li a{display: block; text-align: center; font-size: 60px; font-family: "kft";color: #104155;}
-        .open ul li:hover a{color: green;}
+        .open {
+    width: 100%;
+    height: 100vh;
+    background-color: #f7f5d1;
+    display: none;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    z-index: 999;
+}
+
+.open ul {
+    width: 100%;
+    height: 100vh;
+    margin-top: 90px;
+}
+
+.open ul li {
+    width: 100%;
+    line-height: 150px;
+}
+
+.open ul li a {
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    color: #104155;
+}
+
+.open ul li:hover a {
+    color: green;
+}
         .it{font-size: 10px; }
         .item{position: relative;}
         .tit{position: absolute; top: 40%;left: 26%; color: #fff; font-size: 100px; font-weight: 300; font-family: "kft";}
