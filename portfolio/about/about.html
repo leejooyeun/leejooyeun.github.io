@@ -27,28 +27,10 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontset.css">
+    <link rel="stylesheet" href="css/comomm.css">
     <style>
-        .logo{display: block; width: 150px; height: 100px; background-repeat: no-repeat; background-position: center center; background-image: url(../data/logo.png); position: absolute; top: 30px;left: 100px; z-index: 99;}
-        
-        #ck1{display: none;}
-    #ck1:checked ~ #hd { right:0; } 
-    .lst_btn { display:block; width: 60px; height: 60px; cursor:pointer;position: absolute; top: 1.7%;left: 63%; z-index: 99; margin-left: -30px; }    
-    .line_box { position:relative; width:60px; height:60px; }    
-    .lst_btn span { display:block; width:50px; height:3px; background-color:#9bd7d2; position:absolute; left:16px; transition:0.4s; }
-    .lst_btn span#l1 { top: 18px; }
-    .lst_btn span#l2 { top: 35px; }    
-    .lst_btn span#l3 { bottom: 5px; }     
-    #ck1:checked ~ .lst_btn { border-color:#9bd7d2; }    
-    #ck1:checked ~ .lst_btn span { background:#9bd7d2; }  
-    #ck1:checked ~ .lst_btn span#l1 { transform:rotate(45deg); top:29px; }  
-    #ck1:checked ~ .lst_btn span#l2 { opacity:0; }  
-    #ck1:checked ~ .lst_btn span#l3 { transform:rotate(-45deg); bottom:28px; }
-        .open{width: 100%; height: 100vh; background-color: #f7f5d1; display: none;position: absolute; top: 160px;left: 0;z-index: 999;}
-        .open ul{width: 100%; height: 100vh;}
-        .open ul li{width: 100%; line-height: 100px;}
-        .open ul li a{display: block; text-align: center; font-size: 60px; color: #104155;}
-        .open ul li:hover a{color: green;}
-        #img{display: none;position: absolute; top: -170px;right: 0; transition: 0.5s; width: 500px; height: auto; z-index: 99;}
+        .logo{position: absolute; top: 0;left: 100px;}
+        .lst_btn{right: 200px;}
         .wrap2{width: 220px; height: 220px; margin: 0px auto; padding-top: 10px; background-color: rgba(255,255,255,0.7);border-radius: 20px;}
        #p1, #p2, #p3{stroke:#0E423D; stroke-width:1; fill:none; animation-name: an; animation-duration: 5s; stroke-dasharray: 2200;}
        @keyframes an{
@@ -105,7 +87,7 @@
        <h2 class="tit0">능력치</h2>
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="skil_text">
                         <div class="single_skil">
                             <p>CSS/HTML</p>
@@ -143,6 +125,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="skil_text">
                         <div class="single_skil">
                             <p>한글 오피스</p>
                             <div class="progress-bar">
@@ -170,11 +156,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="skil_img">
-                        <img src="./data/it2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -350,7 +331,7 @@
                                     <img src="../data/poto.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-lg-9 col-md-9">
+                            <div class="col-lg-3 col-md-3">
                                 <div class="cta_text d-flex justify-content-between align-items-center">
                                     <div class="cta_text_iner" id="click">
                                         <img src="../data/click.png" alt="">
@@ -358,7 +339,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-9 col-md-9" id="img">
+                            <div class="col-lg-3 col-md-3" id="img">
                                 <img src="../data/inpographic.jpg" alt="">
                             </div>
                         </div>
