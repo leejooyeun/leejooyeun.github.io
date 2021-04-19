@@ -8637,7 +8637,8 @@ h1, h2, h3, h4, h5, p,
       margin-bottom: 20px;
       z-index: 99;
       font-weight: 400;
-      letter-spacing: 4px; }
+      letter-spacing: 4px;
+margin-left: -200px;}
       .hero-wrap .slider-text .breadcrumbs span {
         color: #104155; font-family: "kft", serif; font-size: 20px; }
         .hero-wrap .slider-text .breadcrumbs span a {
@@ -8654,7 +8655,7 @@ h1, h2, h3, h4, h5, p,
       font-size: 90px;
       color: #104155;
       line-height: 1.2;
-      font-weight: 400; margin-top: -150px;}
+      font-weight: 400; margin-top: -150px; margin-left: -200px;}
       @media (max-width: 991.98px) {
         .hero-wrap .slider-text .bread {
           font-size: 60px; } }
