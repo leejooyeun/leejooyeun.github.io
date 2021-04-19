@@ -152,7 +152,7 @@ input:focus {
 
 /* line 99, ../../01 cl html template/03_jun 2019/181_Fitness Trainer_html/sass/_common.scss */
 .padding_bottom {
-  padding-bottom: 140px;
+  padding-bottom: 0px;
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
@@ -3269,7 +3269,7 @@ font-weight: bold; font-size: 20px;
 
 /* line 74, ../../01 cl html template/03_jun 2019/181_Fitness Trainer_html/sass/_skil_part.scss */
 .skil_part .skil_text .progress-bar .line {
-  height: 9px;
+  height: 20px;
   background: #fff;
   position: relative;
 }
