@@ -440,16 +440,15 @@ font-family: 'kft', serif;
     font-family: "kft";
     letter-spacing: .025em;
     padding-top: 20px;
+    position: relative;
     
 }
-.hero .front-content .container-mid p.subline.it:before{content: ""; display: block; width: 30px;height: 30px; background-size: contain; background-image: url(../img/homebtn.png); position: absolute; top: 0;left: 45%;}
-.hero .front-content .container-mid p.subline.it:before{content: ""; display: block; width: 30px;height: 30px; background-size: contain; background-image: url(../img/homebtn.png); position: absolute; top: 0;left: 45%;}
-.hero .front-content .container-mid p.subline.it:nth-child(2)::before{top: 74px; }
-.hero .front-content .container-mid p.subline.it:nth-child(3)::before{top: 138px; }
-.hero .front-content .container-mid p.subline.it:nth-child(4)::before{top: 207px; left: 42%;}
-.hero .front-content .container-mid p.subline.it:nth-child(5)::before{top: 267px; left: 44%;}
-.hero .front-content .container-mid p.subline.it:nth-child(6)::before{top: 332px; left: 44.8%;}
-.hero .front-content .container-mid p.subline.it:nth-child(7)::before{top: 400px; left: 44.7%;}
+.hero .front-content .container-mid p.subline.it:before{content: ""; display: block; width: 30px;height: 30px; background-size: contain; background-image: url(../img/homebtn.png); position: absolute; top: 20px;left: 44%;}
+
+.hero .front-content .container-mid p.subline.it:nth-child(4)::before{left: 40%;}
+.hero .front-content .container-mid p.subline.it:nth-child(5)::before{left: 42.5%;}
+.hero .front-content .container-mid p.subline.it:nth-child(6)::before{left: 43.5%;}
+.hero .front-content .container-mid p.subline.it:nth-child(7)::before{left: 43%;}
 /** 5. Hero --> Background Content 
 *******************************************************************/
 
