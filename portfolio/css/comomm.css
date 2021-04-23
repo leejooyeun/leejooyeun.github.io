@@ -108,20 +108,21 @@ html {
 }
 
 .open {
-    width: 100%;
-    height: 100vh;
-    background-color: #f7f5d1;
+    width: 500px;
+    height: 80%;
+    background-color: rgba(255,255,255,0.4);
     display: none;
     position: absolute;
-    top: 130px;
-    left: 0;
+    top: 10%;
+    left: 50%;
+    margin-left: -250px;
+    border-radius: 100px 0px 100px 0px;
     z-index: 999;
 }
 
 .open ul {
     width: 100%;
     height: 100vh;
-    margin-top: 90px;
 }
 
 .open ul li {
