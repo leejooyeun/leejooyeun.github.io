@@ -52,6 +52,7 @@
     width: 500px;
     height: auto;
     z-index: 99; display: none; }
+        #text .com{font-size: 17px;}
     </style>
     
 </head>
@@ -327,7 +328,7 @@
 
     <!-- cta_part part start-->
     <section class="cta_area section_padding">
-       <h2 class="tit2">디자인 이력서 (inpographic resume)</h2>
+       <h2 class="tit2">이주연이란?</h2>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
@@ -337,6 +338,10 @@
                                 <div class="our_expesience">
                                     <img src="../data/poto.jpg" alt="">
                                 </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4" id="text">
+                                <h2 class="tit1">후회없는 인생!<br> 매 순간을 최선을 다하며 사는 이주연 입니다.</h2>
+                                <p class="com">안녕하세요. 한 번 사는 인생 해보고자 하는 것은 무엇이든 도전하며 살고 있는 이주연 입니다. IT업계가 계속해서 성장해가는 요즘 트랜드에 맞게 웹디자인을 공부하였고, 앞으로 다양한 경험을 쌓아가며 사용자에게 차별화 된, 질 좋은 서비스를 제공할 수 있는 디자이너가 될 것 입니다.<br>제 포트폴리오의 컨셉은 친근하면서도 따듯한 느낌을 줄 수 있도록 컬러맵을 참고하여 선정 하였으며 앞으로도 친근하게 다가갈 수 있는 디자이너가 되고 싶다는 의지를 표현해 보았습니다.</p>
                             </div>
                             <div class="col-lg-3 col-md-3">
                                 <div class="cta_text d-flex justify-content-between align-items-center">
@@ -349,6 +354,7 @@
                             <div class="col-lg-5 col-md-5" id="img">
                                 <img src="../data/inpographic.jpg" alt="">
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -454,7 +460,10 @@
     <script>
     $(document).ready(function(){
        $("#click").click(function(){
-         $("#img").fadeToggle();  
+         $("#img").fadeIn();  
+       });
+        $("#img").click(function(){
+         $("#img").fadeOut();  
        });
     });
     </script>
