@@ -26,7 +26,7 @@
 }
 
 .bx-wrapper .bx-prev {
-    background-image: url(../data/lrftbtn.png);
+    background-image: url(../data/leftbtn.png);
     display: block;
     top: 0;
     left: 20px;
@@ -145,7 +145,7 @@
 }
 
 #vs2 button.slick-prev.slick-arrow {
-    background-image: url(../data/lrftbtn.png);
+    background-image: url(../data/leftbtn.png);
     left: 30px;
 }
 
@@ -194,9 +194,9 @@
 #vs2 .ytb_box {
     position: absolute;
     top: 20%;
-    right: 13%;
-    width: 800px;
-    height: 600px;
+    right: 7%;
+    width: 700px;
+    height: 500px;
     overflow: hidden;
 }
 
