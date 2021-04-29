@@ -119,6 +119,8 @@ html {
     display: block;
     width: 150px;
     line-height: 40px;
+    border-radius: 20px;
+    height: 40px;
     color: #fff;
     font-size: 17px; 
 }
@@ -126,6 +128,9 @@ html {
 .menu li:hover .dp1 {
     text-decoration: underline;
     color: #009fe3;
+    background-color: #fff;
+    background-image: url(data/hover.png);
+    border: 1px solid #009fe3;
 }
 
 .hd.on .menu li .dp1 {
@@ -134,7 +139,7 @@ html {
 
 .menu li .sub {
     position: absolute;
-    top: 40px;
+    top: 45px;
     left: 0;
     width: 150px;
     height: 170px;
