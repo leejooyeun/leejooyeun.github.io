@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/fontset.css">
+    <title>KT&aring;G</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none; }
+        a{text-decoration: none; color: #333;}    
+body, html{width: 100%; clear: both ; font-family:"wmpR" , serif;}
+.hd_wrap{width:1440px; margin: 0 auto; position: relative;}
+.hd{width: 1440px; height: 50px; position: absolute; top: 70px;left: 0; z-index: 999;}
+.hd_it{float: left; }
+.logo{display: block; width: 150px; height: 50px;  margin-left: 50px;}
+.logo img{display: block; width: 110px; height: 50px; }
+.gnb{width: 900px; margin-left: 100px;}
+.gnb ul{width: 100%;}
+.gnb ul li{width: 150px; float: left;}
+.gnb ul li a{display: block; width: 150px; line-height: 40px; height: 40px; text-align: center;}
+        .sub{width: 150px; visibility: hidden; opacity: 0; transition: 0.5s;}
+        .gnb ul li.mn1:hover .dp1{background-color: #f05921;}
+        .gnb ul li.mn2:hover .dp1{background-color: #009dda;}
+        .gnb ul li.mn3:hover .dp1{background-color: #8cc63e;}
+        .gnb ul li.mn4:hover .dp1{background-color: #fa9114;}
+        .gnb ul li.mn5:hover .dp1, .gnb ul li.mn6:hover .dp1{background-color: #a6a8aa;}
+        .gnb ul li:hover .sub{visibility: visible; opacity: 1; }
+        .gnb ul li.mn1 .sub a:hover{background-color: #f05921;}
+        .gnb ul li.mn2 .sub a:hover{background-color: #009dda;}
+        .gnb ul li.mn3 .sub a:hover{background-color: #8cc63e;}
+        .gnb ul li.mn4 .sub a:hover{background-color: #fa9114;}
+        .gnb ul li.mn5 .sub a:hover, .gnb ul li.mn6 .sub a:hover{background-color: #a6a8aa;}
+.dp1{width: 150px; line-height: 40px; font-size: 18px; text-align: center;transition: 0.5s; }
+.lang{width: 150px; margin-left: 30px;}
+.vs{clear: both;width: 100vw; height: 100vh; }
+.slide_wrap{width: 500%; height: 100vh;}
+.slide{width: 20%; height: 100vh; float: left;}
+iframe{width: 100%; height: 100vh;}
+        .loding_lst{width: 100%; height: 300px; position: absolute; bottom: -250px;left: 0;}
+        .loding{width: 1100px; height: 300px; margin: 0 auto;  }
+        .loding li{width: 200px; height: 40px; margin: 0 10px; float: left; transition: 0.7s;}
+        .loding li p{opacity: 0; transition: 0.7s;}
+        .loding li p.tit{color: #fff; font-size: 18px; margin: 15px;}
+        .loding li p.com{color: #fff; font-size: 14px; margin: 0 10px;}
+        .loding li:hover{height: 300px;margin-top: -260px;}
+        .loding li:hover p{opacity: 1;}
+        .ld1{background-color: #f05921;}
+        .ld2{background-color: #009dda;}
+        .ld3{background-color: #8cc63e;}
+        .ld4{background-color: #fa9114;}
+        .ld5{background-color: #a6a8aa;}
+        .page{width: 100%; height: auto;}
+        #p1{position: relative; clear: both; height: auto;}
+        #p1:after{content: ""; display: block; clear: both;}
+        #p1 .teb_lst{position: absolute; top: 35%;right: 15%;}
+        #p1 .teb_lst a{display: block; width: 100px; margin: 0 5px; text-align: center; font-size: 20px; font-weight: bold; float: left; color: #009dda;}
+        #p1 .teb_lst a:before{content: ""; display: block; clear: both; width: 0px;height: 3px;background-color:#009dda; transition: 0.5s; margin-bottom: 10px;}
+        #p1 .teb_lst a:hover::before{width: 100px; }
+        #p1 .tit_box{width: 500%; height: auto;}
+        #p1 .tit_box:after{content: ""; display: block; clear: both;}
+        #p1 .tit_box li{width: 20%; height: auto; float: left;}
+        #p1 .tit_box li .item_wrap{width: 100%; height: auto;}
+        #p1 .tit_box li .item_wrap:after{content: ""; display: block; clear: both;}
+        #p1 .tit_box li .left{float: left; margin-left: 200px; margin-top: 60px;}
+        #p1 .tit_box li .left p span{display: block; font-size: 50px; line-height: 70px;}
+        #p1 .tit_box li .right{float: right;margin-right: 200px;margin-top: 60px;}
+        #p1 .tit_box li .right p{display: block; font-size: 25px; line-height: 30px;}
+        #p1 .pic_box{position: relative; width: 100%; margin: 40px auto;height: auto;}
+        #p1 .pic_box:after{content: ""; display: block; clear: both;}
+        #p1 .pic_box li{width: 300px;height: auto; position: absolute; top: 0;left: 0;}
+        #p1 .pic_box li img{display: block; width: 300px; height: auto;}
+        #p1 .pic_box li.pic1{left: 0px;}
+        #p1 .pic_box li.pic2{left: 700px;}
+        #p1 .pic_box li.pic3{left: 1360px;}
+        #p1 .pic_box li.pic4{top: 280px; left: 200px;}
+        #p1 .pic_box li.pic5{top: 280px; left: 1250px;}
+        #p1 .pic_box li.pic1 img, #p1 .pic_box li.pic2 img, #p1 .pic_box li.pic3 img{width: 550px; height: auto}
+        #p1 .pic_box li.pic4 img, #p1 .pic_box li.pic5 img{width: 500px; height: auto}
+        #p1 .pic_box a{display: block; width: 300px; height: 100px; border: 1px solid #333; text-align: center; line-height: 100px; font-size: 30px; position: absolute; bottom: 0;left: 50%; margin-left: -150px;}
+        
+        
+    </style>
+</head>
+<body>
+       <div class="hd_wrap">
+            <header class="hd">
+                <a href="index.html" class="logo hd_it"><img src="./data/img_12.png" alt="로고"></a>
+                <nav class="gnb hd_it">
+                    <ul>
+                        <li class="mn1">
+                            <a href="" class="dp1">기업소개</a>
+                            <ul class="sub">
+                                <li><a href="">overview</a></li>
+                                <li><a href="">연혁</a></li>
+                                <li><a href="">계열사</a></li>
+                                <li><a href="">글로벌비즈니스</a></li>
+                                <li><a href="">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li class="mn2">
+                            <a href="" class="dp1">투자정보</a>
+                            <ul class="sub">
+                                <li><a href="">경영정보</a></li>
+                                <li><a href="">주가정보</a></li>
+                                <li><a href="">공시정보</a></li>
+                                <li><a href="">재무정보</a></li>
+                                <li><a href="">LR자료실</a></li>
+                            </ul>
+                        </li>
+                        <li class="mn3">
+                            <a href="" class="dp1">홍보체널</a>
+                            <ul class="sub">
+                                <li><a href="">KT&aring;G소식</a></li>
+                                <li><a href="">광고라이브러리</a></li>
+                                <li><a href="">공장견학</a></li>
+                                <li><a href="">상상체</a></li>
+                                <li><a href="">Facebook</a></li>
+                            </ul>
+                        </li>
+                        <li class="mn4">
+                            <a href="" class="dp1">지속가능경영</a>
+                            <ul class="sub">
+                                <li><a href="">환경경영</a></li>
+                                <li><a href="">윤리경영</a></li>
+                                <li><a href="">사회공헌</a></li>
+                                <li><a href="">보고서</a></li>
+                            </ul>
+                        </li>
+                        <li class="mn5">
+                            <a href="" class="dp1">인재채용</a>
+                            <ul class="sub">
+                                <li><a href="">KT&aring;G인재상</a></li>
+                                <li><a href="">채용가이드</a></li>
+                                <li><a href="">직무소개</a></li>
+                                <li><a href="">인사제도</a></li>
+                                <li><a href="">상상인터뷰</a></li>
+                            </ul>
+                        </li>
+                        <li class="mn6">
+                            <a href="" class="dp1">고객센터</a>
+                            <ul class="sub">
+                                <li><a href="">고객문의</a></li>
+                                <li><a href="">비윤리행위신고</a></li>
+                                <li><a href="">입찰정보</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="lang hd_it">
+                    <select name="sel" id="lang">
+                        <option value="">KOR</option>
+                        <option value="">ENG</option>
+                    </select>
+                </div>
+            </header>
+        </div>
+        <fiuer class="vs">
+            <div class="slide_wrap">
+              <div class="slide1 slide"><iframe src="./data/vs1.mp4" frameborder="0"></iframe></div>
+              <div class="slide2 slide"><iframe src="./data/vs2.mp4" frameborder="0"></iframe></div>
+              <div class="slide3 slide"><iframe src="./data/vs3.mp4" frameborder="0"></iframe></div>
+              <div class="slide4 slide"><iframe src="./data/vs4.mp4" frameborder="0"></iframe></div>
+              <div class="slide5 slide"><iframe src="./data/vs5.mp4" frameborder="0"></iframe></div>
+            </div>
+            <div class="loding_lst">
+                <ul class="loding">
+                    <li class="ld1">
+                        <p></p>
+                        <a href="">
+                            <div class="hover">
+                                <img src="./data/logo1.png" alt="" class="icon">
+                                <p class="tit">담배</p>
+                                <p class="com">2002년 민영화 이후 담배사업의 내수 안정화와 해외 수출에 앞장서고 있으며, 균형 잡힌 비즈니스 포트폴리오, 정도경영 및 윤리경영의 적극적 이행을 통해 기업가치를 향상하고 글로벌 초우량 기업으로 도약하고자 노력하고 있습니다.</p>
+                            </div></a>
+                    </li>
+                    <li class="ld2">
+                        <p></p>
+                        <a href="">
+                            <div class="hover">
+                               <img src="./data/logo2.png" alt="" class="icon">
+                                <p class="tit">인삼 / 한방</p>
+                                <p class="com">대한민국을 대표하는 인삼종주 기업으로서 세계 최고 품질의 고려삼 전통을 이어가고 있습니다.안전하고 신뢰할 수 있는 고품질의 천연물공급을 통하여 인류의 삶의 질 향상 및 건강 증진에 기여하는 천연물 헬스케어 기업입니다.</p>
+                            </div></a>
+                    </li>
+                    <li class="ld3">
+                        <p></p>
+                        <a href="">
+                            <div class="hover">
+                                <img src="./data/logo3.png" alt="" class="icon">
+                                <p class="tit">건강생활</p>
+                                <p class="com">변화와 혁신을 두려워하지 않는 모습으로 아름다움을 지향하는 고객의 꿈을 실현하기 위해 최선을 다하고 있습니다.</p>
+                            </div></a>
+                    </li>
+                    <li class="ld4">
+                        <p></p>
+                        <a href="">
+                            <div class="hover">
+                                <img src="./data/logo4.png" alt="" class="icon">
+                                <p class="tit">제약 / 바이오</p>
+                                <p class="com">반세기 이상 차별화된 의약품 개발과 해외 수출을 주도하는 제약기업입니다.</p>
+                            </div></a>
+                    </li>
+                    <li class="ld5">
+                        <p></p>
+                        <a href="">
+                            <div class="hover">
+                                <img src="./data/logo5.png" alt="" class="icon">
+                                <p class="tit">상상스테이</p>
+                                <p class="com">‘Courtyard by Marriott 서울 남대문’ 호텔을 기반으로 고객에게 최고의 경험을 제공하고 있습니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </fiuer>
+        <div class="page" id="p1">
+            <div class="p1_wrap">
+                <div class="teb_lst">
+                    <a href="" class="it1">기업소개</a>
+                    <a href="" class="it2">사회공헌</a>
+                    <a href="" class="it3">상상마당</a>
+                    <a href="" class="it4">상상유니브</a>
+                    <a href="" class="it5">코로나19</a>
+                </div>
+                <ul class="tit_box">
+                    <li class="item1">
+                       <div class="item_wrap">
+                            <div class="left">
+                                <p class="side2">
+                                    <span class="box1"><span>보다 나은 삶을 함께</span></span>
+                                    <span class="box2"><span>만들어가는</span></span>
+                                    <span class="box3"><span>상상실현 기업</span></span>
+                                </p>
+                            </div>
+                            <div class="right">
+                                <p class="right_tit">KT&amp;G는 '바른 기업', '깨어있는 기업', '함께하는 기업'이라는<br> 경영이념 아래 미래로 함께 도약하는 바른 경영으로 고객과<br> 함께 상상하고 보다 나은 삶을 실현하기 위해 노력하고 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="pic_wrap">
+                            <ul class="pic_box">
+                                <li class="pic1"><img src="data/p1_1.jpg" alt=""></li>
+                                <li class="pic2"><img src="data/p1_2.jpg" alt=""></li>
+                                <li class="pic3"><img src="data/p1_3.jpg" alt=""></li>
+                                <li class="pic4"><img src="data/p1_4.jpg" alt=""></li>
+                                <li class="pic5"><img src="data/p1_5.jpg" alt=""></li>
+                                <a href="" class="more">그룹소개 바로가기 →</a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item2">
+                        <div class="left">
+                            <p class="side2">
+                                <span class="box1"><span>기업과 사회의</span></span>
+                                <span class="box2"><span>지속가능한 발전을</span></span>
+                                <span class="box3"><span>노력하는 기업</span></span>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="right_tit">KT&amp;G는 사회문제 해결을 도모하여, 도움의 손길이 필요한 사회구성원들에게 기회가 효율적으로 배분될 수 있도록 노력하고, 우리 사회의 더 좋은 내일을 함께 만들어 나가겠습니다.</p>
+                        </div>
+                        <div class="pic_wrap">
+                            <ul class="pic_box">
+                                <li class="pic1"></li>
+                                <li class="pic2"></li>
+                                <li class="pic3"></li>
+                                <li class="pic4"></li>
+                                <li class="pic5"></li>
+                                <a href="" class="more">그룹소개 바로가기<br><span class="morebtn">→</span></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item3">
+                        <div class="left">
+                            <p class="side2">
+                                <span class="box1"><span>누구나 상상하고</span></span>
+                                <span class="box2"><span>실현할 수 있는 공간을 </span></span>
+                                <span class="box3"><span>마련하고 지원하는 기업</span></span>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="right_tit">KT&amp;G는 문화예술이 특별한 사람만이 즐기는 것이 아니라 누구나 즐길 수 있는 생활 속의 문화예술이 될 수 있도록 아낌없는 지원을 하고 있습니다.문화로 소통하는 열린 공간을 통해 예술적 상상을 키우고 세상과 만나 함께 나누며, 행복해지는 곳을 만들어 갑니다.</p>
+                        </div>
+                        <div class="pic_wrap">
+                            <ul class="pic_box">
+                                <li class="pic1"></li>
+                                <li class="pic2"></li>
+                                <li class="pic3"></li>
+                                <li class="pic4"></li>
+                                <li class="pic5"></li>
+                                <a href="" class="more">상상마당 바로가기<br><span class="morebtn">→</span></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item4">
+                        <div class="left">
+                            <span class="side1"></span>
+                            <p class="side2">
+                                <span class="box1"><span>KT&amp;G만의</span></span>
+                                <span class="box2"><span>독보적이고 차별적인</span></span>
+                                <span class="box3"><span>CSR 프로그램</span></span>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="right_tit">캠퍼스 내 스펙 경쟁으로 힘들어하는 대학생들에게 다양한 경험과 교류의 기회 제공을 통해 진정한 자기성장을 돕는 KT&amp;G의 대학생 대외활동 커뮤니티입니다.</p>
+                        </div>
+                        <div class="pic_wrap">
+                            <ul class="pic_box">
+                                <li class="pic1"></li>
+                                <li class="pic2"></li>
+                                <li class="pic3"></li>
+                                <li class="pic4"></li>
+                                <li class="pic5"></li>
+                                <a href="" class="more">상상유니브 바로가기<br><span class="morebtn">→</span></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item5">
+                        <div class="left">
+                            <p class="side2">
+                                <span class="box1"><span>다시 함께 누릴</span></span>
+                                <span class="box2"><span>일상의 행복을 상상하고</span></span>
+                                <span class="box3"><span>만들어 가는 기업</span></span>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="right_tit">KT&amp;G는 코로나19의 세계적 확산에 따라 어려움을 겪고 있는 지역사회의 회복력을 높이기 위해 신속히 3단계에 걸친 지원 방안을 마련해 운영 중입니다.</p>
+                        </div>
+                        <div class="pic_wrap">
+                            <ul class="pic_box">
+                                <li class="pic1"></li>
+                                <li class="pic2"></li>
+                                <li class="pic3"></li>
+                                <li class="pic4"></li>
+                                <li class="pic5"></li>
+                                <a href="" class="more">코로나19 바로가기<br><span class="morebtn">→</span></a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page" id="p2">
+           <div class="p2_wrap">
+           <div class="p_wrap">
+                <p class="small">WE ARE KT&amp;G PEOPLE</p>
+                <p class="big">여러분이 바로 KT&amp;G의 소중한 자산이며 미래입니다.</p>
+            </div>
+            <a href="" class="more_btn">KT&amp;G 채용공고 바로가기 →</a>
+            <img src="./data/sub_bg2.jpg" alt="인재채용">
+            </div>
+        </div>
+        <div class="page" id="p3">
+            <div class="p3_wrap">
+                <div class="top">
+                    <p class="s_tit">KT&amp;G NEWS</p>
+                    <div class="teb_wrap">
+                        <a href="" class="news">보도자료</a>
+                        <a href="" class="vdio">동영상</a>
+                    </div>
+                </div>
+                <div class="teb_news">
+                    <div class="big_box">
+                        <a href="">
+                           <div class="news_img_box">
+                           <span class="txt">보도자료</span>
+                            <img src="./data/news1.png" alt="뉴스1">
+                            </div>
+                            <div class="news_tit_box">
+                                <p class="tit">KT&amp;G, 창작극 지원사업 ‘제4회 상상 스테이지 챌린지’ 선정작 발표</p>
+                                <p class="com">창작극 지원 네 번째 결실…뮤지컬 ‘메리 셸리’, 오는 9월 개막 예정</p>
+                                <span class="date">2021.03.23</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="small_box1">
+                        <p class="tit">KT&amp;G 백복인 사장, 정기주총서 선임 확정</p>
+                        <span class="date">2021.03.19</span>
+                    </div>
+                    <div class="small_box2">
+                        <p class="tit">KT&amp;G, 상상스타트업캠프 5기 발표회 '더 데뷔' 개최</p>
+                        <span class="date">2021.03.18</span>
+                    </div>
+                </div>
+                <div class="teb_vdio">
+                    <div class="vdio_lst">
+                        <ul class="vdio_box">
+                            <li class="vdio1">
+                                <a href="">
+                                    <div class="img_wrap">
+                                       <span class="play"></span>
+                                        <img src="./data/vdio1.jpg" alt="영상1">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">KT&amp;G상상 STARTUP CAMP, 나빔을 만나다!</p>
+                                        <p class="date">2021.01.26</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="vdio2">
+                                <a href="">
+                                    <div class="img_wrap">
+                                       <span class="play"></span>
+                                        <img src="./data/vdio2.jpg" alt="영상2">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">레나의 방콕! 러시아 문화탐방 EP.2</p>
+                                        <p class="date">2020.12.15</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="vdio3">
+                                <a href="">
+                                    <div class="img_wrap">
+                                       <span class="play"></span>
+                                        <img src="./data/vdio3.jpg" alt="영상3">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">레나의 방콕! 러시아 문화탐방 EP.1</p>
+                                        <p class="date">2020.12.08</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="vdio4">
+                                <a href="">
+                                    <div class="img_wrap">
+                                       <span class="play"></span>
+                                        <img src="./data/vdio4.jpg" alt="영상4">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">영국누나 캐서린, 상상패션런웨이에 서다!</p>
+                                        <p class="date">2020.12.01</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="ft">
+            <a href="index.html" class="ft_logo"><img src="./data/img_12.png" alt="푸터로고"></a>
+            <div class="copyright">
+                <p class="add"></p>
+                <p class="copy"></p>
+            </div>
+            <div class="link_lst">
+                <select name="ft_sel" id="ft_sel">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+        </footer>
+        <div class="quct"></div>
+</body>
+</html>
