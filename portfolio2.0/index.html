@@ -4,12 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="refresh" content="180">
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 
+    <meta name="msapplication-TileImage" content="./data/favicon240.png">
+    <meta name="msapplication-TileImage" content="./data/favicon160.png">
+    <meta name="msapplication-TileImage" content="./data/favicon32.png">
+    
+    <meta property="og:image" content="./data/favicon240.ico">
+    <meta property="og:image" content="./data/favicon160.ico">
+    <meta property="og:image" content="./data/favicon32.ico">
+    <meta property="og:image" content="./data/favicon240.png">
+    <meta property="og:image" content="./data/favicon160.png">
+    <meta property="og:image" content="./data/favicon32.png">
+
+    <link rel="shortcut icon" href="./data/favicon240.png">
+    <link rel="shortcut icon" href="./data/favicon160.png">
+    <link rel="shortcut icon" href="./data/favicon32.png">
+    <link rel="shortcut icon" href="./data/favicon160.ico">
+    <link rel="shortcut icon" href="./data/favicon32.ico">
     <link rel="stylesheet" href="./css/fontset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>LeeJooYeun</title>
     <style>
+        
     </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        window.onload = function () {
+//            var elm = ".page";
+            $(".page").each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(".page").eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {  //다음 페이지가 있으면
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) { //이전 페이지가 있으면
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("body, html").stop().not("animated").animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 850, complete: function () {
+
+                        }
+                    });
+                });
+            });
+            $(".page").mouseenter(function(){
+                $(this).addClass("on");    
+            });
+            $(".page").mouseleave(function(){
+                $(this).removeClass("on");    
+            });
+        }
+    </script>
 </head>
 <body>
 <div class="wrap">
@@ -19,19 +90,19 @@
             <li class="menu1"><a href="about.html">About 이주연</a></li>
             <li class="menu2"><a href="planner.html">Planner</a></li>
             <li class="menu3"><a href="webdesign.html">Web Design</a></li>
-            <li class="menu4"><a href="gallery.html">Gallery</a></li>
+            <li class="menu4"><a href="gallery.html">Contact</a></li>
         </ul>
     </header>
-    <main class="content">
-        <div class="left"><img src="./data/me.jpg" alt="프로필사진"></div>
+    <main class="page pg content" id="p1">
+        <div class="left"><img src="./data/poto.jpg" alt="프로필사진"></div>
         <div class="rihgt">
-            <h1 class="title">다재다능한 개발 인재 이주연</h1>
+            <h1 class="title">다재다능한 인재 이주연</h1>
             <h2 class="subtitle">- 기획 &amp; 퍼블리싱 -</h2>
             <p class="com">안녕하세요. 저는 웹디자인 과정을 마치고 인턴기간을 통해 기획자의 역할을 경험하였습니다. <br> 그로인해 기획이라는 직업에도 매력을 느껴 도전하게 되었고 퍼블리싱도 계속해서 공부해 나가고 싶른 의지를 갖고 꾸준히 해나가고 있습니다.</p>
             <a href="about.html" class="more">+</a>
         </div>
     </main>
-    <div class="pit">
+    <div class="page pg pit content" id="p2">
        <h2 class="pit_tit">Preview</h2>
         <ul class="list">
             <li class="nom1"><a href="https://leejooyeun.github.io/web4/"><img src="./data/pit1.png" alt="사진1">이니스프리 (데스크탑 VR)<br> MORE</a></li>
@@ -47,10 +118,11 @@
     <div class="abutme">
         <div class="tak">
             <ul class="tak_list">
-                <li class="com1"><a href="about.html">이주연이란?</a></li>
-                <li class="com2"><a href="#">웹디자인</a></li>
-                <li class="com3"><a href="#">기획</a></li>
-                <li class="com4"><a href="#">CONTACT</a></li>
+                <li class="com1"><a href="index.html">홈</a></li>
+                <li class="com2"><a href="about.html">이주연이란?</a></li>
+                <li class="com3"><a href="planner.html">기획</a></li>
+                <li class="com4"><a href="webdesign.html">웹디자인</a></li>
+                <li class="com5"><a href="contact.html">연락방법</a></li>
             </ul>
         </div>  
         <img src="./data/aboutme_icon.png" alt="바로가기1">
