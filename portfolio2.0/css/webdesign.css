@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+.wrap { position: relative;}
+
+.hd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.contant {
+    clear: both;
+    margin: 0 auto;
+    padding-bottom: 3em;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 24pt;
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.page_wrap:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+        .pg{float: left;}
+.page_tit {
+    width: 55%;
+    margin-left: 30px;
+    color: #fff;
+    font-size: 5.882rem;
+    font-weight: 900;
+    word-break: break-word;
+    letter-spacing: -.04rem;
+    line-height: 7.058rem;
+    transition-delay: 1s;
+    padding-top: 4rem;
+    transition: transform 1.5s, opacity 1.7s;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.page_com {
+    width: 55%;
+    margin-left: 30px;
+    margin-top: 40px;
+    color: #fff;
+    font-size: 1.412rem;
+    word-break: keep-all;
+    letter-spacing: -.04rem;
+    line-height: 1.882rem;
+    transition-delay: 1s;
+    transition: transform 2.5s, opacity 2.7s;
+    transform: translateY(50px);
+    opacity: 0;
+}
+.page_wrap img {
+    display: block;
+    width: 470px;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 120px;
+}
+.page.on .page_tit {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.page.on .page_com {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.page_wrap {
+    width: 80%;
+    margin: 140px auto;
+    position: relative;
+}
+
+.con_wrap {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+.icon_lst {
+    position: relative;
+    height: 300px;
+    bottom: 0;
+}
+
+.icon_lst li {
+    float: left;
+    margin: 15px;
+    position: relative;
+    transition: 0.5s;
+    min-width: 240px;
+    min-height: 230px;
+}
+
+.icon_lst li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    transition: 0.5s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    word-break: keep-all;
+    background-repeat: no-repeat;
+    background-position: 160px 160px;
+}
+
+.icon_tit {
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.icon_com {
+    font-size: 15px;
+    display: none;
+    transition: 0.5s;
+}
+
+.icon_lst li:hover .icon_com {
+    display: block;
+    font-size: 17px;
+}
+
+.icon_lst li:hover .icon_tit {
+    font-size: 24px;
+}
+
+.icon_lst li:hover a {
+    width: 80px;
+    height: 80px;
+    background-color: coral;
+    background-position: 260px 260px;
+}
+
+        #p3 .page_wrap img {width: 420px; margin-top: -50px;padding-top: 0;}
+        
