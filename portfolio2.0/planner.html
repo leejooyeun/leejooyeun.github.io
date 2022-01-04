@@ -24,54 +24,10 @@
     <link rel="shortcut icon" href="./data/favicon32.ico">
     <link rel="stylesheet" href="./css/fontset.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/planner.css">
     <title>LeeJooYeun</title>
     <style>
-        .wrap{position: relative;}
-        .hd{position: absolute; top: 0;left: 0;z-index: 999;}
-     .contant {clear: both; margin: 0 auto; padding-bottom: 3em; position:relative; 
-        background-position:center center; background-repeat: no-repeat; background-size:100% 100%; font-size:24pt; color:#fff; width:100vw; height:100vh; overflow:hidden;}   
-       .page:after { content:""; clear:both; display:block; } 
-    .page_wrap:after { content:""; clear:both; display:block; } 
-    .page_tit { margin-top: 134px;    color: #fff;    font-size: 5.882rem;
-    font-weight: 900;    word-break: break-word;    letter-spacing: -.04rem;
-    line-height: 7.058rem;  transition-delay: 1s; padding-top: 4rem;
-    transition: transform 1.5s, opacity 1.7s;
-    transform: translateY(50px);
-    opacity: 0; }
-    .page_com { margin-top: 44px;    color: #fff;    font-size: 1.412rem;
-    word-break: keep-all;    letter-spacing: -.04rem;    line-height: 1.882rem; 
-        transition-delay: 1s;    transition: transform 2.5s, opacity 2.7s;
-    transform: translateY(50px);    opacity: 0; }
-        .page.on .page_tit { transform: translateY(0);    opacity: 1; }  
-    .page.on .page_com { transform: translateY(0);    opacity: 1; }   
-    .page_wrap { width: 80%; margin: 0 auto; position:relative; }
-    .con_wrap { position:absolute; bottom: 10%; right:10%; }
-        #page3 .con_wrap { top:auto; bottom:13%; }   
-    .icon_lst { position:relative; height: 300px; bottom: 0; }
-    .icon_lst li { float:left; margin:15px; position:relative; 
-        transition:0.5s; min-width:240px; min-height:230px; }
-    .icon_lst li a { display:block; width: 180px; height: 150px; padding:30px 25px; 
-        background-color:rgba(0,0,0,0.45); color:#fff; transition:0.5s; position:absolute; bottom: 0; left: 0; word-break:keep-all; background-repeat: no-repeat; background-position:160px 160px; } 
-    .icon_tit { font-size:18px;  transition:0.5s;  }
-    .icon_com { font-size:15px; padding: 20px 0px; display:none; transition:0.5s; }
-    .icon_lst li:hover { min-width: 350px; }    
-    .icon_lst li:hover .icon_com { display:block; font-size:17px; }    
-    .icon_lst li:hover .icon_tit { font-size:24px;  }    
-    .icon_lst li:hover a { width: 300px; height: 300px; background-color: coral; 
-        background-position:260px 260px; }   
-        #p2 .con_wrap { position:absolute; bottom: -120%; left: 0.1%; }
-        #p2 .icon_lst li{min-width:200px; min-height:130px;}
-        #p2 .icon_lst li a{width: 130px; height: 130px; margin: 0 auto;}
-        #p2 .page_tit  {  padding-top:0.5em; margin-top: 125px;}
-        #p2 .icon_lst { position:relative; width: 1200px; margin: 0 auto; height: 300px; bottom: 0; }
-        #p2 .icon_lst li:hover { min-width: 250px; }
-        #p2 .icon_lst li:hover a { width: 220px; height: 200px; background-color: coral; 
-        background-position:260px 260px; margin: 0 auto;} 
-        #p3 .tit {font-size: 5.882rem; }
-        #p3 .page_tit p{font-size: 35px;display: block; margin: 35px; margin-top: 0;position: relative;}
-        #p3 .page_tit p:after{content: ""; display: block; clear: both; background-image: url(./data/arrow.png); background-repeat: no-repeat; background-position: center; width: 40px;height: 40px;position: absolute; bottom: 35px;right: -55px;}
-        #p3 .page_tit .t_com{ float: left;}
-        #p3 .page_tit p:last-child::after{display: none;}
+        
     
     </style>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -135,7 +91,7 @@
             <li class="menu1"><a href="about.html">About 이주연</a></li>
             <li class="menu2"><a href="planner.html">Planner</a></li>
             <li class="menu3"><a href="webdesign.html">Web Design</a></li>
-            <li class="menu4"><a href="gallery.html">Contact</a></li>
+            <li class="menu4"><a href="contact.html">Contact</a></li>
         </ul>
     </header>
     <section class="page pg contant" id="p1">
@@ -147,19 +103,19 @@
             <div class="pg_item">
                 <ul class="icon_lst">
                     <li class="item1">
-                        <a href="">
+                        <a href="#">
                             <h2 class="icon_tit">다양한 이슈해결과 프로젝트 경험</h2>
                             <p class="icon_com">국내 기획자 인턴 기간 동안 국내 서비스들 Web/App 기획 업무를 맡아 고객지원팀, 개발팀과의 협업을 통해 유지 보수를 주로 하였으며 이벤트나 업데이트 시, 공지사항 작성 및 배너&amp;이미지를 기획하였습니다. 또한 사내 문화 서비스 프로젝트에서 기획자 역할을 맡아 화면 설계 및 기획서 작성 엄무를 맡았었습니다. 그리고 국내 서비스 중 수업용 프로그램 업그레이드 기획을 맡아 분석, 벤치마킹을 통해 화면 설계 및 기획서 작성 업무를 맡았었습니다. 기타 업무로 공지사항 작성, 워드프레스 관리, 테스터 등의 업무를 경험하였습니다.</p>
                         </a>
                     </li>
                     <li class="item2">
-                        <a href="">
+                        <a href="#">
                             <h2 class="icon_tit">프로세스를 토대로 팀원들과의 협업</h2>
                             <p class="icon_com">문제를 파악하고 다양한 리서치를 통해 분석하고 설계할 것이며 그로 인해 최선의 방법으로 문제 해결을 할 수 있도록 제안할 것입니다. 낯선 사람들과의 협업에서도 그동안의 교사 및 인턴의 경험들과 저의 밝은 에너지로 먼저 다가가 상호작용할 것이며 팀원들과의 원활한 커뮤니티를 통해 협업을 하며 일 할 것입니다.</p>
                         </a>
                     </li>
                     <li class="item3">
-                        <a href="">
+                        <a href="#">
                             <h2 class="icon_tit">다양한 문서경험 및 웹디자인 공부로 인한 무궁무진한 가능성</h2>
                             <p class="icon_com">인턴 기간 중에 주 업무가 국내 서비스들(약 6개)의 유지 보수였으며 다양한 이슈들을 다양한 해결 방법으로 해결해오면서 문제해결능력이 더 키워질 수 있었습니다. 또한 저의 적극적인 성격과 긍정적인 에너지로 인해 팀원들과도 금방 가까워질 수 있어 협업을 할 때 상호작용도 많이 이끌어 낼 수 있었습니다. 때문에 회사의 일원이 된다면 어떠한 이슈에도 포기하지 않고 더 좋은 서비스를 위해 기획하는 기획자, 팀원들과의 활발한 상호작용을 통하여 결과를 이끌어내는 기획자가 될 가능성이 충분하다고 생각합니다.</p>
                         </a>
@@ -172,35 +128,36 @@
         <div class="page_wrap">
             <h2 class="page_tit">청취닷컴<br>국내서비스 기획자 인턴</h2>
             <p class="page_com">고객지원팀과 개발팀과의 협업을 통해 국내서비스를 운영 및 고도화, 새로운 서비스를 기획했습니다.</p>
-            <div class="con_wrap">
+        </div>
+        <div class="con_wrap">
                 <div class="pg_item">
                     <ul class="icon_lst">
                         <li class="item1">
-                            <a href="">
+                            <a href="#">
                                 <h2 class="icon_tit">다양한 이슈해결</h2>
                                 <p class="icon_com">국내 영어교육 서비스 6가지의 유지보수를 맡아 다양한 이슈상황을 해결해나아가며 실력을 키울 수 있었고 고객지원팀, 개발팀과의 협업을 경험하였습니다.</p>
                             </a>
                         </li>
                         <li class="item2">
-                            <a href="">
+                            <a href="#">
                                 <h2 class="icon_tit">프로젝트 경험</h2>
                                 <p class="icon_com">정기적으로 국내 서비스에 대한 고객 및 직원들의 건의사항을 수렴하여 서비스를 업그레이드를 프로젝트 프로세스로 진행 하였습니다.</p>
                             </a>
                         </li>
                         <li class="item3">
-                            <a href="">
+                            <a href="#">
                                 <h2 class="icon_tit">사내문화 서비스 기획</h2>
                                 <p class="icon_com">기존의 오프라인 사내문화를 온라인 서비스로 새로이 기획 및 테스트를 맡았고 현제 실서비스 오픈하였습니다.</p>
                             </a>
                         </li>
                         <li class="item4">
-                            <a href="">
+                            <a href="#">
                                 <h2 class="icon_tit">영어교육용 프로그램 업그레이드 기획</h2>
                                 <p class="icon_com">업그레이드를 위해 리서치 방법으로 시장조사 및 밴치 마킹, 직접 조작 등을 하며 분석하여 UX 설계단계에서 메인, 학습화면 설계까지 참여하였습니다.</p>
                             </a>
                         </li>
                         <li class="item5">
-                            <a href="">
+                            <a href="#">
                                 <h2 class="icon_tit">이벤트 및 공지사항 작성</h2>
                                 <p class="icon_com">이벤트에 따라 홈페이지 베너, 카카오체널 카드 이미지 등을 기획하여 디자이너분과 협업하여 작업하엿습니다. 또한 서비스에 관한 공지사항이 필요시 작성하여 게시하였습니다.</p>
                             </a>
@@ -208,65 +165,89 @@
                     </ul>
                 </div>
             </div>
-        </div>
     </section>
     <section class="page pg contant" id="p3">
         <div class="page_wrap">
-            <div class="page_tit"><h2 class="tit t_com">Procass:</h2><p class="t_com">분석</p><p class="t_com">설계</p><p class="t_com">디자인</p>
-            <p class="t_com">개발</p>
-            <p class="t_com">테스트</p>
-            <p class="t_com">오픈</p</div>
-        </div>
-        <div class="con_wrap">
-            <div class="pg_item">
-                <ul class="icon_lst">
-                    <li class="item1">
-                        <a href="">
-                            <h2 class="icon_tit">문제점 인식 및 리서치</h2>
-                            <p class="icon_com">국내 기획자 인턴 기간 동안 국내 서비스들 Web/App 기획 업무를 맡아 고객지원팀, 개발팀과의 협업을 통해 유지 보수를 주로 하였으며 이벤트나 업데이트 시, 공지사항 작성 및 배너&amp;이미지를 기획하였습니다. 또한 사내 문화 서비스 프로젝트에서 기획자 역할을 맡아 화면 설계 및 기획서 작성 엄무를 맡았었습니다. 그리고 국내 서비스 중 수업용 프로그램 업그레이드 기획을 맡아 분석, 벤치마킹을 통해 화면 설계 및 기획서 작성 엄무를 맡았었습니다. 기타 업무로 기획서 작성(Axure), 워드프레스 관리, 테스터 등의 업무를 경험할 수 있었습니다.</p>
-                        </a>
-                    </li>
-                    <li class="item2">
-                        <a href="">
-                            <h2 class="icon_tit">설계</h2>
-                            <p class="icon_com">기획자는 분석&amp;설계, 문제 해결, 커뮤니티 등 3가지 능력이 중요하다고 생각합니다. 저는 논리적이고 객관적인 자료를 통해 분설하고 설계할 것이며 그로 인해 최선의 방법으로 문제 해결을 할 수 있도록 제안할 것입니다. 낯선 사람들과의 협업에서도 적극적으로 먼저 다가가 상호작용할 것이며 팀원들과의 원활한 커뮤니티를 통해 협업을 하며 일하고 싶습니다.</p>
-                        </a>
-                    </li>
-                    <li class="item3">
-                        <a href="">
-                            <h2 class="icon_tit">결과물</h2>
-                            <p class="icon_com">인턴 기간 중에 주 업무가 국내 서비스들(약 6개)의 유지 보수였으며 다양한 이슈들을 다양한 해결 방법으로 해결해오면서 문제해결능력이 더 키워질 수 있었습니다. 또한 저의 적극적인 성격과 긍정적인 에너지로 인해 팀원들과도 금방 가까워질 수 있어 협업을 할 때 상호작용도 많이 이끌어 낼 수 있었습니다. 때문에 회사의 일원이 된다면 어떠한 이슈에도 포기하지 않고 더 좋은 서비스를 위해 기획하는 기획자, 팀원들과의 활발한 상호작용을 통하여 결과를 이끌어내는 기획자가 될 가능성이 충분하다고 생각합니다.</p>
-                        </a>
-                    </li>
-                </ul>
+            <div class="page_tit">
+                <h2 class="tit t_com">Process:</h2>
+                <p class="t_com">분석</p>
+                <p class="t_com">설계</p>
+                <p class="t_com">디자인</p>
+                <p class="t_com">개발</p>
+                <p class="t_com">테스트</p>
+                <p class="t_com">오픈</p>
             </div>
-        </div>
-        
+            <p class="page_com">다양한 리서치 방법을 시도하여 분석하고 팀원들과의 활발한 상호작용을 통해 프로젝트를 이끌어 가겠습니다.</p>     
+           <ul class="process_wap">
+           <li class="pc1 com">
+               <p class="txt">분석</p>
+           </li>
+           <li class="pc_hover1 com_h">
+               <p class="txt">시장조사</p>
+           </li>
+           <li class="pc_hover2 com_h">
+               <p class="txt">서비스 구축범위</p>
+           </li>
+           <li class="pc2 com">
+               <p class="txt">설계</p>
+           </li>
+           <li class="pc_hover3 com_h">
+               <p class="txt">구현진척률</p>
+           </li>
+           <li class="pc_hover4 com_h">
+               <p class="txt">기능정의서</p>
+           </li>
+           <li class="pc_hover5 com_h">
+               <p class="txt">화면설계</p>
+           </li>
+           <li class="pc3 com">
+               <p class="txt">디자인</p>
+           </li>
+           <li class="pc4 com">
+               <p class="txt">개발</p>
+           </li>
+           <li class="pc_hover6 com_h">
+               <p class="txt">미결사항정의서</p>
+           </li>
+           <li class="pc5 com">
+               <p class="txt">테스트</p>
+           </li>
+           <li class="pc_hover7 com_h">
+               <p class="txt">테스트 시나리오&amp;기록</p>
+           </li>
+           <li class="pc6 com">
+               <p class="txt">오픈</p>
+           </li>
+       </ul>
+       </div>
     </section>
     <section class="page pg contant" id="p4">
         <div class="page_wrap">
-            <h2 class="page_tit">빠르게 성장하는<br>WEB/APP 기획자</h2>
-            <p class="page_com">빠른 상황 파악과 활발한 소통을 통한 성공적인 프로젝트를 이끌겠습니다.</p>
+            <h2 class="page_tit">프로젝트: playchungchy</h2>
+            <p class="page_com">기간: 2021. 08. ~2021. 12.</p>
+            <p class="page_com">사용툴:powerpoint, spreadsheet, axure</p>
+            <img class="page_com" src="./data/progect.png" alt="프로젝트 목업이미지">
         </div>
         <div class="con_wrap">
             <div class="pg_item">
                 <ul class="icon_lst">
                     <li class="item1">
                         <a href="">
-                            <h2 class="icon_tit">다양한 이슈해결과 프로젝트 경험</h2>
-                            <p class="icon_com">국내 기획자 인턴 기간 동안 국내 서비스들 Web/App 기획 업무를 맡아 고객지원팀, 개발팀과의 협업을 통해 유지 보수를 주로 하였으며 이벤트나 업데이트 시, 공지사항 작성 및 배너&amp;이미지를 기획하였습니다. 또한 사내 문화 서비스 프로젝트에서 기획자 역할을 맡아 화면 설계 및 기획서 작성 엄무를 맡았었습니다. 그리고 국내 서비스 중 수업용 프로그램 업그레이드 기획을 맡아 분석, 벤치마킹을 통해 화면 설계 및 기획서 작성 엄무를 맡았었습니다. 기타 업무로 기획서 작성(Axure), 워드프레스 관리, 테스터 등의 업무를 경험할 수 있었습니다.</p>
+                            <h2 class="icon_tit">기대효과: 사내문화 활성화 / 성과</h2>
+                            <p class="icon_com">기존에 사내문화인 감사, 칭찬카드 작성 문화를 온라인 서비스로 생성하면 사용성을 높여 사내문화를 활성화 하는 것이 목표입니다.<br>- 오프라인에서 온라인 서비스로 변환하니 참여빈도수가 증가됨.<br>- 팀과 팀 사이의 교류가 어려웠는데 온라인 서비스로 다른팀과의 교류가 쉬워짐.
+                            <br>- 서로의 일상, 감정등을 작성한 글을 공감하는 버튼을 둠으로써 교류감을 느낄 수 있고 오프라인 상호작용도 증가함.</p>
                         </a>
                     </li>
                     <li class="item2">
                         <a href="">
-                            <h2 class="icon_tit">후회없는 인생을 위한 강렬한 열정</h2>
-                            <p class="icon_com">기획자는 분석&amp;설계, 문제 해결, 커뮤니티 등 3가지 능력이 중요하다고 생각합니다. 저는 논리적이고 객관적인 자료를 통해 분설하고 설계할 것이며 그로 인해 최선의 방법으로 문제 해결을 할 수 있도록 제안할 것입니다. 낯선 사람들과의 협업에서도 적극적으로 먼저 다가가 상호작용할 것이며 팀원들과의 원활한 커뮤니티를 통해 협업을 하며 일하고 싶습니다.</p>
+                            <h2 class="icon_tit">컨셉1: 쉽고 간단한 UI</h2>
+                            <p class="icon_com">한 화면에 주요 기능(칭찬, 감사, 일정, 공지)을 확인할 수 있으며 사용자가 편리함을 느낄 수 있도록 컬러를 선정, 기존 서비스와 유사한 작성 폼으로 친근함을 느낄 수 있도록 설계하였습니다.</p>
                         </a>
                     </li>
                     <li class="item3">
                         <a href="">
-                            <h2 class="icon_tit">다양한 문서경험 및 웹디자인 공부로 인한 무궁무진한 가능성</h2>
-                            <p class="icon_com">인턴 기간 중에 주 업무가 국내 서비스들(약 6개)의 유지 보수였으며 다양한 이슈들을 다양한 해결 방법으로 해결해오면서 문제해결능력이 더 키워질 수 있었습니다. 또한 저의 적극적인 성격과 긍정적인 에너지로 인해 팀원들과도 금방 가까워질 수 있어 협업을 할 때 상호작용도 많이 이끌어 낼 수 있었습니다. 때문에 회사의 일원이 된다면 어떠한 이슈에도 포기하지 않고 더 좋은 서비스를 위해 기획하는 기획자, 팀원들과의 활발한 상호작용을 통하여 결과를 이끌어내는 기획자가 될 가능성이 충분하다고 생각합니다.</p>
+                            <h2 class="icon_tit">컨셉2:소통과 공유에 용이한 환경</h2>
+                            <p class="icon_com">커뮤니케이션에서 중요한 상호작용이 빠르고 원활하게 진행될 수 있도록 실시간 업데이트 기능을 적용하였고 칭찬, 감사 게시글에 공감 버튼 기능을 통해 쉽게 서로 소통하는 환경을 구축하였으며 눈의 피로감과 주 기능인 감사와 칭찬의 내용이 강조되도록 배경색을 검정으로 선정하여 구현하였습니다.</p>
                         </a>
                     </li>
                 </ul>

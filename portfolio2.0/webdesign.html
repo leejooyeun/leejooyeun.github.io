@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="refresh" content="180">
+    <meta name="msapplication-TileColor" content="#FFFFFF"> 
+    <meta name="msapplication-TileImage" content="./data/favicon240.png">
+    <meta name="msapplication-TileImage" content="./data/favicon160.png">
+    <meta name="msapplication-TileImage" content="./data/favicon32.png">
+    
+    <meta property="og:image" content="./data/favicon240.ico">
+    <meta property="og:image" content="./data/favicon160.ico">
+    <meta property="og:image" content="./data/favicon32.ico">
+    <meta property="og:image" content="./data/favicon240.png">
+    <meta property="og:image" content="./data/favicon160.png">
+    <meta property="og:image" content="./data/favicon32.png">
+
+    <link rel="shortcut icon" href="./data/favicon240.png">
+    <link rel="shortcut icon" href="./data/favicon160.png">
+    <link rel="shortcut icon" href="./data/favicon32.png">
+    <link rel="shortcut icon" href="./data/favicon160.ico">
+    <link rel="shortcut icon" href="./data/favicon32.ico">
+    <link rel="stylesheet" href="./css/fontset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/webdesign.css">
+    <title>LeeJooYeun</title>
+    <style>
+     
+
+    </style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        window.onload = function () {
+//            var elm = ".page";
+            $(".page").each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(".page").eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {  //다음 페이지가 있으면
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) { //이전 페이지가 있으면
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("body, html").stop().not("animated").animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 850, complete: function () {
+
+                        }
+                    });
+                });
+            });
+            $(".page").mouseenter(function(){
+                $(this).addClass("on");    
+            });
+            $(".page").mouseleave(function(){
+                $(this).removeClass("on");    
+            });
+        }
+    </script>
+    <script>  
+
+function openWin1(){  
+    window.open("https://leejooyeun.github.io/web4/", "width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes" );  
+}
+function openWin2(){  
+    window.open("https://leejooyeun.github.io/w1/", "width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes" );  
+}
+function openWin3(){  
+    window.open("https://leejooyeun.github.io/mobail1/", "width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes" );  
+}
+function openWin4(){  
+    window.open("https://leejooyeun.github.io/portfolio/index.html", "width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes" );  
+}
+
+</script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+       <a href="index.html" class="logo"><img src="./data/logo.png" alt="로고"></a>
+        <ul class="menu">
+            <li class="menu1"><a href="about.html">About 이주연</a></li>
+            <li class="menu2"><a href="planner.html">Planner</a></li>
+            <li class="menu3"><a href="webdesign.html">Web Design</a></li>
+            <li class="menu4"><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <section class="page pg contant" id="p1">
+        <div class="page_wrap">
+           <img class="page_com pg" src="./data/inisfree.png" alt="프로젝트 목업이미지">
+            <h2 class="page_tit pg">inisfree (web)</h2>
+            <p class="page_com pg">브랜드 홍보용 홈페이지로 이니스프리의 자연주의를 보여줄 수 있는 컬러와 이미지를 사용하여 제작하였습니다. 또한 브랜드 홍보를 위해 케릭터, 홍보영상을 위주로 콘텐츠를 구성하였습니다.</p>
+        </div>
+        <div class="con_wrap">
+            <div class="pg_item">
+                <ul class="icon_lst">
+                    <li class="item1">
+                        <a id="more1" onclick="javascript:openWin1();" href="#">
+                            <h2 class="icon_tit">MORE ☞</h2>
+                            <p class="icon_com">바로가기</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="page pg contant" id="p2">
+        <div class="page_wrap">
+           <img class="page_com pg" src="./data/delta.png" alt="프로젝트 목업이미지">
+            <h2 class="page_tit pg">deltaindex (web/tablet/app)</h2>
+            <p class="page_com pg"> it 기업 홈페이지로 이 회사가 무엇을 하는 회사인지를 보여 줄 수 있는 이미지를 선정하였으며 회사이름을 본따 파비콘을 제작하였습니다. 콘텐츠에 인포그레픽을 적용, 기업 자체에서 목표달성을 위함을 추구로한 기업형 반응 웹 사이트 입니다.</p>
+        </div>
+        <div class="con_wrap">
+            <div class="pg_item">
+                <ul class="icon_lst">
+                    <li class="item1">
+                        <a id="more2" onclick="javascript:openWin2();" href="#">
+                            <h2 class="icon_tit">MORE ☞</h2>
+                            <p class="icon_com">바로가기</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="page pg contant" id="p3">
+        <div class="page_wrap">
+           <img class="page_com pg" src="./data/chungnun.png" alt="프로젝트 목업이미지">
+            <h2 class="page_tit pg">청년떡집 (mobail)</h2>
+            <p class="page_com pg">떡집의 이미지와 어울리는 컬러를 선정하여 모바일 웹으로 구현해 보았으며, 비쥬얼 배너에서는 이벤트 및 신상품 소개를 하여 구매로 이어질 수 있도록 배치하였습니다. 상품 구매 페이지의 탭에는 떡을 모티브로 만든 케릭터를 배치, 친근한 이미지를 주었고 하단에 네비게이션 바를 고정시켜 메뉴이동이 쉽도록 제작하였습니다.</p>
+        </div>
+        <div class="con_wrap">
+            <div class="pg_item">
+                <ul class="icon_lst">
+                    <li class="item1">
+                        <a id="more3" onclick="javascript:openWin3();" href="#">
+                            <h2 class="icon_tit">MORE ☞</h2>
+                            <p class="icon_com">바로가기</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="page pg contant" id="p4">
+        <div class="page_wrap">
+           <img class="page_com pg" src="./data/portfolio.png" alt="프로젝트 목업이미지">
+            <h2 class="page_tit pg">portfolio1.0 (web)</h2>
+            <p class="page_com pg">svg와 자바스크립트를 이용하여 에니메이션 효과를 넣어주었으며 파스텔 톤으로 주색을 선정하여 따듯한 느낌을 줄 수 있도록 제작하였습니다. 제작된 사이트 뿐만아니라 겔러리메뉴에서는 일러스트 및 포토샾 제작 이미지를 볼 수 있는 특징이 있습니다.</p>
+        </div>
+        <div class="con_wrap">
+            <div class="pg_item">
+                <ul class="icon_lst">
+                    <li class="item1">
+                        <a id="more4" onclick="javascript:openWin4();" href="#">
+                            <h2 class="icon_tit">MORE ☞</h2>
+                            <p class="icon_com">바로가기</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="abutme">
+        <div class="tak">
+            <ul class="tak_list">
+                <li class="com1"><a href="index.html">홈</a></li>
+                <li class="com2"><a href="about.html">이주연이란?</a></li>
+                <li class="com3"><a href="planner.html">기획</a></li>
+                <li class="com4"><a href="webdesign.html">웹디자인</a></li>
+                <li class="com5"><a href="contact.html">연락방법</a></li>
+            </ul>
+        </div>
+        <img src="./data/aboutme_icon.png" alt="바로가기1">
+    </div>
+    <footer class="ft">
+        <div class="contact">
+            <h3 class="neme">이주연</h3>
+            <p class="call">010. 4641. 7782.</p>
+            <p class="email">dlwndus7782@naver.com</p>
+        </div>
+    </footer>
+</div>    
+</body>
+</html>
