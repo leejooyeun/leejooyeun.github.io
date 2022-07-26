@@ -5,34 +5,34 @@
     body, html{width: 100vw; height: 100%; font-family: "Kyobo", "돋움", sans-serif; cursor:url(../data/mouse.webp), auto; overflow-x: hidden;background-image: linear-gradient(to bottom, #3ab5b0 0%, #3d99be 31%, #330867 100%);}
     ul{list-style: none;}
     a{text-decoration: none; color: #fff; cursor:url(../data/mouse_point.webp), auto;}
-.cf:after{content: ""; display: block; clear: both;}
-        .wrap{width: 1720px; height: 100%; margin: 0 auto; position: relative; cursor:url(../data/mouse.webp), auto;display: flex; flex-direction: column;}
+    .cf:after{content: ""; display: block; clear: both;}
+
+    .wrap{width: 1720px; height: 100%; margin: 0 auto; position: relative; cursor:url(../data/mouse.webp), auto;display: flex; flex-direction: column;}
 /*
         background-image: linear-gradient(to top, #330867 0%, #30cfd0 100%);
         background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
         background-image: linear-gradient(to bottom, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
 */
-        .hd{width: 100%; height: 200px; display: grid; align-items: center;position: relative; }
-        .logo{display: block; width: 150px; height: 120px;  position: absolute; top: 50%;left: 0;z-index: 999;margin-top: -60px;}
+    .hd{width: 100%; height: 200px; display: grid; align-items: center;position: relative; }
+    .logo{display: block; width: 150px; height: 120px;  position: absolute; top: 50%;left: 0;z-index: 999;margin-top: -30px;background-image: url(../data/logo.webp);}
         
         
-        .abutme{clear: both; width: 140px; height: 100px; position: fixed; z-index: 999; bottom: 10em; right: 7%;}
-        .tak{display: none; width: 200px; height: 300px; position: fixed; z-index: 999; bottom: 17em; right: 9em; background-color: aliceblue; border-radius: 0.7rem;}
-        .tak_list{width: 100%; height: 100%; }
-        .tak_list li{width: 180px; height: 45px; margin: 10px;background-color: darkblue; border-radius: 0.5rem; }
-        .tak_list li:first-child{margin-top: 18px; }
-        .tak_list li a{display: block;  text-align: center; line-height: 45px; }
-        .tak_list li:hover{background-color: #fff; border: 1px solid darkblue; }
-        .tak_list li:hover a{ color: darkblue;}
-        
-        .abutme:hover .tak{display: block;}
-        .abutme img{display: block; width: 100px; height: 100px;}
-        .ft{width: 100%;height: 200px; clear: both;border-top: 1px solid #fff;display: grid; align-items: center;position: relative; }
-        .contact{width: 100%; }
-        .contact p {color: #fff; margin: 10px 0;}
-        .contact .neme{font-weight: bold;}
-.ft a{display: block; width: 137px;height: 55px; position: absolute; top: 50%;right: 0;margin-top: -27.5px; background-image: url(../data/contact.webp);  animation: any 3s linear infinite; }
-.ft a:hover{animation-play-state:paused;}
+    .abutme{clear: both; width: 100px; height: 120px; position: fixed; z-index: 999; bottom: 10em; right: 9%;background-repeat: no-repeat;background-position: bottom; background-image: url(../data/aboutme_icon.webp);background-size: 100px 100px}
+    .abutme:hover .tak{display: block;}
+    .tak{display: none; width: 200px; height: 300px; position: fixed; z-index: 999; bottom: 17em; right: 9em; background-color: aliceblue; border-radius: 0.7rem;}
+    .tak_list{width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center;justify-content: space-around}
+    .tak_list li{width: 180px; height: 45px; background-color: darkblue; border-radius: 0.5rem; box-sizing: border-box;}
+    .tak_list li a{display: block;  text-align: center; line-height: 45px; }
+    .tak_list li:hover{background-color: #fff; border: 1px solid darkblue; }
+    .tak_list li:hover a{ color: darkblue;}
+    
+
+    .ft{width: 100%;height: 200px; clear: both;border-top: 1px solid #fff;display: grid; align-items: center;position: relative; text-shadow: 1px 1px 3px rgb(51 51 51 / 50%);}
+    .contact{width: 100%; }
+    .contact p {color: #fff; margin: 10px 0;}
+    .contact .neme{font-weight: bold;}
+    .ft a{display: block; width: 137px;height: 55px; position: absolute; top: 50%;right: 0;margin-top: -27.5px; background-image: url(../data/contact.webp);  animation: any 3s linear infinite; }
+    .ft a:hover{animation-play-state:paused;}
 @keyframes any {
   0%{transform:translateX(-300px)}
   50%{transform:translateX(0px)}
