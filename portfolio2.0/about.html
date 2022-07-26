@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="refresh" content="180">
     <meta name="msapplication-TileColor" content="#FFFFFF"> 
+    <meta name="description" content="UI/UX기획자&퍼블리셔로 성장해 나아가는 이주연의 포트폴리오입니다.">
+    <meta name="keywords" content="포트폴리오, 웹디자인, 코딩, 퍼블리셔, 퍼블리싱, css, html, 제이쿼리, UI/UX, 기획">
+    <meta name="author" content="JINNI">
     <meta name="msapplication-TileImage" content="./data/favicon240.png">
     <meta name="msapplication-TileImage" content="./data/favicon160.png">
     <meta name="msapplication-TileImage" content="./data/favicon32.png">
@@ -30,86 +33,98 @@
                 
     </style>
 <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script>
-        window.onload = function () {
-//            var elm = ".page";
-            $(".page").each(function (index) {
-                // 개별적으로 Wheel 이벤트 적용
-                $(this).on("mousewheel DOMMouseScroll", function (e) {
-                    e.preventDefault();
-                    var delta = 0;
-                    if (!event) event = window.event;
-                    if (event.wheelDelta) {
-                        delta = event.wheelDelta / 120;
-                        if (window.opera) delta = -delta;
-                    } 
-                    else if (event.detail)
-                        delta = -event.detail / 3;
-                    var moveTop = $(window).scrollTop();
-                    var elmSelecter = $(".page").eq(index);
-                    // 마우스휠을 위에서 아래로
-                    if (delta < 0) {
-                        if ($(elmSelecter).next() != undefined) {  //다음 페이지가 있으면
-                            try{
-                                moveTop = $(elmSelecter).next().offset().top;
-                            }catch(e){}
-                        }
-                    // 마우스휠을 아래에서 위로
-                    } else {
-                        if ($(elmSelecter).prev() != undefined) { //이전 페이지가 있으면
-                            try{
-                                moveTop = $(elmSelecter).prev().offset().top;
-                            }catch(e){}
-                        }
-                    }
-                     
-                    // 화면 이동 0.8초(800)
-                    $("body, html").stop().not("animated").animate({
-                        scrollTop: moveTop + 'px'
-                    }, {
-                        duration: 850, complete: function () {
-
-                        }
-                    });
-                });
-            });
-            $(".page").mouseenter(function(){
-                $(this).addClass("on");    
-            });
-            $(".page").mouseleave(function(){
-                $(this).removeClass("on");    
-            });
-        }
-    </script>
+<script src="./js/layout.js"></script>
+   
 </head>
 <body>
 <div class="wrap">
-    <header class="hd">
-       <a href="index.html" class="logo"><img src="./data/logo.png" alt="로고"></a>
-        <ul class="menu">
-            <li class="menu1"><a href="about.html">About 이주연</a></li>
-            <li class="menu2"><a href="planner.html">Planner</a></li>
-            <li class="menu3"><a href="webdesign.html">Web Design</a></li>
-            <li class="menu4"><a href="contact.html">Contact</a></li>
-        </ul>
+    <header class="hd cf">
+       <a href="index.html" class="logo"></a>
     </header>
     <div class="page pg contant" id="p1">
        <div class="con left">
-          <div class="plofil"><img class="pf" src="./data/aboutme_icon.png" alt="프로필"><p class="pf" >LeeJooYeun</p></div>
-           <img class="poto"src="./data/poto.jpg" alt="증명사진">
+          <div class="plofil"><img class="pf" src="./data/aboutme_icon.webp" alt="프로필"><p class="pf" >LeeJooYeun</p></div>
+           <img class="poto"src="./data/poto.webp" alt="증명사진">
             <div class="btn_list">
                <img src="./data/btn1.png" alt="좋아요" class="btn">
                <img src="./data/btn2.png" alt="보내기" class="btn">
                <img src="./data/btn3.png" alt="체팅" class="btn">
                 <button class="btn btn_con"><a href="contact.html">CONTACT</a></button>
             </div>
-           <div class="txt"><p>후회없는 삶을 살자!! 제가 입사를 하게 된다면 저의 긍정적인 에너지와 열정을 쏟아 최선을 다해 일을 할 것이며 저의 삶의 새로운 꿈을 위해 계속해서 다양한 도전을 하고 성장하는 인재가 될것입니다! </p></div>
+           <div class="txt"><p>웹디자인&nbsp;하고&nbsp;싶어&nbsp;취업했는데<br>회사에서&nbsp;웹디자인&nbsp;일을&nbsp;안&nbsp;한다니&nbsp;퇴사&nbsp;레고&#126;<br>내&nbsp;미래를&nbsp;위해&nbsp;지긋지긋하지만&nbsp;또&nbsp;다시&nbsp;취준생&nbsp;스타트...<br>이번&nbsp;기회에&nbsp;늙어&nbsp;죽을때까지&nbsp;일할&nbsp;직장으로&nbsp;입사하자<br>아자아자!!</p></div>
            <div class="link">
-               <p>#지원동기#이니스프리#열정만수르#긍정적#후회없는삶을위해#웹디자인#서비스기획자#ENFJ#프로젝트#playchungchy#정의로운사회운동가#델타인덱스</p>
+               <p>&#35;열정만수르&#35;긍정적&#35;ENFJ&#35;정의로운사회운동가&#35;지원동기&#35;후회없는삶을위해&#35;퍼블리셔&#35;웹디자인&#35;서비스기획자&#35;프로젝트&#35;playchungchy&#35;사이언스디자인</p>
            </div>
        </div>   
        <div class="con right">
-           <img src="./data/gificon.gif" alt="경력아이콘" class="gif">
+           <div class="t_com study">
+            <h3 class="tit">학력</h3>
+            <table class="tb">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                        <td>그린 컴퓨터 학원</td>
+                        <td>디지털 디자인 양성과정</td>
+                        <td>2020. 12. ~ 2021. 04.</td>
+                    </tr>
+                    <tr>
+                        <td>대덕대학</td>
+                        <td>유아교육과 졸업</td>
+                        <td>2012. 03. ~ 2015. 02.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="t_com career">
+            <h3 class="tit">경력</h3>
+            <table class="tb">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>청취닷컴</td>
+                        <td>국내 기획자 인턴</td>
+                        <td>2021. 05. ~ 2021. 11.</td>
+                    </tr>
+<!--
+                    <tr>
+                        <td>덕암 유치원</td>
+                        <td>담임교사</td>
+                        <td>2020. 03. ~ 2020. 08.</td>
+                    </tr>
+                    <tr>
+                        <td>맑은아침 유치원</td>
+                        <td>담임교사</td>
+                        <td>2017. 03. ~ 2020. 02.</td>
+                    </tr>
+                    <tr>
+                        <td>굿모닝 유치원</td>
+                        <td>담임교사</td>
+                        <td>2016. 03. ~ 2017. 02.</td>
+                    </tr>
+                    <tr>
+                        <td>한아름 어린이집</td>
+                        <td>담임교사</td>
+                        <td>2015. 03. ~ 2016. 02.</td>
+                    </tr>
+-->
+                </tbody>
+            </table>
+        </div>
+        </div>    
+    </div>
+    <div class="page pg contant" id="p2">
            <div class="tb_w">
                <div class="table">
                    <div class="tb"><p class="yer">2015. 03. ~ 2020. 08.</p></div>
@@ -262,74 +277,6 @@
                 <p class="tit">Excel Skill</p>
               </div>
         </div>
-       </div>
-    </div>
-    <div class="page pg contant" id="p2">
-        <div class="t_com study">
-            <h3 class="tit">학력</h3>
-            <table class="tb">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                   <tr>
-                        <td>그린 컴퓨터 학원</td>
-                        <td>디지털 디자인 양성과정</td>
-                        <td>2020. 12. ~ 2021. 04.</td>
-                    </tr>
-                    <tr>
-                        <td>대덕대학</td>
-                        <td>유아교육과 졸업</td>
-                        <td>2012. 03. ~ 2015. 02.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="t_com career">
-            <h3 class="tit">경력</h3>
-            <table class="tb">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>청취닷컴</td>
-                        <td>국내 기획자 인턴</td>
-                        <td>2021. 05. ~ 2021. 11.</td>
-                    </tr>
-<!--
-                    <tr>
-                        <td>덕암 유치원</td>
-                        <td>담임교사</td>
-                        <td>2020. 03. ~ 2020. 08.</td>
-                    </tr>
-                    <tr>
-                        <td>맑은아침 유치원</td>
-                        <td>담임교사</td>
-                        <td>2017. 03. ~ 2020. 02.</td>
-                    </tr>
-                    <tr>
-                        <td>굿모닝 유치원</td>
-                        <td>담임교사</td>
-                        <td>2016. 03. ~ 2017. 02.</td>
-                    </tr>
-                    <tr>
-                        <td>한아름 어린이집</td>
-                        <td>담임교사</td>
-                        <td>2015. 03. ~ 2016. 02.</td>
-                    </tr>
--->
-                </tbody>
-            </table>
-        </div>
     </div>
     <div class="abutme">
         <div class="tak">
@@ -341,14 +288,14 @@
                 <li class="com5"><a href="contact.html">연락방법</a></li>
             </ul>
         </div>
-        <img src="./data/aboutme_icon.png" alt="바로가기1">
     </div>
     <footer class="ft">
         <div class="contact">
-            <h3 class="neme">이주연</h3>
-            <p class="call">010. 4641. 7782.</p>
+            <p class="neme">이주연&nbsp;&#95;&nbsp;010&nbsp;&#46;&nbsp;4641&nbsp;&#46;&nbsp;7782&nbsp;&#46;</p>
             <p class="email">dlwndus7782@naver.com</p>
+            <p class="call">ⓒ&nbsp;2022&#46;&nbsp;JINNI&nbsp;All&nbsp;rights&nbsp;reserved&#46;</p>
         </div>
+        <a href="./contact.html" class="any"></a>
     </footer>
 </div>    
 </body>
