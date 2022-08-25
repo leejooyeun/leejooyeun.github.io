@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="refresh" content="180" />
+    <meta
+      name="description"
+      content="UI/UX기획자&퍼블리셔로 성장해 나아가는 이주연의 포트폴리오입니다."
+    />
+    <meta
+      name="keywords"
+      content="포트폴리오, 웹디자인, 코딩, 퍼블리셔, 퍼블리싱, css, html, javascript, jQuery, UI/UX, 기획"
+    />
+    <meta name="author" content="JINNI" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="./data/favicon240.png" />
+    <meta name="msapplication-TileImage" content="./data/favicon160.png" />
+    <meta name="msapplication-TileImage" content="./data/favicon32.png" />
+
+    <meta property="og:image" content="./data/favicon240.ico" />
+    <meta property="og:image" content="./data/favicon160.ico" />
+    <meta property="og:image" content="./data/favicon32.ico" />
+    <meta property="og:image" content="./data/favicon240.png" />
+    <meta property="og:image" content="./data/favicon160.png" />
+    <meta property="og:image" content="./data/favicon32.png" />
+
+    <link rel="shortcut icon" href="./data/favicon240.png" />
+    <link rel="shortcut icon" href="./data/favicon160.png" />
+    <link rel="shortcut icon" href="./data/favicon32.png" />
+    <link rel="shortcut icon" href="./data/favicon160.ico" />
+    <link rel="shortcut icon" href="./data/favicon32.ico" />
+    <link rel="stylesheet" href="./css/fontset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+
+    <title>LeeJooYeun</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <style></style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function () {
+        var p = $(".page");
+        p.each(function (index) {
+          // .page의 개별적으로 Wheel 이벤트 적용
+          $(this).on("mousewheel DOMMouseScroll", function (e) {
+            e.preventDefault();
+            var delta = 0;
+            if (!event) event = window.event;
+            if (event.wheelDelta) {
+              delta = event.wheelDelta / 120;
+              if (window.opera) {
+                delta = -delta;
+              } //오페라의 낮은 버전의 경우 역으로
+            } else if (event.detail) {
+              delta = -event.detail / 3; //휠의 스크롤양 미동적인 3px 보완
+            }
+            var moveTop = $(window).scrollTop();
+            var sel = $(".page").eq(index);
+            if (delta < 0) {
+              // 마우스휠을 위에서 아래로
+              if ($(sel).next() != undefined) {
+                try {
+                  moveTop = $(sel).next().offset().top;
+                } catch (e) {}
+              }
+            } else {
+              // 마우스휠을 아래에서 위로
+              if ($(sel).prev() != undefined) {
+                try {
+                  moveTop = $(sel).prev().offset().top;
+                } catch (e) {}
+              }
+            }
+            $("html, body")
+              .not(":animated")
+              .animate(
+                {
+                  scrollTop: moveTop + "px",
+                },
+                800,
+                "easeOutExpo"
+              );
+          });
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        var on2 = parseInt($("#page3").offset().top);
+        $(window).scroll(function () {
+          var sct = parseInt($(window).scrollTop());
+          if (sct >= 500 && sct < on2 - 50) {
+            $("#hd").removeClass("on2").addClass("on");
+            $(".page_top_btn").fadeIn();
+          } else if (sct >= on2 - 50) {
+            $("#hd").removeClass("on").addClass("on2");
+          } else {
+            $("#hd").removeClass("on").removeClass("on2");
+            $(".page_top_btn").fadeOut();
+          }
+        });
+        $(".page_top_btn").click(function () {
+          $("html, body").animate(
+            {
+              scrollTop: "0px",
+            },
+            800,
+            "easeOutExpo"
+          );
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        var ht = 0;
+        $(".page").each(function (index) {
+          $(this).attr("data-offset", $(this).offset().top);
+        });
+        $(".par_btn, #gnb a, .page_lst .item_btn").click(function () {
+          var pg = parseInt($(this).attr("data-rel"));
+          var ht = parseInt($(".page").eq(pg).offset().top);
+          $("body, html").animate(
+            {
+              scrollTop: ht + "px",
+            },
+            1000,
+            "easeInOutSine"
+          );
+        });
+      });
+      //easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint, easeInSine, easeOutSine, easeInOutSine, easeInExpo, easeOutExpo, easeInOutExpo, easeInCirc, easeOutCirc, easeInOutCirc, easeInElastic, easeOutElastic, easeInOutElastic, easeInBack, easeOutBack, easeInOutBack, easeInBounce, easeOutBounce, easeInOutBounce
+
+      //         https://code.jquery.com/ui/  --> CDN
+
+      // 플러그인 다운로드
+      // https://plugins.jquery.com/jquery.easing/ 에서 [Download now] 버튼을 클릭
+      // https://jqueryui.com/ 에서 [Stable] 버튼 클릭
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          var scTop = parseInt($(window).scrollTop());
+          $(".page").each(function (index) {
+            var tp = parseInt($(this).offset().top);
+            if (scTop >= tp - 20) {
+              $(this).find(".lst").addClass("on");
+              $(".page_lst li").eq(index).addClass("on");
+              $(".page_lst li").eq(index).siblings().removeClass("on");
+            }
+          });
+        });
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/c8095f6fc9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header id="hd">
+        <nav id="gnb">
+          <a href="index.html" class="logo hdlogo"></a>
+          <div class="menu_wrap">
+            <span class="lin lin1"></span>
+            <span class="lin lin2"></span>
+            <span class="lin lin3"></span>
+          </div>
+        </nav>
+      </header>
+      <div class="page" id="page1">
+        <div class="page_wrap">
+          <ul class="slide">
+            <li class="it1"><a href=""></a></li>
+            <li class="it2"><a href=""></a></li>
+            <li class="it3"><a href=""></a></li>
+            <li class="it4"><a href=""></a></li>
+            <li class="it5"><a href=""></a></li>
+            <li class="it6"><a href=""></a></li>
+          </ul>
+          <figure class="page_pic"></figure>
+        </div>
+        <button class="next_btn par_btn" data-rel="1">
+          <i class="fa-solid fa-angles-down"></i>
+        </button>
+      </div>
+      <div class="page" id="page2">
+        <div class="page_wrap">
+          <h2 class="page_title">ABOUT&nbsp;ME</h2>
+          <div id="t_com">
+            <h3>Skill</h3>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart blue">
+                <path
+                  class="circle-bg"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="90, 100"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <p class="svgtit">90%</p>
+              <p class="tit">CSS</p>
+            </div>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart blue">
+                <path
+                  class="circle-bg"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="90, 100"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <p class="svgtit">90%</p>
+              <p class="tit">HTML</p>
+            </div>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart blue">
+                <path
+                  class="circle-bg"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="70, 100"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <p class="svgtit">70%</p>
+              <p class="tit">JAVASCRIPT</p>
+            </div>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart blue">
+                <path
+                  class="circle-bg"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="70, 100"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <p class="svgtit">70%</p>
+              <p class="tit">SVG</p>
+            </div>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart orange">
+                <path
+                  class="circle-bg"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="90, 100"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <p class="svgtit">90%</p>
+              <p class="tit">Photoshop</p>
+            </div>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart green">
+                <path
+                  class="circle-bg"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="60, 100"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <p class="svgtit">60%</p>
+              <p class="tit">Illustrator</p>
+            </div>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart blue">
+                <path
+                  class="circle-bg"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="90, 100"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <p class="svgtit">90%</p>
+              <p class="tit">PowerPoint</p>
+            </div>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart blue">
+                <path
+                  class="circle-bg"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="90, 100"
+                  d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+              </svg>
+              <p class="svgtit">90%</p>
+              <p class="tit">Excel</p>
+            </div>
+          </div>
+          <button class="prev_btn par_btn" data-rel="0">
+            <i class="fa-solid fa-angles-up"></i>
+          </button>
+          <button class="next_btn par_btn" data-rel="2">
+            <i class="fa-solid fa-angles-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="page" id="page3">
+        <div class="page_wrap">
+          <h2 class="page_title">WORKS</h2>
+          <ul>
+            <li>
+              <a href="https://www.sdg1727.com/" target="_blank"></a>
+            </li>
+            <li>
+              <a href="https://leejooyeun.github.io/w1/" target="_blank"></a>
+            </li>
+            <li>
+              <a href="https://leejooyeun.github.io/web4/" target="_blank"></a>
+            </li>
+            <li>
+              <a
+                href="https://leejooyeun.github.io/web6/index.html"
+                target="_blank"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://leejooyeun.github.io/mobail1/"
+                target="_blank"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://leejooyeun.github.io/portfolio/index.html"
+                target="_blank"
+              ></a>
+            </li>
+          </ul>
+          <button class="prev_btn par_btn" data-rel="1">
+            <i class="fa-solid fa-angles-up"></i>
+          </button>
+          <button class="next_btn par_btn" data-rel="3">
+            <i class="fa-solid fa-angles-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="page" id="page4">
+        <div class="page_wrap">
+          <h2 class="page_title">PLANNER</h2>
+          <div class="left it">
+            <div class="item_w">
+              <div class="img"></div>
+              <div class="box"></div>
+              <div class="text">
+                <p>서비스&nbsp;기획</p>
+                소통과&nbsp;협업&nbsp;중시
+              </div>
+            </div>
+          </div>
+          <div class="right it">
+            <div class="item_w">
+              <div class="img"></div>
+              <div class="box"></div>
+              <div class="text">
+                <p>마케팅&nbsp;기획</p>
+                오프라인&nbsp;홍보<br />seo최적화
+              </div>
+            </div>
+          </div>
+          <button class="prev_btn par_btn" data-rel="2">
+            <i class="fa-solid fa-angles-up"></i>
+          </button>
+          <button class="next_btn par_btn" data-rel="4">
+            <i class="fa-solid fa-angles-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="page" id="page5">
+        <div class="page_wrap">
+          <h2 class="page_title">CONTACT</h2>
+          <div class="num">Tel.&nbsp;010&nbsp;-&nbsp;4641&nbsp;-&nbsp;7782</div>
+          <button class="prev_btn par_btn" data-rel="3">
+            <i class="fa-solid fa-angles-up"></i>
+          </button>
+        </div>
+      </div>
+      <footer class="page" id="ft">
+        <a href="index.html" class="logo ftlogo"></a>
+        <div class="ft_wrap">
+          <p>
+            <strong>CONTACT</strong><br />
+            T.&nbsp;010-4641-7782&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E.&nbsp;dlwndus7782@naver.com
+          </p>
+          <p class="copy">
+            ⓒ&nbsp;2022.&nbsp;JINNI&nbsp;All&nbsp;rights&nbsp;reserved.
+          </p>
+        </div>
+      </footer>
+      <div class="page_nation">
+        <ul class="page_lst">
+          <li class="item1">
+            <button class="item_btn" data-rel="0">HOME</button>
+          </li>
+          <li class="item2">
+            <button class="item_btn" data-rel="1">ABOUT ME</button>
+          </li>
+          <li class="item3">
+            <button class="item_btn" data-rel="2">WORKS</button>
+          </li>
+          <li class="item4">
+            <button class="item_btn" data-rel="3">PLANNER</button>
+          </li>
+          <li class="item5">
+            <button class="item_btn" data-rel="4">CONTACT</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="cursor"></div>
+    <script>
+      const circle = document.querySelector(".cursor");
+
+      document.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+        circle.style.left = mouseX + "px";
+        circle.style.top = mouseY + "px";
+      });
+    </script>
+    <!-- <script>
+      window.addEventListener("mousemove", function (event) {
+        document.querySelector(".clientX").innerText = event.clientX;
+        document.querySelector(".clientY").innerText = event.clientY;
+        document.querySelector(".offsetX").innerText = event.offsetX;
+        document.querySelector(".offsetY").innerText = event.offsetY;
+        document.querySelector(".pageX").innerText = event.pageX;
+        document.querySelector(".pageY").innerText = event.pageY;
+        document.querySelector(".screenX").innerText = event.screenX;
+        document.querySelector(".screenY").innerText = event.screenY;
+      });
+
+      //마우스 움직이기
+      window.addEventListener("mousemove", function (e) {
+        // document.querySelector(".cursor").style.left = e.clientX -25 + "px";
+        // document.querySelector(".cursor").style.top = e.clientY -25 + "px";
+
+        let x = e.clientX - 25 + "px";
+        let y = e.clientY - 25 + "px";
+        document.querySelector(".cursor").style.cssText =
+          "left:" + x + "; top:" + y;
+      });
+      document
+        .querySelectorAll(".wrap a", ".wrap button")
+        .forEach((element, index) => {
+          element.addEventListener("mouseover", () => {
+            document.querySelector(".cursor").classList.add("hover");
+          });
+          element.addEventListener("mouseout", function () {
+            document.querySelector(".cursor").classList.remove("hover");
+          });
+        });
+    </script> -->
+  </body>
+</html>
