@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* --------------------------------
+Fonts Rule
+-------------------------------- */
+
+@font-face {
+    font-family: 'Kyobo';
+    src: local('※'), url('../fonts/KyoboHandwriting2020pdy.ttf') format('truetype'), url('../fonts/KyoboHandwriting2020pdy.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GL';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
