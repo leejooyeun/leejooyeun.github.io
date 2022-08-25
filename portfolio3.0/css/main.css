@@ -31,14 +31,22 @@
   height: 100vh;
 }
 #page1 .page_wrap ul.slide li {
-  width: 1200px;
+  width: 78.947369%;
   height: 100%;
   float: left;
   background-repeat: no-repeat;
   background-size: contain;
 }
-#page1 .page_wrap ul.slide li.it1 {
-  background-image: url(../data/it1.jpg);
+#page1 .page_wrap ul.slide li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#page1 .page_wrap ul.slide li.it1 a {
+  background-image: url(../data/sl_sdg.jpg);
+}
+#page1 .page_wrap ul.slide li.it2 a {
+  background-image: url(../data/sl_innisfree.jpg);
 }
 /*페이지2*/
 #page2 .par_btn {
