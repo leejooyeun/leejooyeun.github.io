@@ -32,9 +32,13 @@
     <link rel="shortcut icon" href="./data/favicon160.ico" />
     <link rel="shortcut icon" href="./data/favicon32.ico" />
     <link rel="stylesheet" href="./css/fontset.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/media.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <title>LeeJooYeun</title>
     <link
@@ -164,6 +168,14 @@
       src="https://kit.fontawesome.com/c8095f6fc9.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
 
   <body>
@@ -179,20 +191,37 @@
         </nav>
       </header>
       <div class="page" id="page1">
-        <div class="page_wrap">
-          <ul class="slide">
-            <li class="it1"><a href=""></a></li>
-            <li class="it2"><a href=""></a></li>
-            <li class="it3"><a href=""></a></li>
-            <li class="it4"><a href=""></a></li>
-            <li class="it5"><a href=""></a></li>
-            <li class="it6"><a href=""></a></li>
-          </ul>
-          <figure class="page_pic"></figure>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="it1 swiper-slide">
+              <p>SDG</p>
+            </div>
+            <div class="it2 swiper-slide"></div>
+            <div class="it3 swiper-slide"></div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
         <button class="next_btn par_btn" data-rel="1">
           <i class="fa-solid fa-angles-down"></i>
         </button>
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        </script>
       </div>
       <div class="page" id="page2">
         <div class="page_wrap">
@@ -454,7 +483,7 @@
       </footer>
       <div class="page_nation">
         <ul class="page_lst">
-          <li class="item1">
+          <li class="item1 on">
             <button class="item_btn" data-rel="0">HOME</button>
           </li>
           <li class="item2">
