@@ -25,6 +25,12 @@
     bottom: 40px;
   }
 }
+#hd.on2 {
+  border-bottom: none;
+}
+#hd.on2 #gnb a.logo {
+  display: none;
+}
 /*페이지1*/
 
 .swiper {
@@ -36,7 +42,7 @@
 .swiper-slide {
   text-align: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   font-size: 18px;
   background: #fff;
 
@@ -67,6 +73,9 @@
   right: 0;
   bottom: 40%;
 }
+#page1 .next_btn {
+  right: 48.5%;
+}
 /*페이지2*/
 #page2 .par_btn {
   background-color: rgba(255, 255, 255, 0.3);
@@ -83,7 +92,7 @@
 }
 #t_com h3 {
   color: #fff;
-  font-size: 30px;
+  font-size: 28px;
   padding-left: 20px;
 }
 .single-chart {
@@ -91,13 +100,14 @@
   float: left;
   justify-content: space-around;
   position: relative;
+  margin-top: 10px;
 }
 
 .circular-chart {
   display: block;
-  margin: 10px 15px;
-  max-width: 100%;
-  max-height: 250px;
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
 }
 
 .circle-bg {
@@ -116,6 +126,8 @@
   color: #fff;
   text-align: center;
   font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .svgtit {
   color: #fff;
@@ -125,7 +137,7 @@
   position: absolute;
   top: 50%;
   margin-top: -30px;
-  left: 42%;
+  width: 100%;
 }
 @keyframes progress {
   0% {
@@ -148,8 +160,8 @@
 }
 #page3 .page_wrap ul li {
   position: relative;
-  width: 380px;
-  height: 250px;
+  width: 31.66666666666667%;
+  height: 39.18495297805643%;
   background-color: rgba(75, 123, 212, 0.2);
   display: flex;
   flex-direction: column;
@@ -249,27 +261,30 @@
 #page4 .page_wrap .it {
   float: left;
   position: relative;
+  width: 50%;
+  height: 80%;
 }
 #page4 .page_wrap .it .item_w {
-  width: 479px;
-  height: 490px;
+  width: 80%;
+  height: 76.758%;
   margin: 70px auto;
   position: relative;
 }
 #page4 .page_wrap .it .item_w .img {
-  width: 380px;
-  height: 276px;
+  width: 79.16666666666667%;
+  height: 56.3265306122449%;
   position: absolute;
   z-index: 55;
   left: 0px;
   top: -50px;
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #page4 .page_wrap .it .item_w .box {
-  width: 370px;
-  height: 430px;
+  width: 77.08333333333333%;
+  height: 87.75510204081633%;
   margin: 0 auto;
   background-color: #4b7bd4;
   position: relative;
@@ -279,8 +294,8 @@
   content: "";
   display: block;
   clear: both;
-  width: 390px;
-  height: 450px;
+  width: 104.867%;
+  height: 104.187%;
   border: 1px solid #fff;
   position: absolute;
   top: -10px;
@@ -299,17 +314,11 @@
   color: #fff;
   font-size: 15px;
 }
-#page4 .page_wrap .left {
-  width: 50%;
-  height: 80%;
-}
+
 #page4 .page_wrap .left .item_w .img {
   background-image: url(../data/planner_service.jpg);
 }
-#page4 .page_wrap .right {
-  width: 50%;
-  height: 80%;
-}
+
 #page4 .page_wrap .right .item_w {
   margin: 0 auto;
   margin-top: 140px;
@@ -320,10 +329,11 @@
 /*페이지5*/
 #page5 .page_wrap {
   height: 75%;
+  position: relative;
 }
 #page5 .page_wrap .num {
-  width: 900px;
-  height: 250px;
+  width: 75%;
+  height: 26.681%;
   margin: 0 auto;
   background-color: #4b7bd4;
   color: #fff;
@@ -336,15 +346,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -125px;
-  margin-left: -450px;
+  margin-top: -10.5%;
+  margin-left: -37.5%;
 }
 #page5 .page_wrap .num:before {
   content: "";
   display: block;
   clear: both;
-  width: 820px;
-  height: 170px;
+  width: 92%;
+  height: 66%;
   border: 3px solid #fff;
   position: absolute;
 }
@@ -366,7 +376,7 @@
 }
 
 .next_btn {
-  right: 48.5%;
+  right: 47%;
 }
 
 .prev_btn {
