@@ -50,6 +50,7 @@
     <style></style>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <!-- 마우스휠 부드럽게 이동 -->
     <script>
       $(document).ready(function () {
         var p = $(".page");
@@ -97,9 +98,10 @@
         });
       });
     </script>
+    <!-- on, on2 클레스 부여  -->
     <script>
       $(document).ready(function () {
-        var on2 = parseInt($("#page3").offset().top);
+        var on2 = parseInt($("#page5").offset().top);
         $(window).scroll(function () {
           var sct = parseInt($(window).scrollTop());
           if (sct >= 500 && sct < on2 - 50) {
@@ -123,6 +125,7 @@
         });
       });
     </script>
+    <!-- 버튼으로 페이지 이동 -->
     <script>
       $(document).ready(function () {
         var ht = 0;
@@ -149,6 +152,7 @@
       // https://plugins.jquery.com/jquery.easing/ 에서 [Download now] 버튼을 클릭
       // https://jqueryui.com/ 에서 [Stable] 버튼 클릭
     </script>
+    <!-- //페이지네이션 이동// -->
     <script>
       $(document).ready(function () {
         $(window).scroll(function () {
@@ -164,10 +168,12 @@
         });
       });
     </script>
+    <!-- 웹이모티콘, 버튼이미지 -->
     <script
       src="https://kit.fontawesome.com/c8095f6fc9.js"
       crossorigin="anonymous"
     ></script>
+    <!-- 스와이프슬라이드 -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -193,41 +199,20 @@
       <div class="page" id="page1">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="it1 swiper-slide">
-              <p>SDG</p>
-            </div>
+            <div class="it1 swiper-slide"></div>
             <div class="it2 swiper-slide"></div>
             <div class="it3 swiper-slide"></div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
         <button class="next_btn par_btn" data-rel="1">
           <i class="fa-solid fa-angles-down"></i>
         </button>
-        <script>
-          var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-              delay: 2500,
-              disableOnInteraction: false,
-            },
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-          });
-        </script>
       </div>
       <div class="page" id="page2">
         <div class="page_wrap">
           <h2 class="page_title">ABOUT&nbsp;ME</h2>
           <div id="t_com">
-            <h3>Skill</h3>
+            <!-- <h3>Skill</h3> -->
             <div class="single-chart">
               <svg viewbox="0 0 36 36" class="circular-chart blue">
                 <path
@@ -474,8 +459,9 @@
         <div class="ft_wrap">
           <p>
             <strong>CONTACT</strong><br />
-            T.&nbsp;010-4641-7782&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E.&nbsp;dlwndus7782@naver.com
+            T.&nbsp;010-4641-7782&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
+          <p>E.&nbsp;dlwndus7782@naver.com</p>
           <p class="copy">
             ⓒ&nbsp;2022.&nbsp;JINNI&nbsp;All&nbsp;rights&nbsp;reserved.
           </p>
@@ -501,6 +487,33 @@
         </ul>
       </div>
     </div>
+    <div id="menu">
+      <div class="top">
+        <a href="index.html" class="logo menulogo"></a>
+        <button class="close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="menu_wrap">
+        <ul class="page_lst">
+          <li><a href="javascript:;" data-rel="0">HOME</a></li>
+          <li><a href="javascript:;" data-rel="1">ABOUT ME</a></li>
+          <li><a href="javascript:;" data-rel="2">WORKS</a></li>
+          <li><a href="javascript:;" data-rel="3">PLANNER</a></li>
+          <li><a href="javascript:;" data-rel="4">CONTACT</a></li>
+        </ul>
+        <div class="ft_wrap">
+          <p>
+            <strong>CONTACT</strong><br />
+            T.&nbsp;010-4641-7782&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
+          <p>E.&nbsp;dlwndus7782@naver.com</p>
+          <p class="copy">
+            ⓒ&nbsp;2022.&nbsp;JINNI&nbsp;All&nbsp;rights&nbsp;reserved.
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="cursor"></div>
     <script>
       const circle = document.querySelector(".cursor");
@@ -512,6 +525,36 @@
         circle.style.top = mouseY + "px";
       });
     </script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      $(document).ready(function ($) {
+        $(".menu_wrap").on("click", function (event) {
+          //팝업오픈 버튼 누르면
+          $("#menu").fadeIn(); //팝업 오픈
+        });
+        $("#menu .top .close").on("click", function (event) {
+          $("#menu").fadeOut(); //close버튼 이거나 뒷배경 클릭시 팝업 삭제
+        });
+      });
+    </script>
+
     <!-- <script>
       window.addEventListener("mousemove", function (event) {
         document.querySelector(".clientX").innerText = event.clientX;
