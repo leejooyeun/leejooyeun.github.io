@@ -1,425 +1,557 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="./data/favicon320png">
-    <link rel="shortcut icon" href="./data/favicon160.ico">
-    <link rel="shortcut icon" href="./data/favicon32.ico">
-    <link rel="shortcut icon" href="./data/favicon320.png">
-    <link rel="stylesheet" href="../css/fontset.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="./common.css">
-    <link rel="stylesheet" href="./main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="./data/favicon320png" />
+    <link rel="shortcut icon" href="./data/favicon160.ico" />
+    <link rel="shortcut icon" href="./data/favicon32.ico" />
+    <link rel="shortcut icon" href="./data/favicon320.png" />
+    <link rel="stylesheet" href="../css/fontset.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./main.css" />
     <title>deltaindex</title>
-    
-    <script src="./js/jquery-1.10.0.js">
-    </script>
+
+    <script src="./js/jquery-1.10.0.js"></script>
     <script src="./js/prefixfree.min.js"></script>
     <script src="./js/respond/src/respond.js"></script>
     <script>
-    $(document).ready(function(){
-        $(window).scroll(function(){
-            var scTop = parseInt($(window).scrollTop());
-            if(scTop>=300){
-                $(".hd").addClass("on");
-            } else {
-                $(".hd").removeClass("on");
-            }
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          var scTop = parseInt($(window).scrollTop());
+          if (scTop >= 300) {
+            $(".hd").addClass("on");
+          } else {
+            $(".hd").removeClass("on");
+          }
         });
-    });
+      });
     </script>
     <style>
-    @media screen and (max-width:767px) {
-        .wrap{width: 320px;}
-        .gnb{display: none;}
-        .hd .menu_icon{display: block;}
-        .logo{position: absolute; top: 5px;left: 60px;}
-        .vs .img img{margin-top: 0; width: 230%; max-width: 230%; height: 100vh; margin-left: -215px;}
-        .vs .tit_wrap{left: 0%; margin-left: 0;}
-        .vs .tit_wrap .big{font-size: 65px;}
-        #p1 .tit1{font-size: 50px;}
-        #p1 .com{font-size: 14px;}
-        .tit_box .tit {font-size: 30px;}
-        #p2{align-items:flex-start; }
-        #p2 .tit_box .tit{font-size: 50px; padding-top: 0.5em; padding-bottom: 0.5em;}
-        #p2 .col_box{margin-top: 120px;}
-        #p2 .col_box .cl, #p2 .col_box .cl a, #p2 .col_box .cl a img{width: 200px; height: auto;}
-        #p3 .tit_box .tit{font-size: 40px; margin-bottom: 30px;}
-        #p3 .item_box{padding-bottom: 0;}
-        #p3 .item{width: 360px; height: auto;}
-        #p3 .item a {height: auto;}
-        #p4 .tit{font-size: 40px;}
-        #p4 .com{font-size: 14px;}
-        #p4 .bgi img{width: 320px;}
-        #p5 .tit{font-size: 40px;}
-        #p6 .wrap{flex-direction: column;}
-        #p6 .left .big{font-size: 40px; margin-top: 50px;}
-        #p6 .right{width: 320px;}
-        #p6 .form{width: 320px;}
-        #p6 .form:first-child{margin-top: 60px;}
-        #p6 .form_sell #choise, #p6 .form_sell #choise option, #p6 .form_sell, #p6 input{width: 320px;}
-        #p6 .tell_box{margin-left: 0px;}
-        #p6 input.tell{width: 80px;}
-        #p6 .ck{width: 320px;}
-        .ft_top .right_box {display: none;}
-        .ft_top .ft_logo{margin: 0 auto;}
-        }
-        
-    @media screen and (min-width:768px) and (max-width:959px) {
-        .wrap{width: 728px;}
-        .hd .menu_icon{display: block;}
-        .gnb{display: none;}
-        .logo{position: absolute; top: 5px;left: 260px;}
-        .on_sub li{height: 80px;}
-        .vs .img img{margin-top: 0; width: 230%; max-width: 200%; height: 100vh; margin-left: -350px;}
-        .vs .tit_wrap{left: 0%; margin-left: 0;}
-        .vs .tit_wrap .big{font-size: 65px;}
-        #p1 .tit1{font-size: 60px;}
-        #p1 .com{font-size: 16px;}
-        .tit_box .tit {font-size: 30px;}
-        #p2{align-items:center; }
-        #p2 .col_box{margin-top: 50px;}
-        #p2 .col_box .cl, #p2 .col_box .cl a, #p2 .col_box .cl a img{width: 200px; height: auto;}
-        #p3 .tit_box .tit{font-size: 50px; margin-bottom: 30px;}
-        #p3 .item_box{padding-bottom: 50px;}
-        #p3 .item{width: 768px; height: auto;}
-        #p3 .item a {height: auto;}
-        #p3 .item a .txt_box{margin-left: 100px;}
-        #p4 .tit{font-size: 40px;}
-        #p4 .com{font-size: 14px;}
-        #p4 .bgi img{width: 728px;}
-        #p5 .tit{font-size: 40px;}
-        #p6 .wrap{flex-direction: column;}
-        #p6 .left .big{font-size: 40px; margin-top: 50px;}
-        #p6 .right{width: 728px;}
-        #p6 .form{width: 728px;}
-        #p6 .form:first-child{margin-top: 60px;}
-        #p6 .form_sell #choise, #p6 .form_sell, #p6 .form_sell #choise option, #p6 input{width: 728px;}
-        #p6 .tell_box{margin-left: -300px;}
-        #p6 input.tell{width: 120px;}
-        #p6 .ck{width: 728px;}
-        .ft_top .right_box {display: none;}
-        .ft_top .ft_logo{margin: 0 auto;}
-        }
-        }
-    @media screen and (min-width:960px){
-        .hd .menu_icon{display: none;}
-        }
+      @media screen and (max-width:767px) {
+          .wrap{width: 320px;}
+          .gnb{display: none;}
+          .hd .menu_icon{display: block;}
+          .logo{position: absolute; top: 5px;left: 60px;}
+          .vs .img img{margin-top: 0; width: 230%; max-width: 230%; height: 100vh; margin-left: -215px;}
+          .vs .tit_wrap{left: 0%; margin-left: 0;}
+          .vs .tit_wrap .big{font-size: 65px;}
+          #p1 .tit1{font-size: 50px;}
+          #p1 .com{font-size: 14px;}
+          .tit_box .tit {font-size: 30px;}
+          #p2{align-items:flex-start; }
+          #p2 .tit_box .tit{font-size: 50px; padding-top: 0.5em; padding-bottom: 0.5em;}
+          #p2 .col_box{margin-top: 120px;}
+          #p2 .col_box .cl, #p2 .col_box .cl a, #p2 .col_box .cl a img{width: 200px; height: auto;}
+          #p3 .tit_box .tit{font-size: 40px; margin-bottom: 30px;}
+          #p3 .item_box{padding-bottom: 0;}
+          #p3 .item{width: 360px; height: auto;}
+          #p3 .item a {height: auto;}
+          #p4 .tit{font-size: 40px;}
+          #p4 .com{font-size: 14px;}
+          #p4 .bgi img{width: 320px;}
+          #p5 .tit{font-size: 40px;}
+          #p6 .wrap{flex-direction: column;}
+          #p6 .left .big{font-size: 40px; margin-top: 50px;}
+          #p6 .right{width: 320px;}
+          #p6 .form{width: 320px;}
+          #p6 .form:first-child{margin-top: 60px;}
+          #p6 .form_sell #choise, #p6 .form_sell #choise option, #p6 .form_sell, #p6 input{width: 320px;}
+          #p6 .tell_box{margin-left: 0px;}
+          #p6 input.tell{width: 80px;}
+          #p6 .ck{width: 320px;}
+          .ft_top .right_box {display: none;}
+          .ft_top .ft_logo{margin: 0 auto;}
+          }
+
+      @media screen and (min-width:768px) and (max-width:959px) {
+          .wrap{width: 728px;}
+          .hd .menu_icon{display: block;}
+          .gnb{display: none;}
+          .logo{position: absolute; top: 5px;left: 260px;}
+          .on_sub li{height: 80px;}
+          .vs .img img{margin-top: 0; width: 230%; max-width: 200%; height: 100vh; margin-left: -350px;}
+          .vs .tit_wrap{left: 0%; margin-left: 0;}
+          .vs .tit_wrap .big{font-size: 65px;}
+          #p1 .tit1{font-size: 60px;}
+          #p1 .com{font-size: 16px;}
+          .tit_box .tit {font-size: 30px;}
+          #p2{align-items:center; }
+          #p2 .col_box{margin-top: 50px;}
+          #p2 .col_box .cl, #p2 .col_box .cl a, #p2 .col_box .cl a img{width: 200px; height: auto;}
+          #p3 .tit_box .tit{font-size: 50px; margin-bottom: 30px;}
+          #p3 .item_box{padding-bottom: 50px;}
+          #p3 .item{width: 768px; height: auto;}
+          #p3 .item a {height: auto;}
+          #p3 .item a .txt_box{margin-left: 100px;}
+          #p4 .tit{font-size: 40px;}
+          #p4 .com{font-size: 14px;}
+          #p4 .bgi img{width: 728px;}
+          #p5 .tit{font-size: 40px;}
+          #p6 .wrap{flex-direction: column;}
+          #p6 .left .big{font-size: 40px; margin-top: 50px;}
+          #p6 .right{width: 728px;}
+          #p6 .form{width: 728px;}
+          #p6 .form:first-child{margin-top: 60px;}
+          #p6 .form_sell #choise, #p6 .form_sell, #p6 .form_sell #choise option, #p6 input{width: 728px;}
+          #p6 .tell_box{margin-left: -300px;}
+          #p6 input.tell{width: 120px;}
+          #p6 .ck{width: 728px;}
+          .ft_top .right_box {display: none;}
+          .ft_top .ft_logo{margin: 0 auto;}
+          }
+          }
+      @media screen and (min-width:960px){
+          .hd .menu_icon{display: none;}
+          }
     </style>
 
     <script>
-    $(document).ready(function(){
-        var wd=$(".on_menu").width();
-       $(".menu_icon").click(function(){
-          $(".on_menu").css("left", "0px"); 
-       });
-       $(".close_icon").click(function(){
-          $(".on_menu").css("left", -wd+"px"); 
-       }); 
-    });
+      $(document).ready(function () {
+        var wd = $(".on_menu").width();
+        $(".menu_icon").click(function () {
+          $(".on_menu").css("left", "0px");
+        });
+        $(".close_icon").click(function () {
+          $(".on_menu").css("left", -wd + "px");
+        });
+      });
     </script>
-
 
     <script>
-    $(document).ready(function(){
-        $(".dp1").click(function(){       $(".on_sub1").toggleClass("on");
+      $(document).ready(function () {
+        $(".dp1").click(function () {
+          $(".on_sub1").toggleClass("on");
         });
-        $(".dp2").click(function(){       $(".on_sub2").toggleClass("on");
+        $(".dp2").click(function () {
+          $(".on_sub2").toggleClass("on");
         });
-        $(".dp3").click(function(){       $(".on_sub3").toggleClass("on");
+        $(".dp3").click(function () {
+          $(".on_sub3").toggleClass("on");
         });
-    });    
+      });
     </script>
-</head>
-<body>
-<div class="wrapper">
-    <header class="hd">
-       <div class="menu_icon">
-           <span class="bar_box">
-               <i class="bar1 bar"></i>
-               <i class="bar2 bar"></i>
-               <i class="bar3 bar"></i>
-           </span>
-       </div>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="hd">
+        <div class="menu_icon">
+          <span class="bar_box">
+            <i class="bar1 bar"></i>
+            <i class="bar2 bar"></i>
+            <i class="bar3 bar"></i>
+          </span>
+        </div>
         <a href="index.html" class="logo"></a>
         <nav class="gnb">
-            <ul class="menu">
-                <li class="item1">
-                    <a href="sub1.html" class="dp1">회사소개</a>
+          <ul class="menu">
+            <li class="item1">
+              <a href="sub1.html" class="dp1">회사소개</a>
+            </li>
+            <li class="item2">
+              <a href="#" class="dp1">솔루션</a>
+              <ul class="sub">
+                <li><a href="#">TABLE</a></li>
+                <li><a href="#">LABLE</a></li>
+                <li><a href="#">MABLE</a></li>
+              </ul>
+            </li>
+            <li class="item3">
+              <a href="#" class="dp1">컨설팅</a>
+              <ul class="sub">
+                <li><a href="#">GS인증 컨설팅</a></li>
+                <li><a href="#">SOFTWARE V&amp;V</a></li>
+                <li>
+                  <a href="#">SW 개발 및 품질<br />프로세스 구축</a>
                 </li>
-                <li class="item2">
-                    <a href="sub2.html" class="dp1">솔루션</a>
-                    <ul class="sub">
-                        <li><a href="sub2.html#p1">TABLE</a></li>
-                        <li><a href="sub2.html#p2">LABLE</a></li>
-                        <li><a href="sub2.html#p3">MABLE</a></li>
-                    </ul>
-                </li>
-                <li class="item3">
-                    <a href="sub3.html" class="dp1">컨설팅</a>
-                    <ul class="sub">
-                        <li><a href="sub3.html#p1">GS인증 컨설팅</a></li>
-                        <li><a href="sub3.html#p2">SOFTWARE V&amp;V</a></li>
-                        <li><a href="sub3.html#p3">SW 개발 및 품질<br>프로세스 구축</a></li>
-                    </ul>
-                </li>
-                <li class="item4">
-                    <a href="sub4.html" class="dp1">테스팅</a>
-                    <ul class="sub">
-                        <li><a href="sub4.html#p1">3자 검증</a></li>
-                        <li><a href="sub4.html#p2">SOFTWARE V&amp;V</a></li>
-                    </ul>
-                </li>
-                <li class="item5">
-                    <a href="sub5.html" class="dp1">고객지원</a>
-                </li>
-            </ul>
+              </ul>
+            </li>
+            <li class="item4">
+              <a href="#" class="dp1">테스팅</a>
+              <ul class="sub">
+                <li><a href="#">3자 검증</a></li>
+                <li><a href="#">SOFTWARE V&amp;V</a></li>
+              </ul>
+            </li>
+            <li class="item5">
+              <a href="#" class="dp1">고객지원</a>
+            </li>
+          </ul>
         </nav>
-    </header>
-    <div class="on_menu">
+      </header>
+      <div class="on_menu">
         <div class="menus">
-           <ul class="on_sub ">
-                <li class="dp0 dp">회사소개</li>
-            </ul>
-            <ul class="on_sub on_sub1">
-                <li class="dp1 dp">솔루션</li>
-                <li><a href="sub2.html#p1">TABLE</a></li>
-                <li><a href="sub2.html#p2">LABLE</a></li>
-                <li><a href="sub2.html#p3">MABLE</a></li>
-            </ul>
-            <ul class="on_sub on_sub2">
-                <li class="dp2 dp">컨설팅</li>
-                <li><a href="sub3.html#p1">GS인증 컨설팅</a></li>
-                <li><a href="sub3.html#p2">SOFTWARE V&amp;V</a></li>
-                <li><a href="sub3.html#p3">SW 개발 및 품질 프로세스 구축</a></li>
-            </ul>
-            <ul class="on_sub on_sub3">
-                <li class="dp3 dp">테스팅</li>
-                <li><a href="sub4.html#p1">3자 검증</a></li>
-                <li><a href="sub4.html#p2">SOFTWARE V&amp;V</a></li>
-            </ul>
-            <ul class="on_sub">
-                <li class="dp4 dp">고객지원</li>
-            </ul>
+          <ul class="on_sub">
+            <li class="dp0 dp">회사소개</li>
+          </ul>
+          <ul class="on_sub on_sub1">
+            <li class="dp1 dp">솔루션</li>
+            <li><a href="#">TABLE</a></li>
+            <li><a href="#">LABLE</a></li>
+            <li><a href="#">MABLE</a></li>
+          </ul>
+          <ul class="on_sub on_sub2">
+            <li class="dp2 dp">컨설팅</li>
+            <li><a href="#">GS인증 컨설팅</a></li>
+            <li><a href="#">SOFTWARE V&amp;V</a></li>
+            <li><a href="#">SW 개발 및 품질 프로세스 구축</a></li>
+          </ul>
+          <ul class="on_sub on_sub3">
+            <li class="dp3 dp">테스팅</li>
+            <li><a href="#">3자 검증</a></li>
+            <li><a href="#">SOFTWARE V&amp;V</a></li>
+          </ul>
+          <ul class="on_sub">
+            <li class="dp4 dp">고객지원</li>
+          </ul>
         </div>
         <div class="close_icon">
-               <span class="btn_wrap">
-                   <i class="btn1 btn"></i>
-                   <i class="btn2 btn"></i>
-               </span>
-        </div>    
-    </div>
-    <div class="vs">
-       <div class="img">
-           <img src="data/vs.jpg" alt="메인베너">
-           <div class="tit_wrap">
-                <div class="smoll"><p>System Integration</p></div>
-                <div class="big"><p>DeltaIndex</p></div>
-                <div class="more"><a href="sub1.html">MORE</a></div>
-            </div>
-       </div>
-        
-    </div>
-    <div class="page" id="p1">
+          <span class="btn_wrap">
+            <i class="btn1 btn"></i>
+            <i class="btn2 btn"></i>
+          </span>
+        </div>
+      </div>
+      <div class="vs">
+        <div class="img">
+          <img src="data/vs.jpg" alt="메인베너" />
+          <div class="tit_wrap">
+            <div class="smoll"><p>System Integration</p></div>
+            <div class="big"><p>DeltaIndex</p></div>
+            <div class="more"><a href="sub1.html">MORE</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="page" id="p1">
         <div class="wrap">
-            <div class="tit_box">
-                <h1 class="tit1">deltaindex</h1>
-                <p class="com">deltaindex는 산업 각 분야의 축천된 노하우와<br> 전문인력의 경험과 기술력을 통해<br> 고객의 비즈니스 가치를 실현시켜드리도록 하겠습니다.</p>
-                <a href="sub1.html" class="more">deltaindex adout ☞</a>
-            </div>
+          <div class="tit_box">
+            <h1 class="tit1">deltaindex</h1>
+            <p class="com">
+              deltaindex는 산업 각 분야의 축천된 노하우와<br />
+              전문인력의 경험과 기술력을 통해<br />
+              고객의 비즈니스 가치를 실현시켜드리도록 하겠습니다.
+            </p>
+            <a href="sub1.html" class="more">deltaindex adout ☞</a>
+          </div>
         </div>
-    </div>
-    <div class="page" id="p2">
+      </div>
+      <div class="page" id="p2">
         <div class="wrap">
-            <div class="tit_box">
-                <h1 class="tit">solution</h1>
+          <div class="tit_box">
+            <h1 class="tit">solution</h1>
+          </div>
+          <div class="col_box">
+            <div class="col1 cl">
+              <a href="#"><img src="./data/solusion1.png" alt="솔루션1" /></a>
             </div>
-            <div class="col_box">
-                <div class="col1 cl"><a href="sub2.html#p1"><img src="./data/solusion1.png" alt="솔루션1"></a></div>
-                <div class="col2 cl"><a href="sub2.html#p2"><img src="./data/solusion2.png" alt="솔루션2"></a></div>
-                <div class="col3 cl"><a href="sub2.html#p3"><img src="./data/solusion3.png" alt="솔루션3"></a></div>
+            <div class="col2 cl">
+              <a href="#"><img src="./data/solusion2.png" alt="솔루션2" /></a>
             </div>
+            <div class="col3 cl">
+              <a href="#"><img src="./data/solusion3.png" alt="솔루션3" /></a>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="page" id="p3">
-       <div class="wrap">
-           <div class="tit_box">
-                <h1 class="tit">consulting</h1>
-            </div>
-            <div class="item_box">
-                <div class="it1 item">
-                    <a href="sub3.html#p1">
-                        <div class="txt_box">
-                            <h2 class="tit">GS인증 컨설팅</h2>
-                            <p>국제표준과 고시를 기반으로 다수의 GS인증평가 경력을 가진 전문가의 경험과 노하우를 바탕으로 교육과 제품개선 가이드를 통해 GS인증 취득까지 지원해드립니다.</p>
-                            <span class="more">자세히 보기</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="it2 item">
-                    <a href="sub3.html#p2">
-                        <div class="txt_box">
-                            <h2 class="tit">SOFTWARE V&amp;V</h2>
-                            <p>다양한 분야의 안전 및 비안전 등급 소프트웨어 V&amp;V 경험을 바탕으로 효과적이고 효율적인 V&amp;V활동을 위한 가이드를 제공해드립니다.</p>
-                            <span class="more">자세히 보기</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="it3 item">
-                    <a href="sub3.html#p3">
-                        <div class="txt_box">
-                            <h2 class="tit">SW 개발 및 품질 프로세스 구축</h2>
-                            <p>단순히 모델과 표준에서 제시하는 기준을 도입하는 것이 아닌, 전문 지식과 경험을 가진 인력이 대상 조직의 현황과 특성을 파악하여 최적의 프로세스를 구축합니다.</p>
-                            <span class="more">자세히 보기</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>   
-    <div class="page" id="p4">
-       <div class="wrap">
-            <h1 class="tit">Testing</h1>
-            <p class="com">제3자 검증을 통해 품질에 대한 객관적 입증 지원 및 성적서를 발행하여 드립니다. 테스트 전문 인력과 테스트 도구를 활용하여, 코드 검증을 위한 단위테스트의 정적분석,<br> 동적분석 내외부 인터페이스 검증을 위한 통합테스트, 성능 및 보안을 확인하기 위한 시스템테스트, 고객의 인수조건을<br> 최종확인하기 위한인수테스트을 지원하여 제품의 품질 완성도와 신뢰성을 높여드립니다.</p>
-            <div class="bgi"><img src="data/p4.png" alt="Testing배경이미지"></div>
-            <a href="sub4.html" class="more">MORE</a>
-        </div>
-    </div>   
-    <div class="page" id="p5">
-       <div class="wrap">
-           <div class="tit_box">
-                <h1 class="tit">PARTNER</h1>
-                <a href="sub1.html#p3" class="more">MORE ＞</a>
-            </div>
-            <div class="ptn_box">
-                <div class="ptn1 ptn"><a href="https://www.kaeri.re.kr/"><img src="data/kaeri.png" alt="한국원자력연구원"></a></div>
-                <div class="ptn2 ptn"><a href="http://www.ktr.or.kr/main/index.do"><img src="data/ktr.png" alt="한국화학융합시험원구원"></a></div>
-                <div class="ptn3 ptn"><a href="https://www.tta.or.kr/"><img src="data/tta.png" alt="한국정보통신기술협회"></a></div>
-                <div class="ptn4 ptn"><a href="https://www.dip.or.kr/home/main.ubs"><img src="data/dip.png" alt="대구디지털산업진흥원"></a></div>
-                <div class="ptn5 ptn"><a href="http://www.dicia.or.kr/"><img src="data/dica.png" alt="대전정보문화산업진흥원"></a></div>
-                <div class="ptn6 ptn"><a href="https://www.airport.kr/co/ko/index.do"><img src="data/incheon.png" alt="인천국제공항공사"></a></div>
-                <div class="ptn7 ptn"><a href="https://www.krri.re.kr/html/kr/"><img src="data/krri.png" alt="한국철도기술연구원"></a></div>
-                <div class="ptn8 ptn"><a href="http://www.kcl.re.kr/site/main/index001"><img src="data/kcl.png" alt="한국건설생활환경시험연구원"></a></div>
-                <div class="ptn9 ptn"><a href="https://www.etri.re.kr/intro.html"><img src="data/etri.png" alt="한국전자통신연구원"></a></div>
-                <div class="ptn10 ptn"><a href="https://www.ajou.ac.kr/kr/index.do"><img src="data/ajou.png" alt="아주대학교"></a></div>
-                <div class="ptn11 ptn"><a href="https://www.dju.ac.kr/dju/main.do"><img src="data/daejeon.png" alt="대전대학교"></a></div>
-                <div class="ptn12 ptn"><a href="https://plus.cnu.ac.kr/html/kr/"><img src="data/chong.png" alt="충남대학교"></a></div>
-                <div class="ptn13 ptn"><a href="http://www.jbnu.ac.kr/kor/"><img src="data/han.png" alt="한밭대학교"></a></div>
-                <div class="ptn14 ptn"><a href="https://www.ibk.co.kr/"><img src="data/jeon.png" alt="전북대학교"></a></div>
-                <div class="ptn15 ptn"><a href="https://banking.nonghyup.com/nhbank.html"><img src="data/ibk.png" alt="IBK기업은행"></a></div>
-                <div class="ptn16 ptn"><a href="http://www.hyundai-autoever.com/common/goPage.view?page=ko/main"><img src="data/nong.png" alt="농협"></a></div>
-                <div class="ptn17 ptn"><a href="https://www.hancom.com/main/main.do"><img src="data/hyundai.png" alt="현대"></a></div>
-                <div class="ptn18 ptn"><a href="https://www.yuracorp.co.kr/index.jsp"><img src="data/hancom.png" alt="한글과컴퓨터"></a></div>
-            </div>
-        </div>
-    </div>   
-    <div class="page" id="p6">
-       <div class="wrap">
-            <div class="left">
-                <h2 class="big">CONTACT US</h2>
-                <p class="com">궁금하신 사항이 있으시면 문의를 남겨주세요.<br>담당자가 빠르고 자세하게 안내해 드리겠습니다.</p>
-                <p class="call"><span class="bold">Contact Number</span>  &nbsp; &nbsp;042-934-5551</p>
-                <p class="email"><a href=""><span class="bold">Email Address</span>  &nbsp; &nbsp; delta@deltaindex.kr</a></p>
-            </div>
-            <div class="right">
-                <div class="form">
-                   <label for="">문의 종류를 선택해 주세요.</label>
-                   <div class="form_sell">
-                        <select name="sell" id="choise">
-                            <option value="" selected>선택</option>
-                            <option value="">solution</option>
-                            <option value="">consulting</option>
-                            <option value="">Testing</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form">
-                    <label for="" class="lb">담당자</label>
-                    <input type="text" id="inp1">
-                </div>
-                <div class="form">
-                    <label for="" class="lb">이메일</label>
-                    <input type="text" id="inp2">
-                </div>
-                <div class="form">
-                    <label for="" class="lb">연락처</label>
-                    <div class="tell_box">
-                        <input type="tell" id="tell1" class="tell">
-                        <span class="line">─</span>
-                        <input type="tell" id="tell2" class="tell">
-                        <span class="line">─</span>
-                        <input type="tell" id="tell3" class="tell">
-                    </div>
-                </div>
-                <div class="form">
-                    <label for="" class="lb">회사명</label>
-                    <input type="text" id="inp4">
-                </div>
-                <div class="form">
-                    <label for="" class="lb">문의하실 내용을 적어주세요.</label>
-                    <input type="text" id="inp5">
-                </div>
-                <div class="ck">
-                    <label for="">
-                        <input type="checkbox" value="개인정보 수집에 동의합니다." id="ck">
-                        <span>개인정보 수집에 동의합니다.</span>
-                    </label>
-                </div>
-                <div class="text_full"><a href="" class="btn">문의하기</a></div>
-            </div>
-        </div>    
-    </div>
-    <footer class="ft">
+      </div>
+      <div class="page" id="p3">
         <div class="wrap">
-           <div class="ft_top">
-                <a href="index.html" class="ft_logo"></a>
-                <div class="right_box">
-                    <ul class="ft_menu">
-                        <li class="item1">
-                            <a href="sub1.html" class="dp1">회사소개</a>
-                        </li>
-                        <li class="item2">
-                            <a href="sub2.html" class="dp1">솔루션</a>
-                            <ul class="sub">
-                                <li><a href="sub2.html#p1">TABLE</a></li>
-                                <li><a href="sub2.html#p2">LABLE</a></li>
-                                <li><a href="sub2.html#p3">MABLE</a></li>
-                            </ul>
-                        </li>
-                        <li class="item3">
-                            <a href="sub3.html" class="dp1">컨설팅</a>
-                            <ul class="sub">
-                                <li><a href="sub3.html#p1">GS인증 컨설팅</a></li>
-                                <li><a href="sub3.html#p2">SOFTWARE V&amp;V</a></li>
-                                <li><a href="sub3.html#p3">SW 개발 및<br> 품질 프로세스 구축</a></li>
-                            </ul>
-                        </li>
-                        <li class="item4">
-                            <a href="sub4.html" class="dp1">테스팅</a>
-                            <ul class="sub">
-                                <li><a href="sub4.html#p1">3자 검증</a></li>
-                                <li><a href="sub4.html#p2">SOFTWARE V&amp;V</a></li>
-                            </ul>
-                        </li>
-                        <li class="item5">
-                            <a href="sub5.html" class="dp1">고객지원</a>
-                        </li>
-                    </ul>
+          <div class="tit_box">
+            <h1 class="tit">consulting</h1>
+          </div>
+          <div class="item_box">
+            <div class="it1 item">
+              <a href="#">
+                <div class="txt_box">
+                  <h2 class="tit">GS인증 컨설팅</h2>
+                  <p>
+                    국제표준과 고시를 기반으로 다수의 GS인증평가 경력을 가진
+                    전문가의 경험과 노하우를 바탕으로 교육과 제품개선 가이드를
+                    통해 GS인증 취득까지 지원해드립니다.
+                  </p>
+                  <span class="more">자세히 보기</span>
                 </div>
+              </a>
             </div>
-            <div class="center_box">
-                <p class="Add">Address. 대전 광역시 유성구 테크노 9로 35<br>(지능로봇산업화센터 402호, 탑립동)</p><br>
-                <p class="call">Tel. 042-934-5551</p>
-                <p class="email">Email. delta@deltaindex.kr</p>
+            <div class="it2 item">
+              <a href="#">
+                <div class="txt_box">
+                  <h2 class="tit">SOFTWARE V&amp;V</h2>
+                  <p>
+                    다양한 분야의 안전 및 비안전 등급 소프트웨어 V&amp;V 경험을
+                    바탕으로 효과적이고 효율적인 V&amp;V활동을 위한 가이드를
+                    제공해드립니다.
+                  </p>
+                  <span class="more">자세히 보기</span>
+                </div>
+              </a>
             </div>
-            <div class="bottom_box">
-                <p class="copy">Copyright © 2019 by deltaindex Inc. All RIGHTS RESERVED.</p>
-                <a href="sub6.html" class="link">개인정보처리방침</a>
+            <div class="it3 item">
+              <a href="#">
+                <div class="txt_box">
+                  <h2 class="tit">SW 개발 및 품질 프로세스 구축</h2>
+                  <p>
+                    단순히 모델과 표준에서 제시하는 기준을 도입하는 것이 아닌,
+                    전문 지식과 경험을 가진 인력이 대상 조직의 현황과 특성을
+                    파악하여 최적의 프로세스를 구축합니다.
+                  </p>
+                  <span class="more">자세히 보기</span>
+                </div>
+              </a>
             </div>
+          </div>
         </div>
-    </footer>
-</div>
-</body>
+      </div>
+      <div class="page" id="p4">
+        <div class="wrap">
+          <h1 class="tit">Testing</h1>
+          <p class="com">
+            제3자 검증을 통해 품질에 대한 객관적 입증 지원 및 성적서를 발행하여
+            드립니다. 테스트 전문 인력과 테스트 도구를 활용하여, 코드 검증을
+            위한 단위테스트의 정적분석,<br />
+            동적분석 내외부 인터페이스 검증을 위한 통합테스트, 성능 및 보안을
+            확인하기 위한 시스템테스트, 고객의 인수조건을<br />
+            최종확인하기 위한인수테스트을 지원하여 제품의 품질 완성도와 신뢰성을
+            높여드립니다.
+          </p>
+          <div class="bgi">
+            <img src="data/p4.png" alt="Testing배경이미지" />
+          </div>
+          <a href="#" class="more">MORE</a>
+        </div>
+      </div>
+      <div class="page" id="p5">
+        <div class="wrap">
+          <div class="tit_box">
+            <h1 class="tit">PARTNER</h1>
+            <a href="sub1.html#p3" class="more">MORE ＞</a>
+          </div>
+          <div class="ptn_box">
+            <div class="ptn1 ptn">
+              <a href="https://www.kaeri.re.kr/"
+                ><img src="data/kaeri.png" alt="한국원자력연구원"
+              /></a>
+            </div>
+            <div class="ptn2 ptn">
+              <a href="http://www.ktr.or.kr/main/index.do"
+                ><img src="data/ktr.png" alt="한국화학융합시험원구원"
+              /></a>
+            </div>
+            <div class="ptn3 ptn">
+              <a href="https://www.tta.or.kr/"
+                ><img src="data/tta.png" alt="한국정보통신기술협회"
+              /></a>
+            </div>
+            <div class="ptn4 ptn">
+              <a href="https://www.dip.or.kr/home/main.ubs"
+                ><img src="data/dip.png" alt="대구디지털산업진흥원"
+              /></a>
+            </div>
+            <div class="ptn5 ptn">
+              <a href="http://www.dicia.or.kr/"
+                ><img src="data/dica.png" alt="대전정보문화산업진흥원"
+              /></a>
+            </div>
+            <div class="ptn6 ptn">
+              <a href="https://www.airport.kr/co/ko/index.do"
+                ><img src="data/incheon.png" alt="인천국제공항공사"
+              /></a>
+            </div>
+            <div class="ptn7 ptn">
+              <a href="https://www.krri.re.kr/html/kr/"
+                ><img src="data/krri.png" alt="한국철도기술연구원"
+              /></a>
+            </div>
+            <div class="ptn8 ptn">
+              <a href="http://www.kcl.re.kr/site/main/index001"
+                ><img src="data/kcl.png" alt="한국건설생활환경시험연구원"
+              /></a>
+            </div>
+            <div class="ptn9 ptn">
+              <a href="https://www.etri.re.kr/intro.html"
+                ><img src="data/etri.png" alt="한국전자통신연구원"
+              /></a>
+            </div>
+            <div class="ptn10 ptn">
+              <a href="https://www.ajou.ac.kr/kr/index.do"
+                ><img src="data/ajou.png" alt="아주대학교"
+              /></a>
+            </div>
+            <div class="ptn11 ptn">
+              <a href="https://www.dju.ac.kr/dju/main.do"
+                ><img src="data/daejeon.png" alt="대전대학교"
+              /></a>
+            </div>
+            <div class="ptn12 ptn">
+              <a href="https://plus.cnu.ac.kr/html/kr/"
+                ><img src="data/chong.png" alt="충남대학교"
+              /></a>
+            </div>
+            <div class="ptn13 ptn">
+              <a href="http://www.jbnu.ac.kr/kor/"
+                ><img src="data/han.png" alt="한밭대학교"
+              /></a>
+            </div>
+            <div class="ptn14 ptn">
+              <a href="https://www.ibk.co.kr/"
+                ><img src="data/jeon.png" alt="전북대학교"
+              /></a>
+            </div>
+            <div class="ptn15 ptn">
+              <a href="https://banking.nonghyup.com/nhbank.html"
+                ><img src="data/ibk.png" alt="IBK기업은행"
+              /></a>
+            </div>
+            <div class="ptn16 ptn">
+              <a
+                href="http://www.hyundai-autoever.com/common/goPage.view?page=ko/main"
+                ><img src="data/nong.png" alt="농협"
+              /></a>
+            </div>
+            <div class="ptn17 ptn">
+              <a href="https://www.hancom.com/main/main.do"
+                ><img src="data/hyundai.png" alt="현대"
+              /></a>
+            </div>
+            <div class="ptn18 ptn">
+              <a href="https://www.yuracorp.co.kr/index.jsp"
+                ><img src="data/hancom.png" alt="한글과컴퓨터"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page" id="p6">
+        <div class="wrap">
+          <div class="left">
+            <h2 class="big">CONTACT US</h2>
+            <p class="com">
+              궁금하신 사항이 있으시면 문의를 남겨주세요.<br />담당자가 빠르고
+              자세하게 안내해 드리겠습니다.
+            </p>
+            <p class="call">
+              <span class="bold">Contact Number</span> &nbsp; &nbsp;042-934-5551
+            </p>
+            <p class="email">
+              <a href=""
+                ><span class="bold">Email Address</span> &nbsp; &nbsp;
+                delta@deltaindex.kr</a
+              >
+            </p>
+          </div>
+          <div class="right">
+            <div class="form">
+              <label for="">문의 종류를 선택해 주세요.</label>
+              <div class="form_sell">
+                <select name="sell" id="choise">
+                  <option value="" selected>선택</option>
+                  <option value="">solution</option>
+                  <option value="">consulting</option>
+                  <option value="">Testing</option>
+                </select>
+              </div>
+            </div>
+            <div class="form">
+              <label for="" class="lb">담당자</label>
+              <input type="text" id="inp1" />
+            </div>
+            <div class="form">
+              <label for="" class="lb">이메일</label>
+              <input type="text" id="inp2" />
+            </div>
+            <div class="form">
+              <label for="" class="lb">연락처</label>
+              <div class="tell_box">
+                <input type="tell" id="tell1" class="tell" />
+                <span class="line">─</span>
+                <input type="tell" id="tell2" class="tell" />
+                <span class="line">─</span>
+                <input type="tell" id="tell3" class="tell" />
+              </div>
+            </div>
+            <div class="form">
+              <label for="" class="lb">회사명</label>
+              <input type="text" id="inp4" />
+            </div>
+            <div class="form">
+              <label for="" class="lb">문의하실 내용을 적어주세요.</label>
+              <input type="text" id="inp5" />
+            </div>
+            <div class="ck">
+              <label for="">
+                <input
+                  type="checkbox"
+                  value="개인정보 수집에 동의합니다."
+                  id="ck"
+                />
+                <span>개인정보 수집에 동의합니다.</span>
+              </label>
+            </div>
+            <div class="text_full"><a href="#" class="btn">문의하기</a></div>
+          </div>
+        </div>
+      </div>
+      <footer class="ft">
+        <div class="wrap">
+          <div class="ft_top">
+            <a href="index.html" class="ft_logo"></a>
+            <div class="right_box">
+              <ul class="ft_menu">
+                <li class="item1">
+                  <a href="sub1.html" class="dp1">회사소개</a>
+                </li>
+                <li class="item2">
+                  <a href="#" class="dp1">솔루션</a>
+                  <ul class="sub">
+                    <li><a href="#">TABLE</a></li>
+                    <li><a href="#">LABLE</a></li>
+                    <li><a href="#">MABLE</a></li>
+                  </ul>
+                </li>
+                <li class="item3">
+                  <a href="#" class="dp1">컨설팅</a>
+                  <ul class="sub">
+                    <li><a href="#">GS인증 컨설팅</a></li>
+                    <li><a href="#">SOFTWARE V&amp;V</a></li>
+                    <li>
+                      <a href="#"
+                        >SW 개발 및<br />
+                        품질 프로세스 구축</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="item4">
+                  <a href="#" class="dp1">테스팅</a>
+                  <ul class="sub">
+                    <li><a href="#">3자 검증</a></li>
+                    <li><a href="#">SOFTWARE V&amp;V</a></li>
+                  </ul>
+                </li>
+                <li class="item5">
+                  <a href="#" class="dp1">고객지원</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="center_box">
+            <p class="Add">
+              Address. 대전 광역시 유성구 테크노 9로 35<br />(지능로봇산업화센터
+              402호, 탑립동)
+            </p>
+            <br />
+            <p class="call">Tel. 042-934-5551</p>
+            <p class="email">Email. delta@deltaindex.kr</p>
+          </div>
+          <div class="bottom_box">
+            <p class="copy">
+              Copyright © 2019 by deltaindex Inc. All RIGHTS RESERVED.
+            </p>
+            <a href="#" class="link">개인정보처리방침</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
